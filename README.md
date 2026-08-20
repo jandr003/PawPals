@@ -1,31 +1,39 @@
 # PawPals
 
-PawPals is a pet adoption website that helps users find pets in need of a home. The platform allows users to browse available pets, view pet information, and learn more about the adoption process through a clean and responsive interface.
+**PawPals** is a pet adoption website currently being developed to help users discover pets in need of a loving home. The project aims to provide a simple and responsive platform where users can browse available pets, view pet information, and learn more about the adoption process.
 
-## Features
+## ✨ Planned Features
 
-- Browse Available Pets
-- Search and Filter
-- Pet Categories
-- Pet Details
-- Adoption Information
-- Contact Section
-- Responsive Layout
+The following features are planned for the project:
 
-## Tech Stack
+* **Browse Available Pets**
+* **Search and Filter**
+* **Pet Categories**
+* **Pet Details**
+* **Adoption Information**
+* **Contact Section**
+* **Responsive Layout**
 
-- React
-- JavaScript
-- Tailwind CSS
+## 🛠️ Tech Stack
 
-## Requirements
+* **React**
+* **JavaScript**
+* **Tailwind CSS**
 
-- Node.js 18 or later
-- npm 9 or later
-- Modern Web Browser
+## 📋 Requirements
 
-## Supported Devices
+* **Node.js 18 or later**
+* **npm 9 or later**
+* **Modern Web Browser**
 
-- Desktop
-- Tablet
-- Mobile
+## 💻 Supported Devices
+
+* **Desktop**
+* **Tablet**
+* **Mobile**
+
+## 📌 Project Status
+
+**Current Status: 🚧 In Development**
+
+PawPals is currently in the planning and development stage. The source code and features will be added and updated as development progresses.

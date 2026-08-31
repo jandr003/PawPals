@@ -1,41 +1,36 @@
-# PawPals
+# PawPals 🐾
 
-**PawPals** is a pet adoption website that helps users find pets looking for a new home. It is being developed to give users an easy way to browse pets, check their details, and learn more about the adoption process.
+**PawPals** is a pet adoption website where users can browse pets looking for a new home, view their profiles, and get information about the adoption process. The project focuses on keeping the interface simple, responsive, and easy to navigate.
 
-## ✨ Features
+### ✨ Features
 
-* **Browse Available Pets**
-* **Search and Filter**
-* **Pet Categories**
-* **Pet Details**
-* **Adoption Information**
-* **Contact Section**
-* **Responsive Layout**
+* **Pet Browsing** — Browse available pets
+* **Search & Filter** — Search and filter pet listings
+* **Pet Categories** — View pets by category
+* **Pet Profiles** — View information about each pet
+* **Adoption Information** — Learn about the adoption process
+* **Contact Section** — Get in touch through the website
+* **Responsive Design** — Works across desktop, tablet, and mobile devices
 
-## 🛠️ Tech Stack
+### 🛠️ Tech Stack
 
-* **React**
-* **JavaScript**
-* **Tailwind CSS**
+| Category  | Technology   |
+| --------- | ------------ |
+| Framework | Next.js      |
+| Library   | React        |
+| Language  | JavaScript   |
+| Styling   | Tailwind CSS |
 
-## 📋 Requirements
+### 🎨 Design
 
-* **Node.js 18 or later**
-* **npm 9 or later**
-* **Modern Web Browser**
+The PawPals interface was designed in **Figma** before being developed with **Next.js**, **React**, and **Tailwind CSS**.
 
-## 💻 Supported Devices
+### 🌐 Live Demo
 
-* **Desktop**
-* **Tablet**
-* **Mobile**
+> Coming Soon
 
-## 🎨 Design
+### 📌 Project Status
 
-The UI/UX design for PawPals was created in **Figma**, and the website is currently being developed based on the design.
+**Status:** 🟡 On Hold
 
-## 📌 Project Status
-
-**Current Status: 🚧 In Development**
-
-The PawPals website is currently being coded. More features and updates will be added as the project continues.
+Development is currently on hold. The project may be continued in the future with additional features and updates.

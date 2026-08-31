@@ -1,36 +1,54 @@
 # PawPals 🐾
 
-**PawPals** is a pet adoption website where users can browse pets looking for a new home, view their profiles, and get information about the adoption process. The project focuses on keeping the interface simple, responsive, and easy to navigate.
+**PawPals** is a pet adoption and care website that allows users to browse available pets, view pet profiles, explore pet care services, read pet-related articles, and learn about the adoption process.
 
-### ✨ Features
+The website was redesigned with a revised layout, navigation, and page structure.
 
-* **Pet Browsing** — Browse available pets
-* **Search & Filter** — Search and filter pet listings
-* **Pet Categories** — View pets by category
-* **Pet Profiles** — View information about each pet
-* **Adoption Information** — Learn about the adoption process
-* **Contact Section** — Get in touch through the website
-* **Responsive Design** — Works across desktop, tablet, and mobile devices
+## Features
 
-### 🛠️ Tech Stack
+* Pet listings
+* Search and filtering
+* Pet categories
+* Pet profiles
+* Adoption information
+* Pet care services
+* Blog section
+* Appointment booking
+* Contact section
+* Responsive navigation
+* Mobile-friendly design
+* Interactive UI elements
 
-| Category  | Technology   |
-| --------- | ------------ |
-| Framework | Next.js      |
-| Library   | React        |
-| Language  | JavaScript   |
-| Styling   | Tailwind CSS |
+## Technologies
 
-### 🎨 Design
+| Technology       | Purpose                                      |
+| ---------------- | -------------------------------------------- |
+| **Next.js**      | Website framework and routing                |
+| **React**        | Frontend development and reusable components |
+| **JavaScript**   | Website functionality and interactions       |
+| **Tailwind CSS** | Styling and responsive layouts               |
 
-The PawPals interface was designed in **Figma** before being developed with **Next.js**, **React**, and **Tailwind CSS**.
+## Project Purpose
 
-### 🌐 Live Demo
+PawPals was developed as a platform for pet adoption and care. It provides users with access to:
 
-> Coming Soon
+* Available pets and their profiles
+* Pet care services and packages
+* Adoption information
+* Pet care articles
+* Appointment booking
+* Contact information
 
-### 📌 Project Status
+## Design
 
-**Status:** 🟡 On Hold
+The original PawPals interface was designed in **Figma** and later redesigned with a revised layout and page structure. The design uses a clean interface with responsive layouts for desktop and mobile devices.
 
-Development is currently on hold. The project may be continued in the future with additional features and updates.
+## Development
+
+The redesigned website is being developed using **Next.js, React, JavaScript, and Tailwind CSS**. Reusable components and separate data files are used to organize the website structure and content.
+
+## Project Status
+
+**🔄 Redesign in Progress**
+
+The PawPals website is currently being redesigned and developed with an updated interface, page structure, and content organization.

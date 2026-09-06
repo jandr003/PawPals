@@ -10,6 +10,10 @@ const fredoka = Fredoka({
 export const metadata = {
   title: "PawPals",
   description: "A pet adoption website where you can browse and adopt pets.",
+  icons: {
+    icon: "/PAWPALS-ICON.png",
+    shortcut: "/PAWPALS-ICON.png",
+  },
 };
 
 export default function RootLayout({ children }) {

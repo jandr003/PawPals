@@ -12,21 +12,21 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="w-full bg-white pl-4 pr-6 md:pl-0 md:pr-10 -mt-14 pb-3 font-fredoka max-w-7xl mx-auto relative">
+    <nav className="w-full pl-4 pr-6 md:pl-0 md:pr-10 -mt-28 pb-3 font-fredoka max-w-7xl mx-auto relative">
       <div className="flex items-center justify-between">
   
-        <Link href="/" className="flex items-center gap-2 shrink-0 md:-ml-16" onClick={() => setOpen(false)}>
+        <Link href="/" className="flex items-center gap-2 shrink-0 md:-ml-16 md:translate-y-4" onClick={() => setOpen(false)}>
           <Image
             src="/PAWPALS-LOGO.png"
             alt="PawPals Logo"
             width={340}
             height={100}
             priority
-            className="w-40 sm:w-52 md:w-80 h-auto"
+            className="w-40 sm:w-52 md:w-72 h-auto"
           />
         </Link>
 
-        <ul className="hidden md:flex items-center gap-10 text-lg text-text font-medium">
+        <ul className="hidden md:flex items-center gap-10 text-lg text-text font-medium md:translate-y-4">
           {NAV_LINKS.map(({ href, label }) => (
             <li key={href}>
               <Link href={href} className="hover:text-button transition-colors">

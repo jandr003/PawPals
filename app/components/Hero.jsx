@@ -34,7 +34,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative w-full pb-16 pt-22 pl-48 sm:pl-64">
+      <div className="relative w-full pb-16 pt-24 pl-48 sm:pl-64">
         <div className="max-w-[720px]">
           <h1 className="font-fredoka text-[56px] font-semibold leading-[1.1] text-text sm:text-[64px] lg:text-[72px]">
             Every Paw Deserves Love and Care
@@ -55,12 +55,11 @@ export default function Hero() {
         className="absolute right-56 -top-24 w-full max-w-[620px] object-contain"
       />
 
-     
-      <div className="relative mx-auto mt-32 max-w-2xl px-8 text-center">
-        <h2 className="font-fredoka text-[28px] font-semibold text-text">
+      <div className="relative mx-auto mt-56 max-w-4xl px-8 text-center">
+        <h2 className="font-fredoka text-[44px] font-bold text-text sm:text-[52px]">
           Welcome to PawPals!
         </h2>
-        <p className="mt-4 font-fredoka text-[15px] font-light leading-[1.75] text-text/80">
+        <p className="mt-5 font-fredoka text-xl font-normal leading-[1.75] text-text/80">
           PawPals is a caring space where pets find love, attention, and a
           second chance at happiness. We help connect animals in need with
           people who are ready to welcome them home, while also making sure

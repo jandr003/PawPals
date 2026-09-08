@@ -55,18 +55,39 @@ export default function Hero() {
         className="absolute right-56 -top-24 w-full max-w-[620px] object-contain"
       />
 
-      <div className="relative mx-auto mt-56 max-w-4xl px-8 text-center">
-        <h2 className="font-fredoka text-[44px] font-bold text-text sm:text-[52px]">
-          Welcome to PawPals!
-        </h2>
-        <p className="mt-5 font-fredoka text-xl font-normal leading-[1.75] text-text/80">
-          PawPals is a caring space where pets find love, attention, and a
-          second chance at happiness. We help connect animals in need with
-          people who are ready to welcome them home, while also making sure
-          every pet receives the care they deserve through trusted services
-          and support.
-        </p>
+      <div className="relative mx-auto mt-56 w-[700px] max-w-full px-8 text-center">
+          <h2 className="font-fredoka text-[40px] font-bold text-[#2B2118] sm:text-[44px]">
+            Welcome to PawPals!
+          </h2>
+          <p className="mx-auto mt-4 font-fredoka text-lg font-normal leading-[1.7] text-[#4A4A4A]">
+            PawPals is a caring space where pets find love, attention, and a
+            second chance at happiness. We help connect animals in need with
+            people who are ready to welcome them home, while also making sure
+            every pet receives the care they deserve through trusted services
+            and support.
+          </p>
       </div>
+
+        <div className="relative mx-auto mt-32 max-w-6xl px-8 text-left">
+          <h2 className="font-fredoka text-[32px] font-bold text-[#2B2118] sm:text-[40px]">
+            Our Services
+          </h2>
+        </div>
+
+        <div className="relative mx-auto mt-8 flex max-w-6xl flex-nowrap items-center gap-28 px-8">
+          <img
+            src="/home/HOME-PICTURE-2.png"
+            alt="Our Services"
+            className="w-full max-w-[400px] shrink-0 object-contain"
+          />
+
+          <div className="flex shrink-0 flex-col gap-14">
+            <img src="/home/OUR-SERVICES1.png" alt="Service 1" className="h-16 w-16 object-contain" />
+            <img src="/home/OUR-SERVICES2.png" alt="Service 2" className="ml-8 h-16 w-16 object-contain" />
+            <img src="/home/OUR-SERVICES3.png" alt="Service 3" className="ml-8 h-16 w-16 object-contain" />
+            <img src="/home/OUR-SERVICES4.png" alt="Service 4" className="h-16 w-16 object-contain" />
+          </div>
+        </div>
     </section>
   );
 }

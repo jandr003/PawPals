@@ -68,7 +68,7 @@ export default function Hero() {
           </p>
       </div>
 
-        <div className="relative mx-auto mt-32 max-w-6xl px-8 text-left">
+        <div className="relative mx-auto mt-48 max-w-6xl px-8 text-left">
           <h2 className="font-fredoka text-[32px] font-bold text-[#2B2118] sm:text-[40px]">
             Our Services
           </h2>
@@ -78,15 +78,122 @@ export default function Hero() {
           <img
             src="/home/HOME-PICTURE-2.png"
             alt="Our Services"
-            className="w-full max-w-[400px] shrink-0 object-contain"
+            className="w-full max-w-[450px] shrink-0 object-contain"
           />
 
-          <div className="flex shrink-0 flex-col gap-14">
-            <img src="/home/OUR-SERVICES1.png" alt="Service 1" className="h-16 w-16 object-contain" />
-            <img src="/home/OUR-SERVICES2.png" alt="Service 2" className="ml-8 h-16 w-16 object-contain" />
-            <img src="/home/OUR-SERVICES3.png" alt="Service 3" className="ml-8 h-16 w-16 object-contain" />
-            <img src="/home/OUR-SERVICES4.png" alt="Service 4" className="h-16 w-16 object-contain" />
+          <div className="-ml-6 mt-8 flex shrink-0 flex-col gap-12">
+            <div className="flex items-center gap-4">
+              <img
+                src="/home/OUR-SERVICES1.png"
+                alt="Service 1"
+                className="-ml-4 h-16 w-16 object-contain"
+              />
+              <div className="-ml-1 -mt-6">
+                <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
+                  Pet Grooming
+                </h3>
+                <p className="mt-1 font-fredoka text-sm text-[#4A4A4A]">
+                  Professional grooming services including bathing, nail
+                  trimming, and fur care.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <img
+                src="/home/OUR-SERVICES2.png"
+                alt="Service 2"
+                className="ml-12 h-16 w-16 object-contain"
+              />
+              <div className="-ml-1 -mt-6">
+                <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
+                  Pet Boarding &amp; Daycare
+                </h3>
+                <p className="mt-1 font-fredoka text-sm text-[#4A4A4A]">
+                  Safe and comfortable care for pets during the day or
+                  overnight.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <img
+                src="/home/OUR-SERVICES3.png"
+                alt="Service 3"
+                className="ml-12 mt-4 h-16 w-16 object-contain"
+              />
+              <div className="-ml-1 -mt-0">
+                <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
+                  Veterinary Care
+                </h3>
+                <p className="mt-1 font-fredoka text-sm text-[#4A4A4A]">
+                  Veterinary care for checkups, vaccinations, and treatment.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <img
+                src="/home/OUR-SERVICES4.png"
+                alt="Service 4"
+                className="-ml-4 h-16 w-16 object-contain"
+              />
+              <div className="-ml-1 mt-0">
+                <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
+                  Pet Sitting
+                </h3>
+                <p className="mt-1 font-fredoka text-sm text-[#4A4A4A]">
+                  Reliable care for your pets while you're away, including
+                  feeding, playtime, and companionship.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-2 flex gap-4">
+              <button className="rounded-full border border-[#C77D4A] px-6 py-3 font-fredoka text-sm font-medium text-[#2B2118] transition hover:bg-[#C77D4A]/10">
+                Book Vet Appointment
+              </button>
+              <button className="rounded-full bg-[#C77D4A] px-6 py-3 font-fredoka text-sm font-medium text-white transition hover:brightness-95">
+                Schedule Visit
+              </button>
+            </div>
           </div>
+        </div>
+
+        <div className="relative mx-auto mt-56 max-w-6xl px-8 text-left">
+          <h2 className="font-fredoka text-[32px] font-bold text-[#2B2118] sm:text-[40px]">
+            Happy Pet Parents of PawPals
+          </h2>
+        </div>
+
+        <div className="relative mx-auto mt-32 max-w-6xl px-8">
+            <div className="absolute left-1/2 top-1/2 z-0 h-[280px] w-full max-w-[1050px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-10 shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)]">
+            </div>
+                <img
+                    src="/home/HOME-OWNER-1.png"
+                    alt="Happy pet parent"
+                    className="relative z-10 w-full max-w-[400px] object-contain"
+                />
+        </div>        
+
+        <div className="relative mx-auto mt-16 max-w-6xl px-8">
+            <div className="absolute left-1/2 top-1/2 z-0 h-[280px] w-full max-w-[1050px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-10 shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)]">
+            </div>
+                <img
+                    src="/home/HOME-OWNER-2.png"
+                    alt="Happy pet parent"
+                    className="relative z-10 w-full max-w-[400px] object-contain"
+                />
+        </div>
+
+        <div className="relative mx-auto mt-16 max-w-6xl px-8">
+            <div className="absolute left-1/2 top-1/2 z-0 h-[280px] w-full max-w-[1050px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-10 shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)]">
+            </div>
+                <img
+                    src="/home/HOME-OWNER-3.png"
+                    alt="Happy pet parent"
+                    className="relative z-10 w-full max-w-[400px] object-contain"
+                />
         </div>
     </section>
   );

@@ -168,13 +168,35 @@ export default function Hero() {
 
         <div className="relative mx-auto mt-32 max-w-6xl px-8">
             <div className="absolute left-1/2 top-1/2 z-0 h-[280px] w-full max-w-[1050px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-10 shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)]">
+                <div className="ml-auto max-w-[600px]">
+                    <div className="mb-4 flex gap-1">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                            <svg
+                                key={i}
+                                viewBox="0 0 20 20"
+                                fill="#FACC15"
+                                className="h-6 w-6"
+                            >
+                                <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6L1.3 7.7l6.1-.6z" />
+                            </svg>
+                        ))}
+                    </div>
+
+                    <p className="font-fredoka text-lg leading-relaxed text-[#2B2118]">
+                        "I was a little nervous leaving my dog since he doesn't usually do well during grooming sessions, but the team at PawPals made the experience really comfortable for him. He looked adorable after, and even smelled amazing for days. Definitely coming back."
+                    </p>
+
+                    <p className="mt-6 font-fredoka text-xl font-semibold text-[#2B2118]">
+                        Jasmine Lee
+                    </p>
+                </div>
             </div>
                 <img
                     src="/home/HOME-OWNER-1.png"
                     alt="Happy pet parent"
                     className="relative z-10 w-full max-w-[400px] object-contain"
                 />
-        </div>        
+        </div>  
 
         <div className="relative mx-auto mt-16 max-w-6xl px-8">
             <div className="absolute left-1/2 top-1/2 z-0 h-[280px] w-full max-w-[1050px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-10 shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)]">

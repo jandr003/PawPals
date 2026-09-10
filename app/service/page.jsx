@@ -11,7 +11,7 @@ const SERVICES = [
     icon: "/home/OUR-SERVICES2.png",
     title: "Pet Boarding & Daycare",
     description:
-      "Safe and comfortable care for pets during the day or overnight, with a cozy space to play, rest, and feel at home while you're away.",
+      "Safe and comfortable care for pets during the day or overnight, with a cozy space to play, rest, and feel at home while you're a`way.",
   },
   {
     icon: "/home/OUR-SERVICES3.png",

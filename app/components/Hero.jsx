@@ -34,7 +34,7 @@ export default function Hero() {
         ))}
       </div>
 
-<div className="relative w-full pb-16 pt-24 pl-48 sm:pl-10 md:pl-24 xl:pl-64">
+      <div className="relative w-full pb-16 pt-24 pl-48 sm:pl-10 md:pl-24 xl:pl-64">
         <div className="max-w-[720px] sm:max-w-[320px] md:max-w-[420px] xl:max-w-[720px]">
           <h1 className="font-fredoka font-semibold leading-[1.1] text-text text-[56px] sm:text-[36px] md:text-[44px] xl:text-[72px]">
             Every Paw Deserves Love and Care
@@ -48,7 +48,7 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      
+
       <img
         src="/home/HOME-PICTURE-1.png"
         alt="Happy pet"
@@ -166,7 +166,7 @@ export default function Hero() {
           </h2>
         </div>
 
-        <div className="relative mx-auto mt-32 max-w-6xl px-8">
+        <div className="relative mx-auto mt-32 max-w-6xl px-8 min-h-[320px] flex items-center">
             <div className="absolute left-1/2 top-1/2 z-0 h-[280px] w-full max-w-[1050px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-10 shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)]">
                 <div className="ml-auto max-w-[600px]">
                     <div className="mb-4 flex gap-1">

@@ -12,21 +12,25 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-      <nav className="relative isolate overflow-visible mx-auto -mt-28 md:mt-0 w-full max-w-7xl pb-3 pt-2 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 md:pl-6 md:pr-6 lg:pl-0 lg:pr-10 lg:pt-0 lg:-mt-28">
+      <nav className="relative isolate overflow-visible mx-auto -mt-28 md:mt-0 w-full max-w-7xl pb-3 pt-2 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 md:pl-6 md:pr-6 lg:pl-6 lg:pr-10 lg:pt-0 xl:pl-0 xl:-mt-28 lg:-mt-28">
             <div className="flex items-center justify-between overflow-visible">
         
-            <Link href="/" className="flex shrink-0 min-w-0 overflow-visible -translate-y-2 items-center gap-2 md:translate-y-0 md:translate-x-0 lg:-ml-16 lg:translate-y-4 lg:translate-x-0" onClick={() => setOpen(false)}>
+              <Link
+                href="/"
+                className="flex shrink-0 min-w-0 overflow-visible translate-y-1 items-center gap-2 md:translate-y-3 lg:ml-2 lg:translate-y-8 lg:translate-x-2 xl:-ml-16 xl:translate-y-9"
+                onClick={() => setOpen(false)}
+              >
                 <Image
                   src="/PAWPALS-LOGO.png"
                   alt="PawPals Logo"
                   width={340}
                   height={100}
                   priority
-                  className="h-auto w-48 sm:w-60 md:w-48 lg:w-72 shrink-0"
+                  className="h-auto w-48 sm:w-60 md:w-48 lg:w-64 xl:w-72 shrink-0"
                 />
               </Link>
 
-        <ul className="hidden items-center gap-10 text-lg font-medium text-text lg:flex lg:translate-y-4">
+        <ul className="hidden items-center gap-10 text-lg font-medium text-text lg:flex lg:translate-y-6 lg:translate-x-6">
           {NAV_LINKS.map(({ href, label }) => (
             <li key={href}>
               <Link href={href} className="hover:text-button transition-colors">

@@ -12,19 +12,19 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="relative mx-auto -mt-28 w-full max-w-7xl pb-3 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 lg:pl-0 lg:pr-10">
-      <div className="flex items-center justify-between">
-  
-        <Link href="/" className="flex shrink-0 -translate-y-2 items-center gap-2 lg:-ml-16 lg:translate-y-4" onClick={() => setOpen(false)}>
-          <Image
-            src="/PAWPALS-LOGO.png"
-            alt="PawPals Logo"
-            width={340}
-            height={100}
-            priority
-            className="h-auto w-52 sm:w-60 lg:w-72"
-          />
-        </Link>
+      <nav className="relative isolate overflow-visible mx-auto -mt-28 md:mt-0 w-full max-w-7xl pb-3 pt-2 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 md:pl-6 md:pr-6 lg:pl-0 lg:pr-10 lg:pt-0 lg:-mt-28">
+            <div className="flex items-center justify-between overflow-visible">
+        
+            <Link href="/" className="flex shrink-0 min-w-0 overflow-visible -translate-y-2 items-center gap-2 md:translate-y-0 md:translate-x-0 lg:-ml-16 lg:translate-y-4 lg:translate-x-0" onClick={() => setOpen(false)}>
+                <Image
+                  src="/PAWPALS-LOGO.png"
+                  alt="PawPals Logo"
+                  width={340}
+                  height={100}
+                  priority
+                  className="h-auto w-48 sm:w-60 md:w-48 lg:w-72 shrink-0"
+                />
+              </Link>
 
         <ul className="hidden items-center gap-10 text-lg font-medium text-text lg:flex lg:translate-y-4">
           {NAV_LINKS.map(({ href, label }) => (
@@ -41,7 +41,7 @@ export default function Navbar() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-9 w-9 shrink-0 -translate-y-2 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="flex h-9 w-9 shrink-0 -translate-y-2 flex-col items-center justify-center gap-1.5 md:translate-y-0 lg:hidden"
         >
           <span className={`block h-0.5 w-6 bg-text transition-transform duration-300 ${open ? "translate-y-2 rotate-45" : ""}`} />
           <span className={`block h-0.5 w-6 bg-text transition-opacity duration-300 ${open ? "opacity-0" : "opacity-100"}`} />

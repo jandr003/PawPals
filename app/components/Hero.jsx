@@ -34,25 +34,25 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative w-full pb-16 pt-24 pl-48 sm:pl-10 md:pl-16 lg:pl-64">
-        <div className="max-w-[720px] sm:max-w-[320px] md:max-w-[400px] lg:max-w-[720px]">
-          <h1 className="font-fredoka text-[56px] font-semibold leading-[1.1] text-text sm:text-[36px] md:text-[44px] lg:text-[64px] lg:text-[72px]">
+<div className="relative w-full pb-16 pt-24 pl-48 sm:pl-10 md:pl-24 xl:pl-64">
+        <div className="max-w-[720px] sm:max-w-[320px] md:max-w-[420px] xl:max-w-[720px]">
+          <h1 className="font-fredoka font-semibold leading-[1.1] text-text text-[56px] sm:text-[36px] md:text-[44px] xl:text-[72px]">
             Every Paw Deserves Love and Care
           </h1>
-          <p className="mt-6 max-w-[560px] sm:max-w-[300px] md:max-w-[380px] lg:max-w-[560px] font-fredoka text-2xl font-light leading-relaxed text-text/80 sm:text-base md:text-lg lg:text-2xl">
+          <p className="mt-6 font-fredoka font-light leading-relaxed text-text/80 max-w-[560px] sm:max-w-[300px] md:max-w-[380px] text-2xl sm:text-base md:text-lg xl:text-2xl xl:max-w-[560px]">
             Adopt pets, book vet appointments, and give your companions the
             love and care they deserve.
           </p>
-          <button className="mt-8 rounded-full bg-button px-12 py-5 font-fredoka text-xl font-medium text-white shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)] transition hover:brightness-95 sm:px-8 sm:py-3 sm:text-base md:px-10 md:py-4 md:text-lg lg:px-12 lg:py-5 lg:text-xl">
+          <button className="mt-8 rounded-full bg-button font-fredoka font-medium text-white shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)] transition hover:brightness-95 px-12 py-5 text-xl sm:px-8 sm:py-3 sm:text-base md:px-9 md:py-4 md:text-base xl:px-12 xl:py-5 xl:text-xl">
             Adopt Now
           </button>
         </div>
       </div>
-
+      
       <img
         src="/home/HOME-PICTURE-1.png"
         alt="Happy pet"
-        className="absolute right-56 -top-24 w-full max-w-[620px] object-contain sm:right-2 sm:top-4 sm:max-w-[180px] md:right-4 md:top-8 md:max-w-[240px] lg:right-56 lg:-top-24 lg:max-w-[620px]"
+        className="absolute w-full object-contain right-56 -top-24 max-w-[620px] sm:right-2 sm:top-4 sm:max-w-[180px] md:right-2 md:top-8 md:max-w-[420px] xl:right-56 xl:-top-24 xl:max-w-[620px]"
       />
 
       <div className="relative mx-auto mt-56 w-[700px] max-w-full px-8 text-center">

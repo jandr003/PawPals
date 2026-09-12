@@ -34,16 +34,16 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative w-full pb-16 pt-24 pl-48 sm:pl-10 md:pl-24 xl:pl-64">
-        <div className="max-w-[720px] sm:max-w-[320px] md:max-w-[420px] xl:max-w-[720px]">
-          <h1 className="font-fredoka font-semibold leading-[1.1] text-text text-[56px] sm:text-[36px] md:text-[44px] xl:text-[72px]">
+      <div className="relative w-full pb-16 pt-24 pl-48 sm:pl-10 md:pl-24 lg:pl-24 xl:pl-64">
+        <div className="max-w-[720px] sm:max-w-[320px] md:max-w-[420px] lg:max-w-[460px] xl:max-w-[720px]">
+          <h1 className="font-fredoka font-semibold leading-[1.1] text-text text-[56px] sm:text-[36px] md:text-[44px] lg:text-[48px] xl:text-[72px]">
             Every Paw Deserves Love and Care
           </h1>
-          <p className="mt-6 font-fredoka font-light leading-relaxed text-text/80 max-w-[560px] sm:max-w-[300px] md:max-w-[380px] text-2xl sm:text-base md:text-lg xl:text-2xl xl:max-w-[560px]">
+          <p className="mt-6 font-fredoka font-light leading-relaxed text-text/80 max-w-[560px] sm:max-w-[300px] md:max-w-[380px] lg:max-w-[420px] text-2xl sm:text-base md:text-lg xl:text-2xl xl:max-w-[560px]">
             Adopt pets, book vet appointments, and give your companions the
             love and care they deserve.
           </p>
-          <button className="mt-8 rounded-full bg-button font-fredoka font-medium text-white shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)] transition hover:brightness-95 px-12 py-5 text-xl sm:px-8 sm:py-3 sm:text-base md:px-9 md:py-4 md:text-base xl:px-12 xl:py-5 xl:text-xl">
+          <button className="mt-8 rounded-full bg-button font-fredoka font-medium text-white shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)] transition hover:brightness-95 px-12 py-5 text-xl sm:px-8 sm:py-3 sm:text-base md:px-9 md:py-4 md:text-base lg:px-9 lg:py-4 xl:px-12 xl:py-5 xl:text-xl">
             Adopt Now
           </button>
         </div>
@@ -52,7 +52,7 @@ export default function Hero() {
       <img
         src="/home/HOME-PICTURE-1.png"
         alt="Happy pet"
-        className="absolute w-full object-contain right-56 -top-24 max-w-[620px] sm:right-2 sm:top-4 sm:max-w-[180px] md:right-2 md:top-8 md:max-w-[420px] xl:right-56 xl:-top-24 xl:max-w-[620px]"
+        className="absolute w-full object-contain right-56 -top-24 max-w-[620px] sm:right-2 sm:top-4 sm:max-w-[180px] md:right-2 md:top-8 md:max-w-[420px] lg:right-16 lg:top-8 lg:max-w-[460px] xl:right-56 xl:-top-24 xl:max-w-[620px]"
       />
 
       <div className="relative mx-auto mt-56 w-[700px] max-w-full px-8 text-center">
@@ -74,91 +74,100 @@ export default function Hero() {
           </h2>
         </div>
 
-        <div className="relative mx-auto mt-8 flex max-w-6xl flex-nowrap items-center gap-28 px-8">
-          <img
-            src="/home/HOME-PICTURE-2.png"
-            alt="Our Services"
-            className="w-full max-w-[450px] shrink-0 object-contain"
-          />
+          <div className="relative mx-auto mt-8 flex max-w-6xl flex-nowrap items-center gap-4 px-6 md:gap-6 lg:gap-20 xl:gap-28 xl:px-8">
+            <img
+              src="/home/HOME-PICTURE-2.png"
+              alt="Our Services"
+              className="w-full max-w-[260px] shrink-0 object-contain sm:max-w-[300px] md:max-w-[220px] lg:max-w-[420px] xl:max-w-[450px]"
+            />
 
-          <div className="-ml-6 mt-8 flex shrink-0 flex-col gap-12">
-            <div className="flex items-center gap-4">
-              <img
-                src="/home/OUR-SERVICES1.png"
-                alt="Service 1"
-                className="-ml-4 h-16 w-16 object-contain"
-              />
-              <div className="-ml-1 -mt-6">
-                <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
-                  Pet Grooming
-                </h3>
-                <p className="mt-1 font-fredoka text-sm text-[#4A4A4A]">
-                  Professional grooming services including bathing, nail
-                  trimming, and fur care.
-                </p>
+            <div className="-ml-6 mt-8 flex flex-col gap-6 max-w-[260px] md:gap-8 md:max-w-[340px] lg:ml-0 lg:gap-10 lg:max-w-[420px] xl:-ml-6 xl:max-w-none xl:gap-12">
+              <div className="flex items-center gap-4">
+                <img
+                  src="/home/OUR-SERVICES1.png"
+                  alt="Service 1"
+                  className="-ml-4 h-16 w-16 shrink-0 object-contain"
+                />
+                <div className="-ml-1 -mt-6 min-w-0 flex-1">
+                  <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
+                    Pet Grooming
+                  </h3>
+                  <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] sm:text-base md:text-lg lg:text-xl">
+                    Professional grooming services including bathing, nail
+                    trimming, and fur care.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="flex items-center gap-4">
-              <img
-                src="/home/OUR-SERVICES2.png"
-                alt="Service 2"
-                className="ml-12 h-16 w-16 object-contain"
-              />
-              <div className="-ml-1 -mt-6">
-                <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
-                  Pet Boarding &amp; Daycare
-                </h3>
-                <p className="mt-1 font-fredoka text-sm text-[#4A4A4A]">
-                  Safe and comfortable care for pets during the day or
-                  overnight.
-                </p>
+              <div className="flex items-center gap-4">
+                <img
+                  src="/home/OUR-SERVICES2.png"
+                  alt="Service 2"
+                  className="ml-12 h-16 w-16 shrink-0 object-contain"
+                />
+                <div className="-ml-1 -mt-6 min-w-0 flex-1">
+                  <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
+                    Pet Boarding &amp; Daycare
+                  </h3>
+                  <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] sm:text-base md:text-lg lg:text-xl">
+                    Safe and comfortable care for pets during the day or
+                    overnight.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="flex items-center gap-4">
-              <img
-                src="/home/OUR-SERVICES3.png"
-                alt="Service 3"
-                className="ml-12 mt-4 h-16 w-16 object-contain"
-              />
-              <div className="-ml-1 -mt-0">
-                <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
-                  Veterinary Care
-                </h3>
-                <p className="mt-1 font-fredoka text-sm text-[#4A4A4A]">
-                  Veterinary care for checkups, vaccinations, and treatment.
-                </p>
+              <div className="flex items-center gap-4">
+                <img
+                  src="/home/OUR-SERVICES3.png"
+                  alt="Service 3"
+                  className="ml-12 mt-4 h-16 w-16 shrink-0 object-contain"
+                />
+                <div className="-ml-1 -mt-0 min-w-0 flex-1">
+                  <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
+                    Veterinary Care
+                  </h3>
+                  <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] sm:text-base md:text-lg lg:text-xl">
+                    Veterinary care for checkups, vaccinations, and treatment.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="flex items-center gap-4">
-              <img
-                src="/home/OUR-SERVICES4.png"
-                alt="Service 4"
-                className="-ml-4 h-16 w-16 object-contain"
-              />
-              <div className="-ml-1 mt-0">
-                <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
-                  Pet Sitting
-                </h3>
-                <p className="mt-1 font-fredoka text-sm text-[#4A4A4A]">
-                  Reliable care for your pets while you're away, including
-                  feeding, playtime, and companionship.
-                </p>
+              <div className="flex items-center gap-4">
+                <img
+                  src="/home/OUR-SERVICES4.png"
+                  alt="Service 4"
+                  className="-ml-4 h-16 w-16 shrink-0 object-contain"
+                />
+                <div className="-ml-1 mt-0 min-w-0 flex-1">
+                  <h3 className="font-fredoka text-lg font-bold text-[#2B2118]">
+                    Pet Sitting
+                  </h3>
+                  <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] sm:text-base md:text-lg lg:text-xl">
+                    Reliable care for your pets while you're away, including
+                    feeding, playtime, and companionship.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="mt-2 flex gap-4">
-              <button className="rounded-full border border-[#C77D4A] px-6 py-3 font-fredoka text-sm font-medium text-[#2B2118] transition hover:bg-[#C77D4A]/10">
-                Book Vet Appointment
-              </button>
-              <button className="rounded-full bg-[#C77D4A] px-6 py-3 font-fredoka text-sm font-medium text-white transition hover:brightness-95">
-                Schedule Visit
-              </button>
+              <div 
+                className="mt-3 !flex !flex-row !flex-nowrap items-center justify-center w-full max-w-full mx-auto overflow-hidden md:mt-6"
+                style={{ gap: 'clamp(10px, 3.5vw, 32px)' }}
+              >
+                <button 
+                  className="!inline-flex items-center justify-center shrink min-w-0 rounded-2xl border border-[#C77D4A] font-fredoka font-medium text-[#2B2118] transition hover:bg-[#C77D4A]/10 whitespace-nowrap leading-none text-center"
+                  style={{ padding: 'clamp(12px, 2.8vw, 24px) clamp(28px, 5.5vw, 56px)', fontSize: 'clamp(10px, 2.2vw, 18px)' }}
+                >
+                  Book Vet Appointment
+                </button>
+                <button 
+                  className="!inline-flex items-center justify-center shrink min-w-0 rounded-2xl bg-[#C77D4A] font-fredoka font-medium text-white transition hover:brightness-95 whitespace-nowrap leading-none text-center"
+                  style={{ padding: 'clamp(12px, 2.8vw, 24px) clamp(28px, 5.5vw, 56px)', fontSize: 'clamp(10px, 2.2vw, 18px)' }}
+                >
+                  Schedule Visit
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
         <div className="relative mx-auto mt-56 max-w-6xl px-8 text-left">
           <h2 className="font-fredoka text-[32px] font-bold text-[#2B2118] sm:text-[40px]">
@@ -166,100 +175,97 @@ export default function Hero() {
           </h2>
         </div>
 
-        <div className="relative mx-auto mt-32 max-w-6xl px-8 min-h-[320px] flex items-center">
-            <div className="absolute left-1/2 top-1/2 z-0 h-[280px] w-full max-w-[1050px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-10 shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)]">
-                <div className="ml-auto max-w-[600px]">
+          <div className="relative mx-auto mt-32 max-w-6xl px-6 md:px-10">
+              <div className="relative w-full rounded-3xl bg-white p-6 pl-[160px] shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)] sm:pl-[190px] md:p-8 md:pl-[240px] lg:p-10 lg:pl-[440px]">
+                  <div className="mb-4 flex gap-1">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                          <svg
+                              key={i}
+                              viewBox="0 0 20 20"
+                              fill="#FACC15"
+                              className="h-5 w-5 md:h-6 md:w-6"
+                          >
+                              <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6L1.3 7.7l6.1-.6z" />
+                          </svg>
+                      ))}
+                  </div>
+
+                  <p className="font-fredoka text-base leading-relaxed text-[#2B2118] sm:text-lg md:text-xl lg:text-2xl lg:max-w-[600px]">
+                      "I was a little nervous leaving my dog since he doesn't usually do well during grooming sessions, but the team at PawPals made the experience really comfortable for him. He looked adorable after, and even smelled amazing for days. Definitely coming back."
+                  </p>
+
+                  <p className="mt-4 font-fredoka text-xl font-semibold text-[#2B2118] sm:text-2xl md:mt-6 md:text-2xl lg:text-3xl">
+                      Jasmine Lee
+                  </p>
+              </div>
+
+              <img
+                  src="/home/HOME-OWNER-1.png"
+                  alt="Happy pet parent"
+                  className="absolute left-10 top-1/2 z-10 w-[180px] -translate-y-1/2 object-contain sm:left-12 sm:w-[220px] md:left-16 md:w-[280px] lg:left-12 lg:w-[420px] xl:w-[400px]"
+              />
+          </div>
+
+            <div className="relative mx-auto mt-16 max-w-6xl px-6 md:px-10 lg:mt-24 xl:mt-28">
+                <div className="relative w-full rounded-3xl bg-white p-6 pl-[160px] shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)] sm:pl-[190px] md:p-8 md:pl-[240px] lg:p-10 lg:pl-[440px]">
                     <div className="mb-4 flex gap-1">
                         {Array.from({ length: 5 }).map((_, i) => (
                             <svg
                                 key={i}
                                 viewBox="0 0 20 20"
                                 fill="#FACC15"
-                                className="h-6 w-6"
+                                className="h-5 w-5 md:h-6 md:w-6"
                             >
                                 <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6L1.3 7.7l6.1-.6z" />
                             </svg>
                         ))}
                     </div>
 
-                    <p className="font-fredoka text-lg leading-relaxed text-[#2B2118]">
-                        "I was a little nervous leaving my dog since he doesn't usually do well during grooming sessions, but the team at PawPals made the experience really comfortable for him. He looked adorable after, and even smelled amazing for days. Definitely coming back."
-                    </p>
-
-                    <p className="mt-6 font-fredoka text-xl font-semibold text-[#2B2118]">
-                        Jasmine Lee
-                    </p>
-                </div>
-            </div>
-                <img
-                    src="/home/HOME-OWNER-1.png"
-                    alt="Happy pet parent"
-                    className="relative z-10 w-full max-w-[400px] object-contain"
-                />
-        </div>  
-
-        <div className="relative mx-auto mt-16 max-w-6xl px-8">
-            <div className="absolute left-1/2 top-1/2 z-0 h-[280px] w-full max-w-[1050px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-10 shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)]">
-                <div className="ml-auto max-w-[600px]">
-                    <div className="mb-4 flex gap-1">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                            <svg
-                                key={i}
-                                viewBox="0 0 20 20"
-                                fill="#FACC15"
-                                className="h-6 w-6"
-                            >
-                                <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6L1.3 7.7l6.1-.6z" />
-                            </svg>
-                        ))}
-                    </div>
-
-                    <p className="font-fredoka text-lg leading-relaxed text-[#2B2118]">
+                    <p className="font-fredoka text-base leading-relaxed text-[#2B2118] sm:text-lg md:text-xl lg:text-2xl lg:max-w-[600px]">
                         "My cat usually gets nervous during grooming, but the staff at PawPals handled him really well. They were very patient and careful with him, and the grooming turned out great. He came home looking clean, fluffy, and relaxed after the session."
                     </p>
 
-                    <p className="mt-6 font-fredoka text-xl font-semibold text-[#2B2118]">
+                    <p className="mt-4 font-fredoka text-xl font-semibold text-[#2B2118] sm:text-2xl md:mt-6 md:text-2xl lg:text-3xl">
                         Daniel Cruz
                     </p>
                 </div>
-            </div>
+
                 <img
                     src="/home/HOME-OWNER-2.png"
                     alt="Happy pet parent"
-                    className="relative z-10 w-full max-w-[400px] object-contain"
+                    className="absolute left-10 top-1/2 z-10 w-[180px] -translate-y-1/2 object-contain sm:left-12 sm:w-[220px] md:left-16 md:w-[280px] lg:left-12 lg:w-[420px] xl:w-[400px]"
                 />
-        </div>
-
-        <div className="relative mx-auto mt-16 max-w-6xl px-8">
-            <div className="absolute left-1/2 top-1/2 z-0 h-[280px] w-full max-w-[1050px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-10 shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)]">
-                <div className="ml-auto max-w-[600px]">
-                    <div className="mb-4 flex gap-1">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                            <svg
-                                key={i}
-                                viewBox="0 0 20 20"
-                                fill="#FACC15"
-                                className="h-6 w-6"
-                            >
-                                <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6L1.3 7.7l6.1-.6z" />
-                            </svg>
-                        ))}
-                    </div>
-
-                    <p className="font-fredoka text-lg leading-relaxed text-[#2B2118]">
-                        "I was honestly so happy with how my cat looked after her grooming session at PawPals. The staff were really gentle with her, and you could tell they genuinely care about the pets they handle. She came home looking clean, fluffy, and even more adorable than usual."
-                    </p>
-
-                    <p className="mt-6 font-fredoka text-xl font-semibold text-[#2B2118]">
-                        Sophia Martinez
-                    </p>
-                </div>
             </div>
-                <img
-                    src="/home/HOME-OWNER-3.png"
-                    alt="Happy pet parent"
-                    className="relative z-10 w-full max-w-[400px] object-contain"
-                />
+
+        <div className="relative mx-auto mt-16 max-w-6xl px-6 md:px-10 lg:mt-24 xl:mt-28">
+            <div className="relative w-full rounded-3xl bg-white p-6 pl-[160px] shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)] sm:pl-[190px] md:p-8 md:pl-[240px] lg:p-10 lg:pl-[440px]">
+                <div className="mb-4 flex gap-1">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                        <svg
+                            key={i}
+                            viewBox="0 0 20 20"
+                            fill="#FACC15"
+                            className="h-5 w-5 md:h-6 md:w-6"
+                        >
+                            <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6L1.3 7.7l6.1-.6z" />
+                        </svg>
+                    ))}
+                </div>
+
+                <p className="font-fredoka text-base leading-relaxed text-[#2B2118] sm:text-lg md:text-xl lg:text-2xl lg:max-w-[600px]">
+                    "I was honestly so happy with how my cat looked after her grooming session at PawPals. The staff were really gentle with her, and you could tell they genuinely care about the pets they handle. She came home looking clean, fluffy, and even more adorable than usual."
+                </p>
+
+                <p className="mt-4 font-fredoka text-xl font-semibold text-[#2B2118] sm:text-2xl md:mt-6 md:text-2xl lg:text-3xl">
+                    Sophia Martinez
+                </p>
+            </div>
+
+            <img
+                src="/home/HOME-OWNER-3.png"
+                alt="Happy pet parent"
+                className="absolute left-10 top-1/2 z-10 w-[180px] -translate-y-1/2 object-contain sm:left-12 sm:w-[220px] md:left-16 md:w-[280px] lg:left-12 lg:w-[420px] xl:w-[400px]"
+            />
         </div>
     </section>
   );

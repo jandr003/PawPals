@@ -30,7 +30,7 @@ export default function Navbar() {
                 />
               </Link>
 
-        <ul className="hidden items-center gap-10 text-lg font-medium text-text lg:flex lg:translate-y-6 lg:translate-x-6">
+        <ul className="hidden items-center gap-10 text-lg font-medium text-text lg:flex lg:translate-y-6 lg:-translate-x-6 xl:translate-x-6">
           {NAV_LINKS.map(({ href, label }) => (
             <li key={href}>
               <Link href={href} className="hover:text-button transition-colors">

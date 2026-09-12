@@ -267,6 +267,37 @@ export default function Hero() {
                 className="absolute left-10 top-1/2 z-10 w-[180px] -translate-y-1/2 object-contain sm:left-12 sm:w-[220px] md:left-16 md:w-[280px] lg:left-12 lg:w-[420px] xl:w-[400px]"
             />
         </div>
+
+          <div className="relative mx-auto mt-80 max-w-6xl px-8 text-left">
+            <h2 className="font-fredoka text-[32px] font-bold text-[#2B2118] sm:text-[40px]">
+              Our Pet Care Gallery
+            </h2>
+
+            <div className="mt-8 grid grid-cols-2 gap-4 overflow-hidden sm:grid-cols-4">
+              <div className="flex flex-col gap-4">
+                <img src="https://images.unsplash.com/photo-1516310789627-2ff305829fbb?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Cat portrait" className="block h-[420px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                <img src="https://images.unsplash.com/photo-1636105146585-65a51b472c7e?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Gray cat sleeping" className="block h-[316px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+              </div>
+
+              <div className="flex flex-col gap-4">
+                <img src="https://images.unsplash.com/photo-1728230293543-3d6097917f75?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Two cats playing in grass" className="block h-[230px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                <img src="https://images.unsplash.com/photo-1683051149142-9ca23718cb6c?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Dog with ball on grass" className="block h-[230px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                <img src="https://images.unsplash.com/photo-1711127169047-12f68297c88e?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Black cat" className="block h-[260px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+              </div>
+
+              <div className="flex flex-col gap-4">
+                <img src="https://images.unsplash.com/photo-1725409796872-8b41e8eca929?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Kitten vet checkup" className="block h-[420px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                <img src="https://images.unsplash.com/photo-1648854947054-432af7faca56?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Dog bath time" className="block h-[316px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+              </div>
+
+
+              <div className="flex flex-col gap-4">
+                <img src="https://images.unsplash.com/photo-1570402383251-9f8a173630da?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Puppy beside pet bowl" className="block h-[220px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                <img src="https://images.unsplash.com/photo-1625794084867-8ddd239946b1?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Golden retriever puppy" className="block h-[240px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Tabby cat closeup" className="block h-[260px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+              </div>
+            </div>
+          </div>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function BlogPage() {
   return (
@@ -11,6 +12,7 @@ export default function BlogPage() {
           className="block w-full object-cover"
         />
       </section>
+      <Footer />
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const SERVICES = [
   {
@@ -90,6 +91,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

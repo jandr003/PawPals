@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 const PAW_POSITIONS = [
   { top: "10%", left: "60%", size: 30, rotate: -18, opacity: 0.45 },
@@ -268,36 +269,120 @@ export default function Hero() {
             />
         </div>
 
-          <div className="relative mx-auto mt-80 max-w-6xl px-8 text-left">
-            <h2 className="font-fredoka text-[32px] font-bold text-[#2B2118] sm:text-[40px]">
-              Our Pet Care Gallery
-            </h2>
+            <div className="relative mx-auto mt-80 max-w-6xl px-8 text-left">
+              <h2 className="font-fredoka text-[32px] font-bold text-[#2B2118] sm:text-[40px]">
+                Our Pet Care Gallery
+              </h2>
 
-            <div className="mt-8 grid grid-cols-2 gap-4 overflow-hidden sm:grid-cols-4">
-              <div className="flex flex-col gap-4">
-                <img src="https://images.unsplash.com/photo-1516310789627-2ff305829fbb?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Cat portrait" className="block h-[420px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
-                <img src="https://images.unsplash.com/photo-1636105146585-65a51b472c7e?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Gray cat sleeping" className="block h-[316px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+              <div className="mt-8 grid grid-cols-2 gap-4 overflow-hidden sm:grid-cols-4">
+                <div className="flex flex-col gap-4">
+                  <img src="https://images.unsplash.com/photo-1516310789627-2ff305829fbb?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Cat portrait" className="block h-[420px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                  <img src="https://images.unsplash.com/photo-1636105146585-65a51b472c7e?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Gray cat sleeping" className="block h-[316px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                </div>
+
+                <div className="flex flex-col gap-4">
+                  <img src="https://images.unsplash.com/photo-1728230293543-3d6097917f75?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Two cats playing in grass" className="block h-[230px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                  <img src="https://images.unsplash.com/photo-1683051149142-9ca23718cb6c?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Dog with ball on grass" className="block h-[230px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                  <img src="https://images.unsplash.com/photo-1711127169047-12f68297c88e?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Black cat" className="block h-[260px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                </div>
+
+                <div className="flex flex-col gap-4">
+                  <img src="https://images.unsplash.com/photo-1725409796872-8b41e8eca929?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Kitten vet checkup" className="block h-[420px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                  <img src="https://images.unsplash.com/photo-1648854947054-432af7faca56?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Dog bath time" className="block h-[316px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                </div>
+
+                <div className="flex flex-col gap-4">
+                  <img src="https://images.unsplash.com/photo-1570402383251-9f8a173630da?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Puppy beside pet bowl" className="block h-[220px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                  <img src="https://images.unsplash.com/photo-1625794084867-8ddd239946b1?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Golden retriever puppy" className="block h-[240px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                  <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Tabby cat closeup" className="block h-[260px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                </div>
               </div>
 
-              <div className="flex flex-col gap-4">
-                <img src="https://images.unsplash.com/photo-1728230293543-3d6097917f75?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Two cats playing in grass" className="block h-[230px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
-                <img src="https://images.unsplash.com/photo-1683051149142-9ca23718cb6c?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Dog with ball on grass" className="block h-[230px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
-                <img src="https://images.unsplash.com/photo-1711127169047-12f68297c88e?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Black cat" className="block h-[260px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+              <div className="mt-10 flex justify-start">
+                <button className="rounded-2xl bg-[#C77D4A] px-10 py-4 font-fredoka font-medium text-white transition hover:brightness-95">
+                  View Gallery
+                </button>
               </div>
 
-              <div className="flex flex-col gap-4">
-                <img src="https://images.unsplash.com/photo-1725409796872-8b41e8eca929?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Kitten vet checkup" className="block h-[420px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
-                <img src="https://images.unsplash.com/photo-1648854947054-432af7faca56?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Dog bath time" className="block h-[316px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
-              </div>
+              <div className="relative mx-auto mt-56 max-w-6xl px-8 text-left">
+                <h2 className="font-fredoka text-[40px] font-bold text-[#2B2118] sm:text-[44px]">
+                  Pet Care Stories
+                </h2>
 
+                <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+                  <div className="w-full min-w-[280px] overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <img
+                      src="https://images.unsplash.com/photo-1741230713152-244939ffbd75?fm=jpg&q=80&w=800&auto=format&fit=crop"
+                      alt="The Secret to a Healthy Pet Smile"
+                      width={800}
+                      height={533}
+                      className="block h-64 w-full object-cover"
+                    />
+                    <div className="p-5">
+                      <h3 className="font-fredoka text-xl font-bold text-[#2B2118]">
+                        The Secret to a Healthy Pet Smile
+                      </h3>
+                      <p className="mt-2 text-sm text-[#4A4A4A]">
+                        Keep your pet's teeth clean and healthy with simple dental care tips for a brighter smile.
+                      </p>
+                      <p className="mt-3 text-xs text-[#8A8A8A]">24 May 2026</p>
+                      <Link href="/blog" className="mt-2 inline-block font-fredoka font-semibold text-[#2B2118] hover:text-button transition-colors">
+                        Read more
+                      </Link>
+                    </div>
+                  </div>
 
-              <div className="flex flex-col gap-4">
-                <img src="https://images.unsplash.com/photo-1570402383251-9f8a173630da?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Puppy beside pet bowl" className="block h-[220px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
-                <img src="https://images.unsplash.com/photo-1625794084867-8ddd239946b1?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Golden retriever puppy" className="block h-[240px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
-                <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="Tabby cat closeup" className="block h-[260px] w-full rounded-2xl object-cover shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl" />
+                  <div className="w-full min-w-[280px] overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <img
+                      src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?fm=jpg&q=80&w=800&auto=format&fit=crop"
+                      alt="Is Your Pet Trying to Tell You Something?"
+                      width={800}
+                      height={533}
+                      className="block h-64 w-full object-cover"
+                    />
+                    <div className="p-5">
+                      <h3 className="font-fredoka text-xl font-bold text-[#2B2118]">
+                        Is Your Pet Trying to Tell You Something?
+                      </h3>
+                      <p className="mt-2 text-sm text-[#4A4A4A]">
+                        Spot early signs of illness before it turns into a serious problem.
+                      </p>
+                      <p className="mt-3 text-xs text-[#8A8A8A]">24 May 2026</p>
+                      <Link href="/blog" className="mt-2 inline-block font-fredoka font-semibold text-[#2B2118] hover:text-button transition-colors">
+                        Read more
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="w-full min-w-[280px] overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <img
+                      src="https://images.unsplash.com/photo-1745252752503-2c5eb22167b6?fm=jpg&q=80&w=800&auto=format&fit=crop"
+                      alt="Common Household Items That Can Be Toxic to Pets"
+                      width={800}
+                      height={533}
+                      className="block h-64 w-full object-cover"
+                    />
+                    <div className="p-5">
+                      <h3 className="font-fredoka text-xl font-bold text-[#2B2118]">
+                        Common Household Items That Can Be Toxic to Pets
+                      </h3>
+                      <p className="mt-2 text-sm text-[#4A4A4A]">
+                        Some foods and plants at home can harm pets. Learn what to avoid and what to do.
+                      </p>
+                      <p className="mt-3 text-xs text-[#8A8A8A]">24 May 2026</p>
+                      <Link href="/blog" className="mt-2 inline-block font-fredoka font-semibold text-[#2B2118] hover:text-button transition-colors">
+                        Read more
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex justify-start">
+                    <Link href="/blog" className="inline-block rounded-2xl bg-[#C77D4A] px-10 py-4 font-fredoka font-medium text-white transition hover:brightness-95">
+                      Explore Blogs
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
     </section>
   );
 }

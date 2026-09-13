@@ -126,4 +126,9 @@ body {
 	main > nav + section > div:nth-child(6) button {
 		width: 100%;
 	}
+
+	.contact-banner {
+  		image-rendering: -webkit-optimize-contrast;
+  		image-rendering: crisp-edges;
+	}
 }

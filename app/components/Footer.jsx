@@ -1,4 +1,3 @@
-// components/Footer.jsx
 import Link from "next/link";
 import Image from "next/image";
 
@@ -66,35 +65,10 @@ const QUICK_LINKS = [
 export default function Footer() {
   return (
     <footer className="relative mt-60">
-      <div className="relative bg-[#EFA85B] pb-20 pt-20">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-8 sm:flex-row sm:items-center">
-          <div>
-            <h3 className="font-fredoka text-2xl font-bold text-[#2B2118]">
-              Stay in the Loop
-            </h3>
-            <p className="mt-2 max-w-md font-fredoka text-[#2B2118]/80">
-              Get the latest pet care tips, treats, and PawPals updates in your inbox.
-            </p>
-          </div>
-          <button className="shrink-0 rounded-xl bg-[#C77D4A] px-6 py-3 font-fredoka font-medium text-white transition hover:brightness-95">
-            Subscribe Now
-          </button>
-        </div>
-
-        <svg
-          className="absolute -bottom-1 left-0 w-full text-[#3A1F0C]"
-          viewBox="0 0 1440 80"
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="currentColor"
-            d="M0,40 C240,90 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"
-          />
-        </svg>
-      </div>
-
-
-      <div className="bg-[#3A1F0C] px-8 pb-10 pt-16 text-white">
+      <div
+        className="bg-cover bg-top bg-no-repeat px-8 pb-10 pt-16 text-white"
+        style={{ backgroundImage: "url('/home/FOOTER-BG-1.png')" }}
+      >
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
@@ -111,7 +85,6 @@ export default function Footer() {
             </p>
           </div>
 
-    
           <div>
             <h4 className="font-fredoka text-lg font-bold">Quick links</h4>
             <ul className="mt-4 space-y-2 font-fredoka text-sm text-white/70">
@@ -125,7 +98,6 @@ export default function Footer() {
             </ul>
           </div>
 
-   
           <div>
             <h4 className="font-fredoka text-lg font-bold">Get in touch</h4>
             <ul className="mt-4 space-y-2 font-fredoka text-sm text-white/70">
@@ -135,7 +107,6 @@ export default function Footer() {
             </ul>
           </div>
 
-    
           <div>
             <h4 className="font-fredoka text-lg font-bold">Opening Hours</h4>
             <ul className="mt-4 space-y-2 font-fredoka text-sm text-white/70">
@@ -144,7 +115,6 @@ export default function Footer() {
             </ul>
           </div>
 
-       
           <div>
             <h4 className="font-fredoka text-lg font-bold">Follow us</h4>
             <ul className="mt-4 space-y-3 font-fredoka text-sm text-white/70">
@@ -160,7 +130,6 @@ export default function Footer() {
           </div>
         </div>
 
-     
         <div className="mx-auto mt-12 flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 font-fredoka text-sm text-white/60 sm:flex-row">
           <p>© 2026 PawPals. All Rights Reserved.</p>
           <div className="flex gap-6">

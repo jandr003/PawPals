@@ -14,6 +14,7 @@ module.exports = {
         footerBottom: '#411A00',
       },
       fontFamily: {
+        sans: ['var(--font-fredoka)'],
         fredoka: ['var(--font-fredoka)'],
       },
     },

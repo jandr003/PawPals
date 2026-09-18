@@ -131,4 +131,13 @@ body {
   		image-rendering: -webkit-optimize-contrast;
   		image-rendering: crisp-edges;
 	}
+	
+	html,
+		body,
+		button,
+		input,
+		textarea,
+		select {
+		font-family: var(--font-fredoka);
+	}
 }

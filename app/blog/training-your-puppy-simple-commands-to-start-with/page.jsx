@@ -6,7 +6,7 @@ export default function BlogPage() {
   return (
     <main>
       <Navbar />
-      <Blog />
+      <BlogPage />
       <Footer />
     </main>
   );

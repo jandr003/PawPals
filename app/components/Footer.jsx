@@ -88,7 +88,7 @@ export default function Footer() {
           style={{ top: "calc(10rem - var(--raise))" }}
         >
           <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
-            <div className="relative -top-4 -left-2 sm:-top-6 sm:-left-8">
+            <div className="relative -left-2 sm:-left-8">
               <h3 className="font-fredoka text-3xl font-bold text-[#3B2414] sm:text-4xl">
                 Stay in the Loop
               </h3>

@@ -1,5 +1,15 @@
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ContactForm from "../components/ContactForm";
+
+const SOCIALS = [
+  { name: "Facebook", href: "#" },
+  { name: "Instagram", href: "#" },
+  { name: "X", href: "#" },
+  { name: "TikTok", href: "#" },
+  { name: "YouTube", href: "#" },
+];
 
 export default function ContactPage() {
   return (
@@ -39,6 +49,39 @@ export default function ContactPage() {
           <p>Monday &ndash; Friday: 8:00 AM &ndash; 7:30 PM</p>
           <p>Saturday &ndash; Sunday: 7:00 AM &ndash; 12:00 NN</p>
         </address>
+
+        <h2 className="mt-16 text-4xl font-bold md:text-5xl">Send Us a Message</h2>
+        <p className="mt-4 max-w-3xl text-lg leading-snug">
+          Have a question about our services or need assistance? Send us a
+          message, and our team will get back to you as soon as possible.
+        </p>
+        <ContactForm />
+
+        <h2 className="mt-16 text-4xl font-bold md:text-5xl">Connect With Us</h2>
+        <p className="mt-4 max-w-3xl text-lg leading-snug">
+          Follow PawPals on social media for updates, pet care tips, and
+          community stories.
+        </p>
+
+        <p className="mt-6 text-lg leading-snug">Follow Us On:</p>
+        <p className="mt-1 text-lg leading-snug">
+          {SOCIALS.map((s, i) => (
+            <span key={s.name}>{i > 0 && " | "}<a href={s.href} target="_blank" rel="noopener noreferrer" className="hover:underline">{s.name}</a></span>
+          ))}
+        </p>
+
+        <p className="mt-6 text-lg leading-snug">
+          Ready to book a service for your pet?
+          <br />
+          Schedule your appointment with PawPals today.
+        </p>
+
+        <Link
+          href="/service/book-appointment"
+          className="mt-6 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+        >
+          Book Now
+        </Link>
       </section>
 
       <Footer />

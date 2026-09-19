@@ -12,7 +12,7 @@ const SERVICES = [
     icon: "/home/OUR-SERVICES2.png",
     title: "Pet Boarding & Daycare",
     description:
-      "Safe and comfortable care for pets during the day or overnight, with a cozy space to play, rest, and feel at home while you're a`way.",
+      "Safe and comfortable care for pets during the day or overnight, with a cozy space to play, rest, and feel at home while you're away.",
   },
   {
     icon: "/home/OUR-SERVICES3.png",
@@ -40,12 +40,11 @@ export default function ServicesPage() {
       />
 
       <section className="mx-auto max-w-4xl px-6 pb-4 pt-16 text-center sm:px-8 sm:pt-24">
-        <h1 className="font-fredoka text-[32px] font-bold text-[#2B2118] sm:text-[40px] lg:text-[48px]">
-          Our Services
-        </h1>
-        <p className="mx-auto mt-4 max-w-[560px] font-fredoka text-base leading-relaxed text-[#4A4A4A] sm:text-lg">
-          Care and support for every stage of your pet's life — from grooming
-          and boarding to checkups and companionship.
+        <p className="font-fredoka text-lg font-medium leading-snug text-[#3B2414] md:text-2xl">
+          At PawPals, we believe every pet deserves personalized care in a safe,
+          welcoming, and loving environment. Our team is dedicated to providing
+          reliable services that support your pet&apos;s health, happiness, and
+          overall well-being.
         </p>
       </section>
 
@@ -69,26 +68,6 @@ export default function ServicesPage() {
               </p>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="mx-auto mb-16 max-w-4xl px-6 sm:px-8">
-        <div className="flex flex-col items-center gap-6 rounded-3xl bg-[#2B2118] px-8 py-12 text-center sm:py-16">
-          <h2 className="font-fredoka text-2xl font-bold text-white sm:text-3xl">
-            Ready to give your pet the care they deserve?
-          </h2>
-          <p className="max-w-[480px] font-fredoka text-base leading-relaxed text-white/80">
-            Book an appointment or reach out to our team to find the right
-            service for your companion.
-          </p>
-          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <button className="w-full rounded-full bg-[#C77D4A] px-8 py-3 text-center font-fredoka text-sm font-medium text-white transition hover:brightness-95 sm:w-auto">
-              Book Vet Appointment
-            </button>
-            <button className="w-full rounded-full border border-white/40 px-8 py-3 text-center font-fredoka text-sm font-medium text-white transition hover:bg-white/10 sm:w-auto">
-              Contact Us
-            </button>
-          </div>
         </div>
       </section>
 

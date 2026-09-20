@@ -45,7 +45,7 @@ export default function AboutUs() {
         aria-labelledby="our-mission-heading"
         className="relative px-6 pb-12 sm:px-8 md:pb-16"
       >
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-12">
           <div className="max-w-xl">
             <h2
               id="our-mission-heading"
@@ -59,6 +59,12 @@ export default function AboutUs() {
               caring environment.
             </p>
           </div>
+
+          <img
+            src="/home/ABOUTUS-DOG-2.png"
+            alt="Beagle resting"
+            className="mx-auto block h-auto w-full max-w-[380px] md:max-w-[560px]"
+          />
         </div>
       </section>
 
@@ -66,7 +72,13 @@ export default function AboutUs() {
         aria-labelledby="why-choose-heading"
         className="relative px-6 pb-12 sm:px-8 md:pb-16"
       >
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-12">
+          <img
+            src="/home/ABOUTUS-CAT-1.png"
+            alt="Orange kitten reaching up"
+            className="mx-auto block h-auto w-full max-w-[380px] md:max-w-[560px]"
+          />
+
           <div className="max-w-xl">
             <h2
               id="why-choose-heading"

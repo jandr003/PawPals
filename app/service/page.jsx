@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -28,6 +29,19 @@ const SERVICES = [
   },
 ];
 
+const WELLNESS_INCLUDES = [
+  "Basic Grooming (Bath, Nail Trim, Ear Cleaning)",
+  "General Health Checkup (Routine Vet Assessment & Weight Monitoring)",
+  "Flea & Tick Prevention Advice (Tips for Keeping Your Pet Pest-Free)",
+];
+
+const ADOPTION_INCLUDES = [
+  "Pet Adoption Assistance (Guidance throughout the adoption process)",
+  "Initial Health Assessment (Basic wellness check before adoption)",
+  "Pet Care Orientation (Tips on feeding, grooming, and daily care)",
+  "Adoption Consultation (Help in finding the right pet for your lifestyle)",
+];
+
 export default function ServicesPage() {
   return (
     <main>
@@ -46,6 +60,74 @@ export default function ServicesPage() {
           reliable services that support your pet&apos;s health, happiness, and
           overall well-being.
         </p>
+      </section>
+
+      <section
+        aria-labelledby="pricing-heading"
+        className="mx-auto max-w-6xl px-6 pt-12 font-fredoka text-[#3B2414] sm:px-8 sm:pt-16"
+      >
+        <h2
+          id="pricing-heading"
+          className="text-4xl font-bold md:text-5xl"
+        >
+          PawPals Services &amp; Pricing
+        </h2>
+
+        <h3 className="mt-8 text-2xl font-semibold md:text-3xl">
+          PawPals Wellness Package &ndash; &#8369;799
+        </h3>
+
+        <p className="mt-4 text-lg leading-snug">
+          Keep your pet happy, healthy, and well-groomed!
+        </p>
+
+        <p className="mt-4 max-w-4xl text-lg leading-snug">
+          Perfect for pet owners looking for a convenient and affordable way to
+          maintain their pet&apos;s overall well-being. The PawPals Wellness
+          Package combines essential grooming services with a routine health
+          check to help your furry companion stay clean, comfortable, and
+          healthy.
+        </p>
+
+        <ul className="mt-6 max-w-4xl list-disc space-y-2 pl-6 text-lg leading-snug">
+          {WELLNESS_INCLUDES.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+
+        <Link
+          href="/adopt"
+          className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+        >
+          Adopt Now
+        </Link>
+
+        <h3 className="mt-16 text-2xl font-semibold md:text-3xl">
+          PawPals Adoption Package &ndash; &#8369;999
+        </h3>
+
+        <p className="mt-4 text-lg leading-snug">
+          Ready to welcome a new furry friend into your home?
+        </p>
+
+        <p className="mt-4 max-w-4xl text-lg leading-snug">
+          Designed for future pet owners who want a smooth and responsible
+          adoption experience. This package helps ensure that both pets and
+          adopters are prepared for a happy and lifelong companionship.
+        </p>
+
+        <ul className="mt-6 max-w-4xl list-disc space-y-2 pl-6 text-lg leading-snug">
+          {ADOPTION_INCLUDES.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+
+        <Link
+          href="/adopt"
+          className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+        >
+          Start Adoption
+        </Link>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-12 sm:px-8 sm:py-16">

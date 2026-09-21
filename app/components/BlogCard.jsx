@@ -17,7 +17,7 @@ const posts = [
   { slug: "making-healthy-treats-for-your-pet", title: "Making Healthy Treats for Your Pet", excerpt: "Simple homemade treats your pet can enjoy as part of a balanced diet.", date: "24 May 2026", image: u("1640652663796-764e4eb5bc59") },
   { slug: "before-you-travel-with-your-pet", title: "Before You Travel With Your Pet", excerpt: "Things to keep in mind to help your pet stay comfortable while traveling.", date: "24 May 2026", image: u("1712681355846-f81302e7886f") },
   { slug: "is-your-pet-trying-to-tell-you-something", title: "Is Your Pet Trying to Tell You Something?", excerpt: "Spot early signs of illness before it turns into a serious problem.", date: "24 May 2026", image: u("1513360371669-4adf3dd7dff8") },
-  { slug: "common-household-items-that-can-be-toxic-to-pets", title: "Common Household Items That Can Be Toxic to Pets", excerpt: "Some foods and plants at home can harm pets. Learn what to avoid and what to do.", date: "24 May 2026", image: u("1605491639036-5d3ecd3df8cc") },
+  { slug: "common-household-items-that-can-be-toxic-to-pets", title: "Common Household Items That Can Be Toxic to Pets", excerpt: "Some foods and plants at home can harm pets. Learn what to avoid and what to do.", date: "24 May 2026", image: u("1631669969504-f35518bf96ba") },
 ];
 
 export default function BlogCard() {

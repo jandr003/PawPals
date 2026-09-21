@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const SOCIALS = [
   {
@@ -108,13 +107,11 @@ export default function Footer() {
 
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2" aria-label="PawPals home">
-              <Image
-                src="/PAWPALS-LOGO-WHITE.png"
+            <Link href="/" className="inline-block" aria-label="PawPals home">
+              <img
+                src="/PAWPALS-LOGO.png"
                 alt="PawPals Logo"
-                width={160}
-                height={48}
-                className="h-auto w-40"
+                className="h-auto w-44 brightness-0 invert"
               />
             </Link>
             <p className="mt-4 max-w-[240px] font-fredoka text-sm leading-relaxed text-white/70">
@@ -128,10 +125,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 font-fredoka text-sm text-white/70">
               {QUICK_LINKS.map(({ href, label }) => (
                 <li key={href}>
-                  <Link
-                    href={href}
-                    className="transition-colors hover:text-white focus:outline-none focus:text-white"
-                  >
+                  <Link href={href} className="transition-colors hover:text-white focus:outline-none focus:text-white">
                     {label}
                   </Link>
                 </li>
@@ -146,14 +140,10 @@ export default function Footer() {
                 <span className="text-white/50">Address:</span> San Miguel
               </li>
               <li>
-                <a href="tel:+639923421134" className="hover:text-white">
-                  (+63) 992 342 1134
-                </a>
+                <a href="tel:+639923421134" className="hover:text-white">(+63) 992 342 1134</a>
               </li>
               <li>
-                <a href="mailto:johnandrew@gmail.com" className="hover:text-white">
-                  johnandrew@gmail.com
-                </a>
+                <a href="mailto:johnandrew@gmail.com" className="hover:text-white">johnandrew@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -171,13 +161,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 font-fredoka text-sm text-white/70">
               {SOCIALS.map((s) => (
                 <li key={s.name}>
-                  <a
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit PawPals on ${s.name}`}
-                    className="flex items-center gap-2 transition-colors hover:text-white focus:outline-none focus:text-white"
-                  >
+                  <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={`Visit PawPals on ${s.name}`} className="flex items-center gap-2 transition-colors hover:text-white focus:outline-none focus:text-white">
                     {s.icon}
                     {s.handle}
                   </a>

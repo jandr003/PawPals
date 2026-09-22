@@ -2,6 +2,29 @@
 
 import Footer from "./Footer";
 
+const crew = [
+  {
+    name: "Mika Santos",
+    role: "Certified Dog Trainer",
+    img: "/about%20us/pawpals-team1.png",
+  },
+  {
+    name: "Kenji Cruz",
+    role: "Pet Activities Coordinator",
+    img: "/about%20us/pawpals-team2.png",
+  },
+  {
+    name: "Dr. Aiko Reyes",
+    role: "Caring for pets with over 10 years of experience",
+    img: "/about%20us/pawpals-team3.png",
+  },
+  {
+    name: "Daniel Tan",
+    role: "Pet Grooming Specialist & Animal Care Expert",
+    img: "/about%20us/pawpals-team4.png",
+  },
+];
+
 export default function AboutUs() {
   return (
     <>
@@ -107,6 +130,19 @@ export default function AboutUs() {
           >
             Meet the PawPals Crew
           </h2>
+
+          <div className="mt-10 grid grid-cols-2 gap-x-16 gap-y-12 md:grid-cols-4 md:gap-x-20">
+            {crew.map((member) => (
+              <div key={member.img}>
+                <img src={member.img} alt={member.name} />
+
+                <div className="mt-4 font-fredoka text-[#3B2414]">
+                  <p className="text-lg font-semibold">{member.name}</p>
+                  <p className="mt-1 text-sm leading-snug">{member.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

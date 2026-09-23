@@ -131,12 +131,18 @@ export default function AboutUs() {
             Meet the PawPals Crew
           </h2>
 
-          <div className="mt-10 grid grid-cols-2 gap-x-16 gap-y-12 md:grid-cols-4 md:gap-x-20">
+          <div className="mt-10 grid grid-cols-2 gap-x-10 gap-y-12 md:grid-cols-4 md:gap-x-10">
             {crew.map((member) => (
-              <div key={member.img}>
-                <img src={member.img} alt={member.name} />
+              <div key={member.img} className="flex flex-col">
+                <div className="flex h-64 w-full items-end justify-center overflow-hidden sm:h-80 md:h-96">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="h-full w-auto max-w-full object-contain"
+                  />
+                </div>
 
-                <div className="mt-4 font-fredoka text-[#3B2414]">
+                <div className="-mt-1 flex flex-1 flex-col items-center text-center font-fredoka text-[#3B2414]">
                   <p className="text-lg font-semibold">{member.name}</p>
                   <p className="mt-1 text-sm leading-snug">{member.role}</p>
                 </div>

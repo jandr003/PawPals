@@ -38,7 +38,7 @@ export default function AboutUs() {
 
       <section
         aria-labelledby="who-we-are-heading"
-        className="relative px-6 py-12 sm:px-8 md:py-16"
+        className="relative px-6 py-16 sm:px-8 md:py-24"
       >
         <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-12">
           <img
@@ -47,7 +47,7 @@ export default function AboutUs() {
             className="mx-auto block h-auto w-full max-w-[380px] md:max-w-[560px]"
           />
 
-          <div className="max-w-xl">
+          <div className="mx-auto max-w-xl text-center md:text-left">
             <h2
               id="who-we-are-heading"
               className="font-fredoka text-4xl font-bold text-[#3B2414] md:text-5xl"
@@ -66,10 +66,10 @@ export default function AboutUs() {
 
       <section
         aria-labelledby="our-mission-heading"
-        className="relative px-6 pb-12 sm:px-8 md:pb-16"
+        className="relative px-6 pb-16 sm:px-8 md:pb-24"
       >
         <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-12">
-          <div className="max-w-xl">
+          <div className="mx-auto max-w-xl text-center md:text-left">
             <h2
               id="our-mission-heading"
               className="font-fredoka text-4xl font-bold text-[#3B2414] md:text-5xl"
@@ -93,7 +93,7 @@ export default function AboutUs() {
 
       <section
         aria-labelledby="why-choose-heading"
-        className="relative px-6 pb-12 sm:px-8 md:pb-16"
+        className="relative px-6 pb-16 sm:px-8 md:pb-24"
       >
         <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-12">
           <img
@@ -102,7 +102,7 @@ export default function AboutUs() {
             className="mx-auto block h-auto w-full max-w-[380px] md:max-w-[560px]"
           />
 
-          <div className="max-w-xl">
+          <div className="mx-auto max-w-xl text-center md:text-left">
             <h2
               id="why-choose-heading"
               className="font-fredoka text-4xl font-bold text-[#3B2414] md:text-5xl"
@@ -121,9 +121,9 @@ export default function AboutUs() {
 
       <section
         aria-labelledby="crew-heading"
-        className="relative px-6 pb-12 sm:px-8 md:pb-16"
+        className="relative px-4 pb-[120px] pt-[150px] sm:px-6 md:pb-[120px]"
       >
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-[1400px]">
           <h2
             id="crew-heading"
             className="font-fredoka text-4xl font-bold text-[#3B2414] md:text-5xl"
@@ -131,20 +131,25 @@ export default function AboutUs() {
             Meet the PawPals Crew
           </h2>
 
-          <div className="mt-10 grid grid-cols-2 gap-x-10 gap-y-12 md:grid-cols-4 md:gap-x-10">
+          <div className="mt-2 grid grid-cols-2 gap-x-[25px] gap-y-12 md:-mt-[65px] md:grid-cols-4 md:gap-x-[25px]">
             {crew.map((member) => (
-              <div key={member.img} className="flex flex-col">
-                <div className="flex h-64 w-full items-end justify-center overflow-hidden sm:h-80 md:h-96">
+              <div key={member.img} className="group flex min-w-0 cursor-pointer flex-col transition-transform duration-300 ease-out hover:-translate-y-3">
+                <div className="flex h-80 w-full items-end justify-center overflow-visible sm:h-[26rem] md:h-[36rem]">
                   <img
                     src={member.img}
                     alt={member.name}
-                    className="h-full w-auto max-w-full object-contain"
+                    className="h-full w-full max-w-full origin-bottom transform-gpu object-contain object-bottom [backface-visibility:hidden] transition-transform duration-300 ease-out group-hover:scale-105"
+                    decoding="sync"
                   />
                 </div>
 
-                <div className="-mt-1 flex flex-1 flex-col items-center text-center font-fredoka text-[#3B2414]">
-                  <p className="text-lg font-semibold">{member.name}</p>
-                  <p className="mt-1 text-sm leading-snug">{member.role}</p>
+                <div className="relative z-10 mt-4 flex flex-1 flex-col items-center text-center font-fredoka text-[#3B2414]">
+                  <p className="text-base font-semibold md:text-xl">
+                    {member.name}
+                  </p>
+                  <p className="mt-1 text-sm leading-snug md:text-base">
+                    {member.role}
+                  </p>
                 </div>
               </div>
             ))}

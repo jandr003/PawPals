@@ -27,16 +27,21 @@ const TRAINING_INCLUDES = [
   "Health Check Consultation (Basic vet check to ensure no medical issues affect behavior)",
 ];
 
+const STAYPLAY_IMAGE = "/service-dog2.png";
+const TRAINING_IMAGE = "/service-cat2.png";
+
 export default function ServicesPage() {
   return (
     <main>
       <Navbar />
 
-      <img
-        src="/SERVICE-PAWPALS.png"
-        alt="Our Services"
-        className="block h-auto w-full"
-      />
+      <section className="relative z-[-1] -mt-[60px] w-full overflow-hidden bg-transparent md:-mt-[188px]">
+        <img
+          src="/SERVICE-PAWPALS.png"
+          alt="Our Services"
+          className="block h-auto w-full"
+        />
+      </section>
 
       <section className="mx-auto max-w-4xl px-6 pb-4 pt-16 text-center sm:px-8 sm:pt-24">
         <p className="font-fredoka text-lg font-medium leading-snug text-[#3B2414] md:text-2xl">
@@ -58,116 +63,156 @@ export default function ServicesPage() {
           PawPals Services &amp; Pricing
         </h2>
 
-        <h3 className="mt-8 text-2xl font-semibold md:text-3xl">
-          PawPals Wellness Package &ndash; &#8369;799
-        </h3>
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">
+          <div>
+            <h3 className="text-2xl font-semibold md:text-3xl">
+              PawPals Wellness Package &ndash; &#8369;799
+            </h3>
 
-        <p className="mt-4 text-lg leading-snug">
-          Keep your pet happy, healthy, and well-groomed!
-        </p>
+            <p className="mt-4 text-lg leading-snug">
+              Keep your pet happy, healthy, and well-groomed!
+            </p>
 
-        <p className="mt-4 max-w-4xl text-lg leading-snug">
-          Perfect for pet owners looking for a convenient and affordable way to
-          maintain their pet&apos;s overall well-being. The PawPals Wellness
-          Package combines essential grooming services with a routine health
-          check to help your furry companion stay clean, comfortable, and
-          healthy.
-        </p>
+            <p className="mt-4 text-lg leading-snug">
+              Perfect for pet owners looking for a convenient and affordable way
+              to maintain their pet&apos;s overall well-being. The PawPals
+              Wellness Package combines essential grooming services with a
+              routine health check to help your furry companion stay clean,
+              comfortable, and healthy.
+            </p>
 
-        <ul className="mt-6 max-w-4xl list-disc space-y-2 pl-6 text-lg leading-snug">
-          {WELLNESS_INCLUDES.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+            <ul className="mt-6 list-disc space-y-2 pl-6 text-lg leading-snug">
+              {WELLNESS_INCLUDES.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
 
-        <Link
-          href="/adopt"
-          className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
-        >
-          Adopt Now
-        </Link>
+            <Link
+              href="/adopt"
+              className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+            >
+              Adopt Now
+            </Link>
+          </div>
 
-        <h3 className="mt-16 text-2xl font-semibold md:text-3xl">
-          PawPals Adoption Package &ndash; &#8369;999
-        </h3>
+          <img
+            src="/service-dog1.png"
+            alt="Dog enjoying the PawPals Wellness Package"
+            className="mx-auto h-auto w-full max-w-lg md:max-w-none md:scale-[1.15]"
+          />
+        </div>
 
-        <p className="mt-4 text-lg leading-snug">
-          Ready to welcome a new furry friend into your home?
-        </p>
+        <div className="mt-16 grid items-center gap-8 md:grid-cols-[1fr_1.4fr]">
+          <img
+            src="/service-cat1.png"
+            alt="Cat ready for adoption with PawPals"
+            className="mx-auto h-auto w-full max-w-lg md:order-1 md:max-w-none md:scale-[1.15]"
+          />
 
-        <p className="mt-4 max-w-4xl text-lg leading-snug">
-          Designed for future pet owners who want a smooth and responsible
-          adoption experience. This package helps ensure that both pets and
-          adopters are prepared for a happy and lifelong companionship.
-        </p>
+          <div className="md:order-2">
+            <h3 className="text-2xl font-semibold md:text-3xl">
+              PawPals Adoption Package &ndash; &#8369;999
+            </h3>
 
-        <ul className="mt-6 max-w-4xl list-disc space-y-2 pl-6 text-lg leading-snug">
-          {ADOPTION_INCLUDES.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+            <p className="mt-4 text-lg leading-snug">
+              Ready to welcome a new furry friend into your home?
+            </p>
 
-        <Link
-          href="/adopt"
-          className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
-        >
-          Start Adoption
-        </Link>
+            <p className="mt-4 text-lg leading-snug">
+              Designed for future pet owners who want a smooth and responsible
+              adoption experience. This package helps ensure that both pets and
+              adopters are prepared for a happy and lifelong companionship.
+            </p>
 
-        <h3 className="mt-16 text-2xl font-semibold md:text-3xl">
-          PawPals Stay &amp; Play Care &ndash; &#8369;1200
-        </h3>
+            <ul className="mt-6 list-disc space-y-2 pl-6 text-lg leading-snug">
+              {ADOPTION_INCLUDES.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
 
-        <p className="mt-4 text-lg leading-snug">
-          Perfect for pets who need safe care, play, and comfort while you&apos;re away.
-        </p>
+            <Link
+              href="/adopt"
+              className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+            >
+              Start Adoption
+            </Link>
+          </div>
+        </div>
 
-        <p className="mt-4 max-w-4xl text-lg leading-snug">
-          A safe and cozy stay where your pet can relax, play, and feel at home
-          while you&apos;re away. PawPals provides attentive care, fun activities,
-          and a comfortable environment for your furry friend.
-        </p>
+        <div className="mt-16 grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">
+          <div>
+            <h3 className="text-2xl font-semibold md:text-3xl">
+              PawPals Stay &amp; Play Care &ndash; &#8369;1200
+            </h3>
 
-        <ul className="mt-6 max-w-4xl list-disc space-y-2 pl-6 text-lg leading-snug">
-          {STAYPLAY_INCLUDES.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+            <p className="mt-4 text-lg leading-snug">
+              Perfect for pets who need safe care, play, and comfort while you&apos;re away.
+            </p>
 
-        <Link
-          href="/adopt"
-          className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
-        >
-          Reserve a Spot
-        </Link>
+            <p className="mt-4 text-lg leading-snug">
+              A safe and cozy stay where your pet can relax, play, and feel at home
+              while you&apos;re away. PawPals provides attentive care, fun activities,
+              and a comfortable environment for your furry friend.
+            </p>
 
-        <h3 className="mt-16 text-2xl font-semibold md:text-3xl">
-          PawPals Training Care &ndash; &#8369;1500
-        </h3>
+            <ul className="mt-6 list-disc space-y-2 pl-6 text-lg leading-snug">
+              {STAYPLAY_INCLUDES.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
 
-        <p className="mt-4 text-lg leading-snug">
-          Training that helps your pet behave better, gain confidence, and
-          follow commands.
-        </p>
+            <Link
+              href="/adopt"
+              className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+            >
+              Reserve a Spot
+            </Link>
+          </div>
 
-        <p className="mt-4 max-w-4xl text-lg leading-snug">
-          A guided training program designed to help your pet improve
-          behavior, build confidence, and develop good habits through
-          positive reinforcement.
-        </p>
+          <img
+            src={STAYPLAY_IMAGE}
+            alt="Pet enjoying PawPals Stay & Play Care"
+            className="mx-auto h-auto w-full max-w-lg md:max-w-none md:scale-[1.15]"
+          />
+        </div>
 
-        <ul className="mt-6 max-w-4xl list-disc space-y-2 pl-6 text-lg leading-snug">
-          {TRAINING_INCLUDES.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        <div className="mt-16 grid items-center gap-8 md:grid-cols-[1fr_1.4fr]">
+          <img
+            src={TRAINING_IMAGE}
+            alt="Pet training with PawPals"
+            className="mx-auto h-auto w-full max-w-lg md:order-1 md:max-w-none md:scale-[1.15]"
+          />
 
-        <Link
-          href="/adopt"
-          className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
-        >
-          Book Training
-        </Link>
+          <div className="md:order-2">
+            <h3 className="text-2xl font-semibold md:text-3xl">
+              PawPals Training Care &ndash; &#8369;1500
+            </h3>
+
+            <p className="mt-4 text-lg leading-snug">
+              Training that helps your pet behave better, gain confidence, and
+              follow commands.
+            </p>
+
+            <p className="mt-4 text-lg leading-snug">
+              A guided training program designed to help your pet improve
+              behavior, build confidence, and develop good habits through
+              positive reinforcement.
+            </p>
+
+            <ul className="mt-6 list-disc space-y-2 pl-6 text-lg leading-snug">
+              {TRAINING_INCLUDES.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <Link
+              href="/adopt"
+              className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+            >
+              Book Training
+            </Link>
+          </div>
+        </div>
       </section>
 
       <section

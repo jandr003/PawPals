@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body {
+	margin: 0;
+	padding: 0;
 	background-image: url("/PAW-BG.png");
 	background-position: calc(50% + 24px) top;
 	background-repeat: repeat-y;

@@ -71,7 +71,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-60 [--raise:18rem]">
+    <footer className="relative mt-60 [--raise:6.75rem]">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 bg-cover bg-top bg-no-repeat"
@@ -105,7 +105,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mx-auto mt-[11.25rem] grid max-w-6xl grid-cols-2 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block" aria-label="PawPals home">
               <img

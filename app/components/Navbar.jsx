@@ -17,12 +17,17 @@ export default function Navbar() {
   const pathname = usePathname() ?? "";
 
   const linkRefs = useRef({});
-  const [pending, setPending] = useState(null); 
+  const [pending, setPending] = useState(null);
   const [bar, setBar] = useState({ x: 0, y: 0, w: 0 });
-  const [ready, setReady] = useState(false); 
+  const [ready, setReady] = useState(false);
 
-  const isActive = (href) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const isActive = (href) => {
+    if (href === "/") return pathname === "/";
+    if (href === "/service") {
+      return pathname.startsWith(href) || pathname.startsWith("/adopt");
+    }
+    return pathname.startsWith(href);
+  };
 
   const fromPath = NAV_LINKS.find(({ href }) => isActive(href))?.href ?? null;
   const activeHref = pending ?? fromPath;

@@ -6,7 +6,7 @@ export const pets = [
     age: "2 years",
     gender: "Female",
     status: "Available",
-    image: "https://placedog.net/500/375?id=1",
+    image: "/pets/bella.jpg",
     description: "Playful and affectionate, loves long walks and belly rubs.",
   },
   {
@@ -16,7 +16,7 @@ export const pets = [
     age: "3 years",
     gender: "Male",
     status: "Available",
-    image: "https://placedog.net/500/375?id=2",
+    image: "/pets/buddy.jpg",
     description: "Friendly and loyal, great with kids and other pets.",
   },
   {
@@ -26,7 +26,7 @@ export const pets = [
     age: "1 year",
     gender: "Female",
     status: "Available",
-    image: "https://cataas.com/cat?width=500&height=375&petId=chloe",
+    image: "https://images.unsplash.com/photo-1565160389639-c2e3cb24b183?fm=jpg&q=60&w=1200&auto=format&fit=crop",
     description: "Curious and gentle, enjoys sunny windowsills and naps.",
   },
   {
@@ -36,7 +36,7 @@ export const pets = [
     age: "2 years",
     gender: "Female",
     status: "Available",
-    image: "https://cataas.com/cat?width=500&height=375&petId=cleo",
+    image: "https://images.unsplash.com/photo-1763536132111-222cfdb10dfc?fm=jpg&q=60&w=1200&auto=format&fit=crop",
     description: "Vocal and social, always wants to be near her humans.",
   },
   {
@@ -46,7 +46,7 @@ export const pets = [
     age: "4 years",
     gender: "Female",
     status: "Available",
-    image: "https://placedog.net/500/375?id=3",
+    image: "/pets/coco.jpg",
     description: "Smart and easy to train, loves puzzle toys.",
   },
   {
@@ -56,7 +56,7 @@ export const pets = [
     age: "3 years",
     gender: "Male",
     status: "Available",
-    image: "https://placedog.net/500/375?id=4",
+    image: "/pets/cooper.jpg",
     description: "Energetic nose-first explorer, great for active families.",
   },
   {
@@ -66,7 +66,7 @@ export const pets = [
     age: "5 years",
     gender: "Female",
     status: "Available",
-    image: "https://placedog.net/500/375?id=5",
+    image: "/pets/daisy.jpg",
     description: "Calm and cuddly, perfect lap companion.",
   },
   {
@@ -76,7 +76,7 @@ export const pets = [
     age: "1 year",
     gender: "Male",
     status: "Available",
-    image: "https://cataas.com/cat?width=500&height=375&petId=leo",
+    image: "https://images.unsplash.com/photo-1513325373431-b45395b820d5?fm=jpg&q=60&w=1200&auto=format&fit=crop",
     description: "Bold and playful, never turns down a game of chase.",
   },
   {
@@ -86,7 +86,7 @@ export const pets = [
     age: "2 years",
     gender: "Female",
     status: "Available",
-    image: "https://placedog.net/500/375?id=6",
+    image: "/pets/luna.jpg",
     description: "Highly intelligent and active, thrives with daily exercise.",
   },
   {
@@ -96,17 +96,17 @@ export const pets = [
     age: "4 years",
     gender: "Male",
     status: "Available",
-    image: "https://placedog.net/500/375?id=7",
+    image: "https://images.pexels.com/photos/13711974/pexels-photo-13711974.jpeg?w=1260&h=750&dpr=1",
     description: "Protective and devoted, well-behaved on leash.",
   },
   {
     slug: "miso",
     name: "Miso",
-    breed: "Japanese Bobtail Cat",
+    breed: "Domestic Shorthair Cat",
     age: "2 years",
     gender: "Female",
     status: "Available",
-    image: "https://cataas.com/cat?width=500&height=375&petId=miso",
+    image: "https://images.unsplash.com/photo-1511717004695-7862a87f4b3d?fm=jpg&q=60&w=1200&auto=format&fit=crop",
     description: "Sweet-natured and quiet, adapts easily to new homes.",
   },
   {
@@ -116,7 +116,7 @@ export const pets = [
     age: "1 year",
     gender: "Male",
     status: "Available",
-    image: "https://placedog.net/500/375?id=8",
+    image: "/pets/mochi.jpg",
     description: "Spirited and independent, keeps everyone entertained.",
   },
   {
@@ -126,7 +126,7 @@ export const pets = [
     age: "3 years",
     gender: "Female",
     status: "Available",
-    image: "https://cataas.com/cat?width=500&height=375&petId=nala",
+    image: "https://images.unsplash.com/photo-1604444506921-bdd3442e66c2?fm=jpg&q=60&w=1200&auto=format&fit=crop",
     description: "Gentle giant, loves being brushed and pampered.",
   },
   {
@@ -136,7 +136,7 @@ export const pets = [
     age: "2 years",
     gender: "Male",
     status: "Available",
-    image: "https://placedog.net/500/375?id=9",
+    image: "/pets/oreo.jpg",
     description: "Quick learner, excels at agility and fetch.",
   },
   {
@@ -146,7 +146,7 @@ export const pets = [
     age: "3 years",
     gender: "Female",
     status: "Available",
-    image: "https://placedog.net/500/375?id=10",
+    image: "/pets/pepper.jpg",
     description: "Spunky and confident, loves a good burrow under blankets.",
   },
   {
@@ -156,7 +156,7 @@ export const pets = [
     age: "4 years",
     gender: "Male",
     status: "Available",
-    image: "https://placedog.net/500/375?id=11",
+    image: "/pets/rocky.jpg",
     description: "Goofy and strong, a big softie once he trusts you.",
   },
   {
@@ -166,7 +166,7 @@ export const pets = [
     age: "2 years",
     gender: "Male",
     status: "Available",
-    image: "https://cataas.com/cat?width=500&height=375&petId=salem",
+    image: "https://images.unsplash.com/photo-1595277264320-8e7a8ece579e?fm=jpg&q=60&w=1200&auto=format&fit=crop",
     description: "Mysterious and affectionate, loves nighttime cuddles.",
   },
   {
@@ -176,7 +176,7 @@ export const pets = [
     age: "1 year",
     gender: "Male",
     status: "Available",
-    image: "https://cataas.com/cat?width=500&height=375&petId=simba",
+    image: "/pets/simba.jpg",
     description: "Confident and proud, loves lounging in sunny spots.",
   },
   {
@@ -186,7 +186,7 @@ export const pets = [
     age: "2 years",
     gender: "Male",
     status: "Available",
-    image: "https://placedog.net/500/375?id=12",
+    image: "/pets/teddy.jpg",
     description: "Sweet and cuddly, follows you from room to room.",
   },
 ];

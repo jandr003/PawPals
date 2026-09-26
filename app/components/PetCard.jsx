@@ -25,7 +25,8 @@ export default function PetCard({ pet }) {
         )}
 
         {status && (
-          <span className="absolute left-3 top-3 rounded-full bg-[#C97F4B] px-3 py-1 font-fredoka text-xs font-medium text-white shadow-sm">
+          <span className="absolute left-3 top-3 flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#C97F4B] to-[#B8703D] px-3 py-1.5 font-fredoka text-xs font-semibold text-white shadow-md ring-1 ring-white/20">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-white" />
             {status}
           </span>
         )}
@@ -39,7 +40,7 @@ export default function PetCard({ pet }) {
           {breed} {age ? `· ${age}` : ""} {gender ? `· ${gender}` : ""}
         </p>
         {description && (
-          <p className="mt-1 line-clamp-2 font-fredoka text-sm leading-relaxed text-[#4A3220]/70">
+          <p className="mt-1 line-clamp-2 font-fredoka text-sm leading-relaxed text-[#3B2414]/80">
             {description}
           </p>
         )}

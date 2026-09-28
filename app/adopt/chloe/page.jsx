@@ -13,9 +13,9 @@ export default function ChloePage() {
   const { name, breed, age, gender, status, description } = pet;
 
   const gallery = [
-    "https://images.unsplash.com/photo-1732002755084-2e89f98e15a8?fm=jpg&q=60&w=1200&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1767740667991-6f707b1db78f?fm=jpg&q=60&w=1200&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1557162368-e650b8e267ea?fm=jpg&q=60&w=1200&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1615349491181-9aabceb06ddd?fm=jpg&q=60&w=1200&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1604675223954-b1aabd668078?fm=jpg&q=60&w=1200&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1586369730051-51b4f2ad9ca8?fm=jpg&q=60&w=1200&auto=format&fit=crop",
   ];
 
   const loves = [
@@ -134,10 +134,10 @@ export default function ChloePage() {
               </h2>
               <div className="mt-3 space-y-3 text-lg leading-relaxed text-[#5C4A3D]">
                 <p>
-				  Chloe is a gentle and curious cat with a calm personality and a love for quiet, cozy moments. She enjoys lounging by sunny windows, curling up on a soft blanket, and keeping you company while you go about your day. She may be a little shy when meeting someone new, but once she feels safe and comfortable, she gradually opens up and shows her sweet, affectionate side. Give her a little time, and you may find her happily settling beside you or greeting you with a soft purr.
+                  Chloe is a gentle and curious cat with a calm personality and a love for quiet, cozy moments. She enjoys lounging by sunny windows, curling up on a soft blanket, and keeping you company while you go about your day. She may be a little shy when meeting someone new, but once she feels safe and comfortable, she gradually opens up and shows her sweet, affectionate side. Give her a little time, and you may find her happily settling beside you or greeting you with a soft purr.
                 </p>
                 <p>
-				  Chloe would be happiest in a peaceful home with someone who understands that trust takes time. She does not need much to be content, just a safe space, gentle care, and a person willing to let her settle in at her own pace. If you are looking for a quiet companion who will grow closer to you over time, Chloe would love the chance to find her forever home and become part of your family.
+                  Chloe would be happiest in a peaceful home with someone who understands that trust takes time. She does not need much to be content, just a safe space, gentle care, and a person willing to let her settle in at her own pace. If you are looking for a quiet companion who will grow closer to you over time, Chloe would love the chance to find her forever home and become part of your family.
                 </p>
               </div>
             </div>

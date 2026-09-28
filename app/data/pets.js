@@ -26,7 +26,7 @@ export const pets = [
     age: "1 year",
     gender: "Female",
     status: "Available",
-    image: "https://images.unsplash.com/photo-1565160389639-c2e3cb24b183?fm=jpg&q=60&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583120513418-c078286682f4?fm=jpg&q=60&w=1200&auto=format&fit=crop",
     description: "Curious and gentle, enjoys sunny windowsills and naps.",
   },
   {

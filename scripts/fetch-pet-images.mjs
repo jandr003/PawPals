@@ -17,16 +17,16 @@ const dogs = [
   { slug: "oreo", breed: "collie/border" },
   { slug: "pepper", breed: "dachshund" },
   { slug: "rocky", breed: "boxer" },
-  { slug: "teddy", breed: "spaniel/brittany" }, 
+  { slug: "teddy", breed: "spaniel/blenheim" },
 ];
 
 const cats = [
-  { slug: "chloe", breed_ids: "" }, 
-  { slug: "cleo", breed_ids: "siam" }, 
+  { slug: "chloe", breed_ids: "" },
+  { slug: "cleo", breed_ids: "siam" },
   { slug: "leo", breed_ids: "" },
-  { slug: "miso", breed_ids: "jbob" }, 
-  { slug: "nala", breed_ids: "mcoo" }, 
-  { slug: "salem", breed_ids: "" }, 
+  { slug: "miso", breed_ids: "jbob" },
+  { slug: "nala", breed_ids: "mcoo" },
+  { slug: "salem", breed_ids: "" },
   { slug: "simba", breed_ids: "" },
 ];
 
@@ -55,9 +55,14 @@ function download(url, dest) {
         if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
           return download(res.headers.location, dest).then(resolve, reject);
         }
+        if (res.statusCode !== 200) {
+          res.resume();
+          return reject(new Error(`HTTP ${res.statusCode}`));
+        }
         const file = fs.createWriteStream(dest);
         res.pipe(file);
         file.on("finish", () => file.close(resolve));
+        file.on("error", reject);
       })
       .on("error", reject);
   });

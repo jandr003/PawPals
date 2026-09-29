@@ -134,10 +134,10 @@ export default function LeoPage() {
               </h2>
               <div className="mt-3 space-y-3 text-lg leading-relaxed text-[#5C4A3D]">
                 <p>
-				 Leo is a playful and curious tabby with plenty of personality. He loves chasing anything that moves, especially feather wands, toy mice, and laser dots. He is always ready to climb, whether that means racing up his cat tree or finding a high spot to watch everything from above. When playtime is over, he has a softer side and enjoys curling up with his favorite plush toy.
+				         Leo is a playful and curious tabby with plenty of personality. He loves chasing anything that moves, especially feather wands, toy mice, and laser dots. He is always ready to climb, whether that means racing up his cat tree or finding a high spot to watch everything from above. When playtime is over, he has a softer side and enjoys curling up with his favorite plush toy.
                 </p>
                 <p>
-				 Leo does best when he has plenty to keep him busy and people who are happy to give him time to play. He would enjoy a home with interactive toys, climbing spaces, and room to explore. He is not a fan of being left with nothing to do, so regular playtime is important to keep his curious mind engaged. If you are looking for a fun, active cat with a few entertaining quirks of his own, come meet Leo and see if he is the right fit for your home.
+				         Leo does best when he has plenty to keep him busy and people who are happy to give him time to play. He would enjoy a home with interactive toys, climbing spaces, and room to explore. He is not a fan of being left with nothing to do, so regular playtime is important to keep his curious mind engaged. If you are looking for a fun, active cat with a few entertaining quirks of his own, come meet Leo and see if he is the right fit for your home.
                 </p>
               </div>
             </div>

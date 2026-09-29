@@ -106,9 +106,9 @@ export default function ServicesPage() {
           <img
             src="/service-cat1.png"
             alt="Cat ready for adoption with PawPals"
-            className="mx-auto h-auto w-full max-w-lg md:order-1 md:max-w-none md:scale-[1.15]"
+            className="mx-auto h-auto w-full max-w-lg md:order-1 md:max-w-none md:translate-y-12 md:scale-[1.15]"
           />
-
+          
           <div className="md:order-2 md:pt-[180px]">
             <h3 className="text-2xl font-semibold md:text-3xl">
               PawPals Adoption Package &ndash; &#8369;999
@@ -139,7 +139,7 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        <div className="mt-16 grid items-center gap-8 md:gap-x-[50px] md:grid-cols-[1.4fr_1fr]">
+        <div className="mt-16 grid items-center gap-8 md:gap-x-[70px] md:grid-cols-[1.4fr_1fr]">
           <div className="md:pt-[180px]">
             <h3 className="text-2xl font-semibold md:text-3xl">
               PawPals Stay &amp; Play Care &ndash; &#8369;1200
@@ -172,7 +172,7 @@ export default function ServicesPage() {
           <img
             src={STAYPLAY_IMAGE}
             alt="Pet enjoying PawPals Stay & Play Care"
-            className="mx-auto h-auto w-full max-w-lg md:max-w-none md:scale-[1.15]"
+            className="mx-auto h-auto w-full max-w-lg md:max-w-none md:translate-x-10 md:translate-y-12 md:scale-[1.15]"
           />
         </div>
 
@@ -180,7 +180,7 @@ export default function ServicesPage() {
           <img
             src={TRAINING_IMAGE}
             alt="Pet training with PawPals"
-            className="mx-auto h-auto w-full max-w-lg md:order-1 md:max-w-none md:scale-[1.15]"
+            className="mx-auto h-auto w-full max-w-lg md:order-1 md:max-w-none md:-translate-x-10 md:translate-y-12 md:scale-[1.15]"
           />
 
           <div className="md:order-2 md:pt-[180px]">

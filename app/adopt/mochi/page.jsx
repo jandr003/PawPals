@@ -78,7 +78,7 @@ const gallery = [
             </div>
           </div>
 
-          <div className="order-2">
+          <div className="order-2 md:pt-16">
             {status && (
               <span className="inline-flex items-center gap-2 rounded-full bg-[#C9622A] px-4 py-1.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(201,98,42,0.25)]">
                 <span className="relative flex h-2 w-2">
@@ -134,10 +134,10 @@ const gallery = [
               </h2>
               <div className="mt-3 space-y-3 text-lg leading-relaxed text-[#5C4A3D]">
                 <p>
-				 Mochi is a spirited young Shiba Inu with a fox-like face, warm russet coat, and a personality that is hard not to love. He is bright, curious, and playful, always finding something new to explore or a way to keep everyone around him entertained. Like many Shibas, Mochi can be independent and a little stubborn at times, but he is also loyal and affectionate with the people he trusts.
+				         Mochi is a spirited young Shiba Inu with a fox-like face, warm russet coat, and a personality that is hard not to love. He is bright, curious, and playful, always finding something new to explore or a way to keep everyone around him entertained. Like many Shibas, Mochi can be independent and a little stubborn at times, but he is also loyal and affectionate with the people he trusts.
                 </p>
                 <p>
-				 Mochi would do well in a home with an active family or owner who enjoys daily walks, playtime, and training. He responds best to patient and consistent guidance and would benefit from plenty of exercise and safe opportunities to explore. If you are looking for a playful, charming companion with a big personality and a lot of love to give, Mochi may be the perfect match for you.
+				         Mochi would do well in a home with an active family or owner who enjoys daily walks, playtime, and training. He responds best to patient and consistent guidance and would benefit from plenty of exercise and safe opportunities to explore. If you are looking for a playful, charming companion with a big personality and a lot of love to give, Mochi may be the perfect match for you.
                 </p>
               </div>
             </div>

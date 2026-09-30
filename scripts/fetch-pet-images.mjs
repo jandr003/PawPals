@@ -17,7 +17,7 @@ const dogs = [
   { slug: "oreo", breed: "collie/border" },
   { slug: "pepper", breed: "dachshund" },
   { slug: "rocky", breed: "boxer" },
-  { slug: "teddy", breed: "spaniel/blenheim" },
+  { slug: "teddy", breed: "cavalierking" },
 ];
 
 const cats = [
@@ -29,6 +29,10 @@ const cats = [
   { slug: "salem", breed_ids: "" },
   { slug: "simba", breed_ids: "" },
 ];
+
+function alreadyHas(slug) {
+  return fs.readdirSync(OUT_DIR).some((f) => f.startsWith(`${slug}.`));
+}
 
 function fetchJson(url) {
   return new Promise((resolve, reject) => {
@@ -69,8 +73,25 @@ function download(url, dest) {
 }
 
 async function run() {
-  for (const { slug, breed } of dogs) {
+  for (const { slug, breed, count } of dogs) {
     try {
+      if (count) {
+        const json = await fetchJson(`https://dog.ceo/api/breed/${breed}/images/random/${count}`);
+        for (let i = 0; i < json.message.length; i++) {
+          const url = json.message[i];
+          const ext = path.extname(new URL(url).pathname) || ".jpg";
+          const name = i === 0 ? `${slug}${ext}` : `${slug}-${i + 1}${ext}`;
+          await download(url, path.join(OUT_DIR, name));
+          console.log(`✔ ${slug} -> ${name}`);
+        }
+        continue;
+      }
+
+      if (alreadyHas(slug)) {
+        console.log(`- ${slug} skipped (already exists)`);
+        continue;
+      }
+
       const json = await fetchJson(`https://dog.ceo/api/breed/${breed}/images/random`);
       const url = json.message;
       const ext = path.extname(new URL(url).pathname) || ".jpg";
@@ -84,6 +105,10 @@ async function run() {
 
   for (const { slug, breed_ids } of cats) {
     try {
+      if (alreadyHas(slug)) {
+        console.log(`- ${slug} skipped (already exists)`);
+        continue;
+      }
       const q = breed_ids ? `?breed_ids=${breed_ids}` : "";
       const json = await fetchJson(`https://api.thecatapi.com/v1/images/search${q}`);
       const url = json[0].url;

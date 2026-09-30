@@ -78,7 +78,7 @@ export default function CleoPage() {
             </div>
           </div>
 
-          <div className="order-2">
+          <div className="order-2 md:pt-16">
             {status && (
               <span className="inline-flex items-center gap-2 rounded-full bg-[#C9622A] px-4 py-1.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(201,98,42,0.25)]">
                 <span className="relative flex h-2 w-2">
@@ -134,10 +134,10 @@ export default function CleoPage() {
               </h2>
               <div className="mt-3 space-y-3 text-lg leading-relaxed text-[#5C4A3D]">
                 <p>
-				 Cleo is a vocal and affectionate Siamese with an outgoing personality. She enjoys being involved in daily activities around the home and is comfortable expressing herself when she wants attention. She may follow you from room to room, greet you with her familiar meows, or settle beside you when it is time to relax. Her striking blue eyes and social nature make her an engaging companion.
+	               Cleo is a vocal and affectionate Siamese with an outgoing personality. She enjoys being involved in daily activities around the home and is comfortable expressing herself when she wants attention. She may follow you from room to room, greet you with her familiar meows, or settle beside you when it is time to relax. Her striking blue eyes and social nature make her an engaging companion.
                 </p>
                 <p>
-				 Cleo is looking for a home where she can receive regular interaction and become part of the household. She would suit an adopter who enjoys an affectionate, social cat and can give her consistent attention and companionship. Interested in adopting Cleo? Meet her and see if she is the right fit for your home.
+				         Cleo is looking for a home where she can receive regular interaction and become part of the household. She would suit an adopter who enjoys an affectionate, social cat and can give her consistent attention and companionship. Interested in adopting Cleo? Meet her and see if she is the right fit for your home.
                 </p>
               </div>
             </div>

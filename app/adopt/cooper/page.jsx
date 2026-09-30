@@ -78,7 +78,7 @@ const gallery = [
             </div>
           </div>
 
-          <div className="order-2">
+          <div className="order-2 md:pt-16">
             {status && (
               <span className="inline-flex items-center gap-2 rounded-full bg-[#C9622A] px-4 py-1.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(201,98,42,0.25)]">
                 <span className="relative flex h-2 w-2">
@@ -134,10 +134,10 @@ const gallery = [
               </h2>
               <div className="mt-3 space-y-3 text-lg leading-relaxed text-[#5C4A3D]">
                 <p>
-				 Cooper is an energetic Beagle who loves to explore and follow his nose. He enjoys sniffing around the yard, checking out new places, and turning a simple walk into something more interesting. He has a friendly, playful nature and is always happy when he has space to run, explore, and spend time with people.
+				         Cooper is an energetic Beagle who loves to explore and follow his nose. He enjoys sniffing around the yard, checking out new places, and turning a simple walk into something more interesting. He has a friendly, playful nature and is always happy when he has space to run, explore, and spend time with people.
                 </p>
                 <p>
-				 Cooper would do best with an active family who enjoys walks, outdoor play, and spending time with their dog. He needs regular exercise and a safe space where he can satisfy his curiosity. If you are looking for a friendly dog who is always up for a walk or a little adventure, come meet Cooper and see if he could be the right fit for your home.
+				         Cooper would do best with an active family who enjoys walks, outdoor play, and spending time with their dog. He needs regular exercise and a safe space where he can satisfy his curiosity. If you are looking for a friendly dog who is always up for a walk or a little adventure, come meet Cooper and see if he could be the right fit for your home.
                 </p>
               </div>
             </div>

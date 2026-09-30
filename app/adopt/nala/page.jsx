@@ -77,7 +77,7 @@ const gallery = [
             </div>
           </div>
 
-          <div className="order-2">
+          <div className="order-2 md:pt-16">
             {status && (
               <span className="inline-flex items-center gap-2 rounded-full bg-[#C9622A] px-4 py-1.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(201,98,42,0.25)]">
                 <span className="relative flex h-2 w-2">
@@ -133,10 +133,10 @@ const gallery = [
               </h2>
               <div className="mt-3 space-y-3 text-lg leading-relaxed text-[#5C4A3D]">
                 <p>
-				 Nala is a young Maine Coon with a soft tabby coat, tufted ears, and big amber eyes. She is a gentle and affectionate cat who enjoys being around people and getting attention. Nala loves having her coat brushed and will happily stay close by when someone is spending time with her.
+                 Nala is a young Maine Coon with a beautiful soft tabby coat, distinctive tufted ears, and expressive amber eyes. She has a gentle and affectionate personality and enjoys spending time with people. Nala especially enjoys being groomed and brushed, and she is happiest when she can stay close to those around her.
                 </p>
                 <p>
-				 She would be happiest in a quiet home where she can feel comfortable and take her time getting settled. Nala enjoys cozy spots for naps, following her favorite people around the house, and playing with feather toys. She has a calm and sweet personality and would make a wonderful companion for someone looking for a loving cat to share their home with.
+                 She would thrive in a calm and quiet home where she can gradually adjust to her new surroundings. Nala enjoys relaxing in cozy spaces, following her favorite people around the home, and playing with feather toys. With her sweet and gentle nature, she would make a wonderful companion for a loving family or individual looking for a devoted feline friend.
                 </p>
               </div>
             </div>

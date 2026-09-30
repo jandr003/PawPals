@@ -78,7 +78,7 @@ export default function CocoPage() {
             </div>
           </div>
 
-          <div className="order-2">
+          <div className="order-2 md:pt-16">
             {status && (
               <span className="inline-flex items-center gap-2 rounded-full bg-[#C9622A] px-4 py-1.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(201,98,42,0.25)]">
                 <span className="relative flex h-2 w-2">
@@ -134,10 +134,10 @@ export default function CocoPage() {
               </h2>
               <div className="mt-3 space-y-3 text-lg leading-relaxed text-[#5C4A3D]">
                 <p>
-                  Coco is a smart and playful Poodle mix who loves learning and being part of the action. She picks up commands quickly, enjoys puzzle toys, and gets excited whenever she has something new to figure out. Her curly brown coat and cheerful personality make her a joy to have around, especially when she is busy exploring, playing, or learning something new.
+                 Coco is a smart and playful Poodle mix who loves learning and being part of the action. She picks up commands quickly, enjoys puzzle toys, and gets excited whenever she has something new to figure out. Her curly brown coat and cheerful personality make her a joy to have around, especially when she is busy exploring, playing, or learning something new.
                 </p>
                 <p>
-				  Coco would thrive with someone who enjoys spending time with their dog and can keep her active and engaged. She loves attention, playtime, and having people around who will encourage her curious nature. If you are looking for a dog who will bring energy, affection, and plenty of fun into your home, come meet Coco and give her the loving family she has been waiting for.
+				         Coco would thrive with someone who enjoys spending time with their dog and can keep her active and engaged. She loves attention, playtime, and having people around who will encourage her curious nature. If you are looking for a dog who will bring energy, affection, and plenty of fun into your home, come meet Coco and give her the loving family she has been waiting for.
                 </p>
               </div>
             </div>

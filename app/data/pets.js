@@ -146,7 +146,7 @@ export const pets = [
     age: "3 years",
     gender: "Female",
     status: "Available",
-    image: "/pets/pepper.jpg",
+    image: "https://images.unsplash.com/photo-1556796879-160fd67614ae?fm=jpg&q=60&w=1200&auto=format&fit=crop",
     description: "Spunky and confident, loves a good burrow under blankets.",
   },
   {
@@ -186,7 +186,7 @@ export const pets = [
     age: "2 years",
     gender: "Male",
     status: "Available",
-    image: "/pets/teddy.jpg",
+    image: "https://images.unsplash.com/photo-1613928521908-24ccf17a1707?fm=jpg&q=60&w=1200&auto=format&fit=crop",
     description: "Sweet and cuddly, follows you from room to room.",
   },
 ];

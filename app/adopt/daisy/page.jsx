@@ -78,7 +78,7 @@ const gallery = [
             </div>
           </div>
 
-          <div className="order-2">
+          <div className="order-2 md:pt-16">
             {status && (
               <span className="inline-flex items-center gap-2 rounded-full bg-[#C9622A] px-4 py-1.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(201,98,42,0.25)]">
                 <span className="relative flex h-2 w-2">
@@ -134,10 +134,10 @@ const gallery = [
               </h2>
               <div className="mt-3 space-y-3 text-lg leading-relaxed text-[#5C4A3D]">
                 <p>
-				 Daisy is a calm and cuddly Shih Tzu who loves staying close to her people. She is happiest curled up beside you on the couch or settling in for a quiet afternoon at home. She also enjoys slow walks and takes her time wherever she goes. With her gentle nature and love for companionship, Daisy is happiest when she knows she is near the people she trusts.
+				         Daisy is a calm and cuddly Shih Tzu who loves staying close to her people. She is happiest curled up beside you on the couch or settling in for a quiet afternoon at home. She also enjoys slow walks and takes her time wherever she goes. With her gentle nature and love for companionship, Daisy is happiest when she knows she is near the people she trusts.
                 </p>
                 <p>
-				 Daisy would do well in a peaceful home where she can enjoy plenty of affection, regular grooming, and a relaxed routine. She would be a lovely match for seniors, couples, or families looking for a gentle dog who enjoys a quieter pace. If you are looking for a sweet companion to share quiet moments and everyday life with, come meet Daisy and give her a place to call home.
+				         Daisy would do well in a peaceful home where she can enjoy plenty of affection, regular grooming, and a relaxed routine. She would be a lovely match for seniors, couples, or families looking for a gentle dog who enjoys a quieter pace. If you are looking for a sweet companion to share quiet moments and everyday life with, come meet Daisy and give her a place to call home.
                 </p>
               </div>
             </div>

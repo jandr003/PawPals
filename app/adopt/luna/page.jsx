@@ -78,7 +78,7 @@ export default function LunaPage() {
             </div>
           </div>
 
-          <div className="order-2">
+          <div className="order-2 md:pt-16">
             {status && (
               <span className="inline-flex items-center gap-2 rounded-full bg-[#C9622A] px-4 py-1.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(201,98,42,0.25)]">
                 <span className="relative flex h-2 w-2">
@@ -134,10 +134,10 @@ export default function LunaPage() {
               </h2>
               <div className="mt-3 space-y-3 text-lg leading-relaxed text-[#5C4A3D]">
                 <p>
-				 Luna is a smart and energetic Border Collie who loves having something to do. She enjoys running around, chasing things, and learning new tricks. She catches on quickly and gets excited when she has a new game or task to figure out. She has plenty of energy and is happiest when she gets to stay active and spend time with her people.
+				         Luna is a smart and energetic Border Collie who loves having something to do. She enjoys running around, chasing things, and learning new tricks. She catches on quickly and gets excited when she has a new game or task to figure out. She has plenty of energy and is happiest when she gets to stay active and spend time with her people.
                 </p>
                 <p>
-				 Luna would do best with an active owner who can give her plenty of exercise and time to play. She would enjoy long walks, hikes, training sessions, and a secure yard where she can run around. If you are looking for a playful and clever dog who is always ready for the next activity, come meet Luna and see if she is the right fit for your home.
+				         Luna would do best with an active owner who can give her plenty of exercise and time to play. She would enjoy long walks, hikes, training sessions, and a secure yard where she can run around. If you are looking for a playful and clever dog who is always ready for the next activity, come meet Luna and see if she is the right fit for your home.
                 </p>
               </div>
             </div>

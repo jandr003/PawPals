@@ -31,9 +31,20 @@ export default function AboutUs() {
       <section className="relative z-[-1] -mt-[60px] w-full overflow-hidden bg-transparent md:-mt-[188px]">
         <img
           src="/about%20us/PAWPALS-ABOUTUS-BG.png"
-          alt="Cat peeking"
+          alt=""
           className="block h-auto w-full"
         />
+
+        <div className="absolute inset-0 flex items-start pt-[60px] md:pt-[188px]">
+          <div className="w-full px-6 pt-6 font-fredoka text-[#3B2414] sm:px-8 md:pl-[14.4%] md:pr-0 md:pt-[4vw]">
+            <h1 className="text-3xl font-extrabold sm:text-5xl md:text-6xl">
+              About Us
+            </h1>
+            <p className="mt-2 text-sm font-medium sm:text-lg md:mt-3 md:text-xl">
+              Helping Pets Stay Happy, Healthy, and Well-Groomed
+            </p>
+          </div>
+        </div>
       </section>
 
       <section

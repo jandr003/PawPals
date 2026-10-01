@@ -38,9 +38,20 @@ export default function ServicesPage() {
       <section className="relative z-[-1] -mt-[60px] w-full overflow-hidden bg-transparent md:-mt-[188px]">
         <img
           src="/SERVICE-PAWPALS.png"
-          alt="Our Services"
+          alt=""
           className="block h-auto w-full"
         />
+
+        <div className="absolute inset-0 flex items-start pt-[60px] md:pt-[188px]">
+          <div className="w-full px-6 pt-6 font-fredoka text-[#3B2414] sm:px-8 md:pl-[14.4%] md:pr-0 md:pt-[4vw]">
+            <h1 className="text-3xl font-extrabold sm:text-5xl md:text-6xl">
+              Our Service
+            </h1>
+            <p className="mt-2 text-sm font-medium sm:text-lg md:mt-3 md:text-xl">
+              Your Guide to Better Pet Care!
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-6 pb-4 pt-16 text-center sm:px-8 sm:pt-24">
@@ -88,10 +99,10 @@ export default function ServicesPage() {
             </ul>
 
             <Link
-              href="/adopt"
+              href="#booking"
               className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
             >
-              Adopt Now
+              Book Now
             </Link>
           </div>
 
@@ -108,7 +119,7 @@ export default function ServicesPage() {
             alt="Cat ready for adoption with PawPals"
             className="mx-auto h-auto w-full max-w-lg md:order-1 md:max-w-none md:translate-y-12 md:scale-[1.15]"
           />
-          
+
           <div className="md:order-2 md:pt-[180px]">
             <h3 className="text-2xl font-semibold md:text-3xl">
               PawPals Adoption Package &ndash; &#8369;999
@@ -162,7 +173,7 @@ export default function ServicesPage() {
             </ul>
 
             <Link
-              href="/adopt"
+              href="#booking"
               className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
             >
               Reserve a Spot
@@ -206,7 +217,7 @@ export default function ServicesPage() {
             </ul>
 
             <Link
-              href="/adopt"
+              href="#booking"
               className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
             >
               Book Training
@@ -216,115 +227,125 @@ export default function ServicesPage() {
       </section>
 
       <section
+        id="booking"
         aria-labelledby="booking-heading"
-        className="mt-[180px] mb-[180px] w-full px-6 py-16 font-fredoka text-[#3B2414] sm:px-8"
+        className="mt-[180px] mb-[180px] w-full scroll-mt-24 px-6 py-16 font-fredoka text-[#3B2414] sm:px-8"
       >
         <div className="mx-auto max-w-6xl">
           <div className="ml-[8%] max-w-2xl md:ml-[20%]">
-          <h2 id="booking-heading" className="text-4xl font-bold md:text-5xl">
-            Book an Appointment
-          </h2>
+            <h2 id="booking-heading" className="text-4xl font-bold md:text-5xl">
+              Book an Appointment
+            </h2>
 
-          <h3 className="mt-10 text-xl font-bold md:text-2xl">
-            How PawPals Works
-          </h3>
+            <h3 className="mt-10 text-xl font-bold md:text-2xl">
+              How PawPals Works
+            </h3>
 
-          <ol className="mt-4 space-y-2 text-lg leading-snug">
-            <li>Step 1: Choose a PawPals service</li>
-            <li>Step 2: Select your preferred date and time</li>
-            <li>Step 3: Fill out your pet and owner details</li>
-            <li>Step 4: Confirm your booking and receive a confirmation message</li>
-          </ol>
+            <ol className="mt-4 space-y-2 text-lg leading-snug">
+              <li>Step 1: Choose a PawPals service</li>
+              <li>Step 2: Select your preferred date and time</li>
+              <li>Step 3: Fill out your pet and owner details</li>
+              <li>Step 4: Confirm your booking and receive a confirmation message</li>
+            </ol>
 
-          <h3 className="mt-12 text-xl font-bold md:text-2xl">
-            Booking Form
-          </h3>
+            <h3 className="mt-12 text-xl font-bold md:text-2xl">
+              Booking Form
+            </h3>
 
-          <form className="mt-6 rounded-2xl border-2 border-dashed border-[#C97F4B] bg-white p-6 shadow-[0_16px_40px_-24px_rgba(43,33,24,0.2)] sm:p-8">
-            <div className="space-y-5 text-lg">
-              <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
-                <span className="font-medium sm:w-48 sm:flex-shrink-0">
-                  Owner&apos;s Name:
-                </span>
-                <input
-                  type="text"
-                  name="ownerName"
-                  className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
-                />
-              </label>
+            <form className="mt-6 rounded-2xl border-2 border-dashed border-[#C97F4B] bg-white p-6 shadow-[0_16px_40px_-24px_rgba(43,33,24,0.2)] sm:p-8">
+              <div className="space-y-5 text-lg">
+                <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+                  <span className="font-medium sm:w-48 sm:flex-shrink-0">
+                    Owner&apos;s Name:
+                  </span>
+                  <input
+                    type="text"
+                    name="ownerName"
+                    className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
+                  />
+                </label>
 
-              <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
-                <span className="font-medium sm:w-48 sm:flex-shrink-0">
-                  Email:
-                </span>
-                <input
-                  type="email"
-                  name="email"
-                  className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
-                />
-              </label>
+                <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+                  <span className="font-medium sm:w-48 sm:flex-shrink-0">
+                    Email:
+                  </span>
+                  <input
+                    type="email"
+                    name="email"
+                    className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
+                  />
+                </label>
 
-              <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
-                <span className="font-medium sm:w-48 sm:flex-shrink-0">
-                  Contact Number:
-                </span>
-                <input
-                  type="tel"
-                  name="contactNumber"
-                  className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
-                />
-              </label>
+                <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+                  <span className="font-medium sm:w-48 sm:flex-shrink-0">
+                    Contact Number:
+                  </span>
+                  <input
+                    type="tel"
+                    name="contactNumber"
+                    className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
+                  />
+                </label>
 
-              <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
-                <span className="font-medium sm:w-48 sm:flex-shrink-0">
-                  Service:
-                </span>
-                <input
-                  type="text"
-                  name="service"
-                  className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
-                />
-              </label>
+                <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+                  <span className="font-medium sm:w-48 sm:flex-shrink-0">
+                    Service:
+                  </span>
+                  <select
+                    name="service"
+                    defaultValue=""
+                    required
+                    className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
+                  >
+                    <option value="" disabled>
+                      Choose a service
+                    </option>
+                    <option>Wellness Package (&#8369;799)</option>
+                    <option>Adoption Package (&#8369;999)</option>
+                    <option>Stay &amp; Play Care (&#8369;1200)</option>
+                    <option>Training Care (&#8369;1500)</option>
+                  </select>
+                </label>
 
-              <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
-                <span className="font-medium sm:w-48 sm:flex-shrink-0">
-                  Date &amp; Time:
-                </span>
-                <input
-                  type="text"
-                  name="dateTime"
-                  className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
-                />
-              </label>
+                <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+                  <span className="font-medium sm:w-48 sm:flex-shrink-0">
+                    Date &amp; Time:
+                  </span>
+                  <input
+                    type="text"
+                    name="dateTime"
+                    className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
+                  />
+                </label>
 
-              <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
-                <span className="font-medium sm:w-48 sm:flex-shrink-0">
-                  Pet&apos;s Name &amp; Breed:
-                </span>
-                <input
-                  type="text"
-                  name="petNameBreed"
-                  className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
-                />
-              </label>
+                <label className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+                  <span className="font-medium sm:w-48 sm:flex-shrink-0">
+                    Pet&apos;s Name &amp; Breed:
+                  </span>
+                  <input
+                    type="text"
+                    name="petNameBreed"
+                    className="flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none"
+                  />
+                </label>
 
-              <label className="flex flex-col gap-1">
-                <span className="font-medium">Additional Notes</span>
-                <textarea
-                  name="additionalNotes"
-                  rows={4}
-                  className="mt-1 rounded-lg border border-[#3B2414]/40 bg-white p-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
-                />
-              </label>
-            </div>
+                <label className="flex flex-col gap-1">
+                  <span className="font-medium">Additional Notes</span>
+                  <textarea
+                    name="additionalNotes"
+                    rows={4}
+                    className="mt-1 rounded-lg border border-[#3B2414]/40 bg-white p-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+                  />
+                </label>
+              </div>
 
-            <button
-              type="submit"
-              className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
-            >
-              Book Training
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+              >
+                Book Appointment
+              </button>
+            </form>
           </div>
         </div>
       </section>

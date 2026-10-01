@@ -16,39 +16,63 @@ export default function ContactPage() {
     <main>
       <Navbar />
 
-      <img
-        src="/contact/CONTACT-PAWPALS.png"
-        alt="Pets banner"
-        className="contact-banner block h-auto w-full"
-        style={{ marginTop: "-250px" }}
-      />
+      <section className="relative z-[-1] -mt-[60px] w-full overflow-hidden bg-transparent md:-mt-[250px]">
+        <img
+          src="/contact/CONTACT-PAWPALS.png"
+          alt=""
+          className="contact-banner block h-auto w-full"
+        />
+
+        <div className="absolute inset-0 flex items-start pt-[60px] md:pt-[250px]">
+          <div
+            className="w-full px-6 pt-6 text-[#3B2414] sm:px-8 md:pl-[14.4%] md:pr-0 md:pt-[4vw]"
+            style={{ fontFamily: "var(--font-fredoka), sans-serif" }}
+          >
+            <h1 className="text-3xl font-extrabold sm:text-5xl md:text-6xl">
+              Contact Us
+            </h1>
+            <p className="mt-2 text-sm font-medium sm:text-lg md:mt-3 md:text-xl">
+              Get in touch with the PawPals team.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section
         className="relative z-10 mx-auto max-w-7xl px-6 py-16 text-[#3B2414]"
         style={{ fontFamily: "var(--font-fredoka), sans-serif" }}
       >
-        <h1 className="text-4xl font-semibold">Contact Us</h1>
-        <p className="mt-3 text-lg leading-snug">
+        <p className="text-lg leading-snug">
           We&apos;re always happy to help with your pet care needs.
           <br />
           Feel free to reach out to the PawPals team.
         </p>
 
-        <h2 className="mt-16 text-4xl font-bold md:text-5xl">Our Location</h2>
+        <div className="mt-16 flex flex-col items-center justify-center gap-10 md:flex-row md:gap-16 lg:gap-[150px]">
+          <div>
+            <h2 className="text-5xl font-bold md:text-6xl">Our Location</h2>
 
-        <address className="mt-8 space-y-1 text-lg not-italic leading-snug">
-          <p>PawPals Pet Care Services</p>
-          <p>San Miguel, Bulacan</p>
-          <p>
-            Call Us: <a href="tel:+639923421134" className="hover:underline">(+63) 9923 421 1134</a>
-          </p>
-          <p>
-            Email Us: <a href="mailto:johnandrew@gmail.com" className="underline hover:text-[#E8A857]">johnandrew@gmail.com</a>
-          </p>
-          <p>Business Hours</p>
-          <p>Monday &ndash; Friday: 8:00 AM &ndash; 7:30 PM</p>
-          <p>Saturday &ndash; Sunday: 7:00 AM &ndash; 12:00 NN</p>
-        </address>
+            <address className="mt-8 space-y-2 text-xl not-italic leading-snug md:text-2xl">
+              <p>PawPals Pet Care Services</p>
+              <p>San Miguel, Bulacan</p>
+              <p>
+                Call Us: <a href="tel:+639923421134" className="hover:underline">(+63) 9923 421 1134</a>
+              </p>
+              <p>
+                Email Us: <a href="mailto:johnandrew@gmail.com" className="underline hover:text-[#E8A857]">johnandrew@gmail.com</a>
+              </p>
+              <p>Business Hours</p>
+              <p>Monday &ndash; Friday: 8:00 AM &ndash; 7:30 PM</p>
+              <p>Saturday &ndash; Sunday: 7:00 AM &ndash; 12:00 NN</p>
+            </address>
+          </div>
+
+          <img
+            src="/Contact/ContactUS-DOG1.png"
+            alt="A smiling woman hugging a puppy"
+            className="h-auto w-full max-w-[420px] md:max-w-[480px] lg:max-w-[600px]"
+          />
+        </div>
 
         <h2 className="mt-16 text-4xl font-bold md:text-5xl">Send Us a Message</h2>
         <p className="mt-4 max-w-3xl text-lg leading-snug">

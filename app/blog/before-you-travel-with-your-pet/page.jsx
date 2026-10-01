@@ -1,81 +1,211 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import { ArrowLeft, CalendarDays, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
+const img = (id) => `https://unsplash.com/photos/${id}/download?force=true&w=1600`;
+
+const GALLERY = [
+  {
+    src: "https://images.unsplash.com/photo-1712681355846-f81302e7886f?auto=format&fit=crop&w=1600&q=80",
+    alt: "Dog sitting in the back of a car",
+  },
+  {
+    src: img("mdb8sgCOHJU"),
+    alt: "A small dog standing on top of a piece of luggage",
+  },
+  {
+    src: img("aP3a8uBSibI"),
+    alt: "A dog sitting in the back seat of a car",
+  },
+  {
+    src: img("v7HYSTHrVzk"),
+    alt: "A brown dog in front of a steering wheel",
+  },
+];
+
+const STEPS = [
+  {
+    title: "Visit the Vet First",
+    text: "Schedule a checkup before a long trip. Make sure vaccinations are up to date, ask about motion sickness, and bring a copy of your pet's health records.",
+  },
+  {
+    title: "Get the Right Gear",
+    text: "Use a secured carrier, crate, or a car harness so your pet can't move around while the vehicle is moving. Let them get used to it at home before the trip.",
+  },
+  {
+    title: "Update Their ID",
+    text: "Check that your pet's collar tag has your current phone number. A microchip with updated details adds another layer of protection if they get lost.",
+  },
+  {
+    title: "Pack Their Essentials",
+    text: "Bring everything your pet needs so you're never caught short on the road:",
+    items: [
+      "Food and fresh water, plus bowls",
+      "Any medication they take",
+      "Leash, waste bags, and a familiar blanket or toy",
+      "Towels and a basic pet first aid kit",
+    ],
+  },
+  {
+    title: "Plan Regular Breaks",
+    text: "Stop every couple of hours so your pet can drink water, stretch, and go to the bathroom. Keep meals light before traveling to help avoid an upset stomach.",
+  },
+  {
+    title: "Never Leave Them in a Parked Car",
+    text: "A parked car heats up very fast, even with the windows cracked, and it can be dangerous for pets within minutes. If you have to leave the vehicle, take your pet with you.",
+  },
+];
+
+const TIPS = [
+  "Try a short practice drive first.",
+  "Keep to their usual feeding and walking schedule.",
+  "Confirm ahead that your hotel or destination is pet-friendly.",
+];
+
 export default function BeforeYouTravelPage() {
+  const [current, setCurrent] = useState(0);
+  const total = GALLERY.length;
+
+  const prev = () => setCurrent((i) => (i - 1 + total) % total);
+  const next = () => setCurrent((i) => (i + 1) % total);
+
+  const arrowClass =
+    "absolute top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-[#C97F4B] shadow-md transition-colors hover:bg-[#C97F4B] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]";
+
   return (
     <main>
       <Navbar />
 
-      <article className="mx-auto max-w-3xl px-6 py-16 font-fredoka text-[#3B2414]">
-        <Link href="/blog" className="text-sm font-medium hover:underline">← Back to Blog</Link>
+      <article className="mx-auto max-w-4xl px-6 pb-16 pt-2 font-fredoka text-[#3B2414] sm:px-8">
+        <Link
+          href="/blog"
+          className="group mb-6 inline-flex items-center gap-2 rounded-full border border-[#E5D5C3] bg-white px-5 py-2.5 text-sm font-semibold text-[#C97F4B] shadow-[0_2px_8px_rgba(201,127,75,0.12)] transition-all duration-300 hover:border-[#C97F4B] hover:bg-[#C97F4B] hover:text-white hover:shadow-[0_4px_14px_rgba(201,127,75,0.35)]"
+        >
+          <ArrowLeft
+            className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1"
+            strokeWidth={2.5}
+          />
+          Back to Blog
+        </Link>
 
-        <h1 className="mt-6 text-4xl font-bold leading-tight md:text-5xl">
+        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#F5E6D3]">
+          {GALLERY.map((photo, i) => (
+            <img
+              key={photo.src}
+              src={photo.src}
+              alt={photo.alt}
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+                i === current ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
+
+          {total > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={prev}
+                aria-label="Previous photo"
+                className={`${arrowClass} left-3`}
+              >
+                <ChevronLeft className="h-6 w-6" strokeWidth={2.5} />
+              </button>
+              <button
+                type="button"
+                onClick={next}
+                aria-label="Next photo"
+                className={`${arrowClass} right-3`}
+              >
+                <ChevronRight className="h-6 w-6" strokeWidth={2.5} />
+              </button>
+
+              <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-black/30 px-3 py-1.5">
+                {GALLERY.map((photo, i) => (
+                  <button
+                    key={photo.src}
+                    type="button"
+                    onClick={() => setCurrent(i)}
+                    aria-label={`Show photo ${i + 1}`}
+                    aria-current={i === current}
+                    className={`h-2.5 rounded-full transition-all ${
+                      i === current ? "w-6 bg-white" : "w-2.5 bg-white/60 hover:bg-white"
+                    }`}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
+        <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#F5E6D3] px-4 py-1.5 text-sm font-semibold text-[#3B2A1F]">
+          <CalendarDays className="h-4 w-4 text-[#B5541F]" strokeWidth={2.5} />
+          24 May 2026
+        </span>
+
+        <h1 className="mt-4 text-4xl font-extrabold leading-tight text-[#4A2E1E] md:text-6xl">
           Before You Travel With Your Pet
         </h1>
-        <p className="mt-3 text-sm">24 May 2026</p>
 
-        <img
-          src="https://images.unsplash.com/photo-1712681355846-f81302e7886f?auto=format&fit=crop&w=1200&h=700&q=80"
-          alt="Dog sitting in the back of a car"
-          className="mt-8 h-64 w-full rounded-2xl object-cover md:h-96"
-        />
-
-        <p className="mt-8 text-lg leading-relaxed">
+        <p className="mt-6 text-xl italic leading-relaxed text-[#5C4A3D]">
           Traveling with your pet can be a great experience, but a little
           planning goes a long way. Here are the things to keep in mind so your
           pet stays safe and comfortable from the first mile to the last.
         </p>
 
-        <h2 className="mt-10 text-2xl font-semibold">1. Visit the Vet First</h2>
-        <p className="mt-3 text-lg leading-relaxed">
-          Schedule a checkup before a long trip. Make sure vaccinations are up
-          to date, ask about motion sickness, and bring a copy of your
-          pet&apos;s health records.
-        </p>
+        <div className="mt-10 space-y-4">
+          {STEPS.map((step, i) => (
+            <section
+              key={step.title}
+              className="flex gap-5 rounded-xl border border-[#EFE0CE] bg-[#FBF6EE] p-6"
+            >
+              <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#C9622A] text-lg font-bold text-white">
+                {i + 1}
+              </span>
+              <div>
+                <h2 className="text-2xl font-bold text-[#4A2E1E]">
+                  {step.title}
+                </h2>
+                <p className="mt-2 text-lg leading-relaxed text-[#5C4A3D]">
+                  {step.text}
+                </p>
+                {step.items && (
+                  <ul className="mt-3 list-disc space-y-1 pl-6 text-lg leading-relaxed text-[#5C4A3D]">
+                    {step.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </section>
+          ))}
+        </div>
 
-        <h2 className="mt-10 text-2xl font-semibold">2. Get the Right Gear</h2>
-        <p className="mt-3 text-lg leading-relaxed">
-          Use a secured carrier, crate, or a car harness so your pet can&apos;t
-          move around while the vehicle is moving. Let them get used to it at
-          home before the trip.
-        </p>
+        <section className="mt-6 rounded-xl border border-[#D9E2CC] bg-[#EEF2E6] px-7 py-6">
+          <h2 className="text-2xl font-bold text-[#4B5D3A]">Tips for a Smooth Trip</h2>
+          <ul className="mt-4 space-y-3 text-lg text-[#4A3C31]">
+            {TIPS.map((tip) => (
+              <li key={tip} className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#4B5D3A] text-white">
+                  <Check className="h-4 w-4" strokeWidth={3} />
+                </span>
+                {tip}
+              </li>
+            ))}
+          </ul>
+        </section>
 
-        <h2 className="mt-10 text-2xl font-semibold">3. Update Their ID</h2>
-        <p className="mt-3 text-lg leading-relaxed">
-          Check that your pet&apos;s collar tag has your current phone number.
-          A microchip with updated details adds another layer of protection if
-          they get lost.
-        </p>
-
-        <h2 className="mt-10 text-2xl font-semibold">4. Pack Their Essentials</h2>
-        <ul className="mt-3 list-disc space-y-2 pl-6 text-lg leading-relaxed">
-          <li>Food and fresh water, plus bowls</li>
-          <li>Any medication they take</li>
-          <li>Leash, waste bags, and a familiar blanket or toy</li>
-          <li>Towels and a basic pet first aid kit</li>
-        </ul>
-
-        <h2 className="mt-10 text-2xl font-semibold">5. Plan Regular Breaks</h2>
-        <p className="mt-3 text-lg leading-relaxed">
-          Stop every couple of hours so your pet can drink water, stretch, and
-          go to the bathroom. Keep meals light before traveling to help avoid an
-          upset stomach.
-        </p>
-
-        <h2 className="mt-10 text-2xl font-semibold">6. Never Leave Them in a Parked Car</h2>
-        <p className="mt-3 text-lg leading-relaxed">
-          A parked car heats up very fast, even with the windows cracked, and it
-          can be dangerous for pets within minutes. If you have to leave the
-          vehicle, take your pet with you.
-        </p>
-
-        <h2 className="mt-10 text-2xl font-semibold">Tips for a Smooth Trip</h2>
-        <ul className="mt-3 list-disc space-y-2 pl-6 text-lg leading-relaxed">
-          <li>Try a short practice drive first.</li>
-          <li>Keep to their usual feeding and walking schedule.</li>
-          <li>Confirm ahead that your hotel or destination is pet-friendly.</li>
-        </ul>
+        <div className="mt-10 text-center">
+          <Link
+            href="/blog"
+            className="inline-block rounded-full bg-[#C9622A] px-8 py-3 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-[#B5541F]"
+          >
+            Read more articles
+          </Link>
+        </div>
       </article>
 
       <Footer />

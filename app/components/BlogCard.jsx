@@ -23,6 +23,25 @@ const posts = [
 export default function BlogCard() {
   return (
     <>
+      <section className="relative z-[-1] -mt-[60px] w-full overflow-hidden bg-transparent md:-mt-[188px]">
+        <img
+          src="/blog/BLOG-PAWPALS.png"
+          alt=""
+          className="block h-auto w-full"
+        />
+
+        <div className="absolute inset-0 flex items-start pt-[60px] md:pt-[188px]">
+          <div className="w-full px-6 pt-6 font-fredoka text-[#3B2414] sm:px-8 md:pl-[14.4%] md:pr-0 md:pt-[4vw]">
+            <h1 className="text-3xl font-extrabold sm:text-5xl md:text-6xl">
+              Blog
+            </h1>
+            <p className="mt-2 text-sm font-medium sm:text-lg md:mt-3 md:text-xl">
+              Tips and Stories for Happy, Healthy Pets
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="relative z-10 px-6 py-12 sm:px-8 md:py-16">
         <p className="mx-auto max-w-4xl text-center font-fredoka text-lg font-medium leading-snug text-[#3B2414] md:text-2xl">
           Welcome to the PawPals Blog! Explore useful articles, practical pet

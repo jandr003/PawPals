@@ -1,65 +1,193 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import { ArrowLeft, CalendarDays, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
+const img = (id) => `https://unsplash.com/photos/${id}/download?force=true&w=1600`;
+
+const GALLERY = [
+  {
+    src: img("orMEQSQMz_Y"),
+    alt: "A small dog sitting in a cozy dog bed",
+  },
+  {
+    src: img("EL26aKbbRgg"),
+    alt: "A dog lying on a bed at home",
+  },
+  {
+    src: img("C6jNnys9uEw"),
+    alt: "A brown dog resting on a bed",
+  },
+  {
+    src: img("Qy6n6rAC4xE"),
+    alt: "A dog sleeping comfortably on a striped bed",
+  },
+];
+
+const STEPS = [
+  {
+    title: "Set Up a Safe Space First",
+    text: "Before letting your pet explore the whole house, set up a quiet room with their bed, food, water, and familiar items. This gives them a secure base to return to.",
+  },
+  {
+    title: "Stick to a Routine",
+    text: "Feed, walk, and play at consistent times from day one. A predictable schedule helps your pet feel more secure in an unfamiliar environment.",
+  },
+  {
+    title: "Introduce New Spaces Gradually",
+    text: "Let your pet explore one room at a time instead of the whole house at once. Expanding their space slowly keeps them from feeling overwhelmed.",
+  },
+  {
+    title: "Keep Familiar Items Around",
+    text: "Their old bed, blanket, or a favorite toy can carry familiar scents that make the new environment feel less foreign.",
+  },
+  {
+    title: "Be Patient with Adjustment",
+    text: "Some pets settle in within days, others take weeks. Give them time to adjust at their own pace, and avoid overwhelming them with too much too soon.",
+  },
+];
+
+const TIPS = [
+  "Keep the first few days low-key with minimal visitors.",
+  "Watch for signs of stress and give them space when needed.",
+  "Celebrate small wins as they grow more comfortable.",
+];
+
 export default function HelpingYourPetSettleIntoANewHomePage() {
+  const [current, setCurrent] = useState(0);
+  const total = GALLERY.length;
+
+  const prev = () => setCurrent((i) => (i - 1 + total) % total);
+  const next = () => setCurrent((i) => (i + 1) % total);
+
+  const arrowClass =
+    "absolute top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-[#C97F4B] shadow-md transition-colors hover:bg-[#C97F4B] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]";
+
   return (
     <main>
       <Navbar />
 
-      <article className="mx-auto max-w-3xl px-6 py-16 font-fredoka text-[#3B2414]">
-        <Link href="/blog" className="text-sm font-medium hover:underline">← Back to Blog</Link>
+      <article className="mx-auto max-w-4xl px-6 pb-16 pt-2 font-fredoka text-[#3B2414] sm:px-8">
+        <Link
+          href="/blog"
+          className="group mb-6 inline-flex items-center gap-2 rounded-full border border-[#E5D5C3] bg-white px-5 py-2.5 text-sm font-semibold text-[#C97F4B] shadow-[0_2px_8px_rgba(201,127,75,0.12)] transition-all duration-300 hover:border-[#C97F4B] hover:bg-[#C97F4B] hover:text-white hover:shadow-[0_4px_14px_rgba(201,127,75,0.35)]"
+        >
+          <ArrowLeft
+            className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1"
+            strokeWidth={2.5}
+          />
+          Back to Blog
+        </Link>
 
-        <h1 className="mt-6 text-4xl font-bold leading-tight md:text-5xl">
+        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#F5E6D3]">
+          {GALLERY.map((photo, i) => (
+            <img
+              key={photo.src}
+              src={photo.src}
+              alt={photo.alt}
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+                i === current ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
+
+          {total > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={prev}
+                aria-label="Previous photo"
+                className={`${arrowClass} left-3`}
+              >
+                <ChevronLeft className="h-6 w-6" strokeWidth={2.5} />
+              </button>
+              <button
+                type="button"
+                onClick={next}
+                aria-label="Next photo"
+                className={`${arrowClass} right-3`}
+              >
+                <ChevronRight className="h-6 w-6" strokeWidth={2.5} />
+              </button>
+
+              <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-black/30 px-3 py-1.5">
+                {GALLERY.map((photo, i) => (
+                  <button
+                    key={photo.src}
+                    type="button"
+                    onClick={() => setCurrent(i)}
+                    aria-label={`Show photo ${i + 1}`}
+                    aria-current={i === current}
+                    className={`h-2.5 rounded-full transition-all ${
+                      i === current ? "w-6 bg-white" : "w-2.5 bg-white/60 hover:bg-white"
+                    }`}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
+        <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#F5E6D3] px-4 py-1.5 text-sm font-semibold text-[#3B2A1F]">
+          <CalendarDays className="h-4 w-4 text-[#B5541F]" strokeWidth={2.5} />
+          24 May 2026
+        </span>
+
+        <h1 className="mt-4 text-4xl font-extrabold leading-tight text-[#4A2E1E] md:text-6xl">
           Helping Your Pet Settle into a New Home
         </h1>
-        <p className="mt-3 text-sm">24 May 2026</p>
 
-        <p className="mt-8 text-lg leading-relaxed">
+        <p className="mt-6 text-xl italic leading-relaxed text-[#5C4A3D]">
           A new home can be overwhelming for a pet. A little preparation and
           patience goes a long way in helping them feel safe and settled.
         </p>
 
-        <h2 className="mt-10 text-2xl font-semibold">1. Set Up a Safe Space First</h2>
-        <p className="mt-3 text-lg leading-relaxed">
-          Before letting your pet explore the whole house, set up a quiet room
-          with their bed, food, water, and familiar items. This gives them a
-          secure base to return to.
-        </p>
+        <div className="mt-10 space-y-4">
+          {STEPS.map((step, i) => (
+            <section
+              key={step.title}
+              className="flex gap-5 rounded-xl border border-[#EFE0CE] bg-[#FBF6EE] p-6"
+            >
+              <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#C9622A] text-lg font-bold text-white">
+                {i + 1}
+              </span>
+              <div>
+                <h2 className="text-2xl font-bold text-[#4A2E1E]">
+                  {step.title}
+                </h2>
+                <p className="mt-2 text-lg leading-relaxed text-[#5C4A3D]">
+                  {step.text}
+                </p>
+              </div>
+            </section>
+          ))}
+        </div>
 
-        <h2 className="mt-10 text-2xl font-semibold">2. Stick to a Routine</h2>
-        <p className="mt-3 text-lg leading-relaxed">
-          Feed, walk, and play at consistent times from day one. A predictable
-          schedule helps your pet feel more secure in an unfamiliar
-          environment.
-        </p>
+        <section className="mt-6 rounded-xl border border-[#D9E2CC] bg-[#EEF2E6] px-7 py-6">
+          <h2 className="text-2xl font-bold text-[#4B5D3A]">Tips for Success</h2>
+          <ul className="mt-4 space-y-3 text-lg text-[#4A3C31]">
+            {TIPS.map((tip) => (
+              <li key={tip} className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#4B5D3A] text-white">
+                  <Check className="h-4 w-4" strokeWidth={3} />
+                </span>
+                {tip}
+              </li>
+            ))}
+          </ul>
+        </section>
 
-        <h2 className="mt-10 text-2xl font-semibold">3. Introduce New Spaces Gradually</h2>
-        <p className="mt-3 text-lg leading-relaxed">
-          Let your pet explore one room at a time instead of the whole house
-          at once. Expanding their space slowly keeps them from feeling
-          overwhelmed.
-        </p>
-
-        <h2 className="mt-10 text-2xl font-semibold">4. Keep Familiar Items Around</h2>
-        <p className="mt-3 text-lg leading-relaxed">
-          Their old bed, blanket, or a favorite toy can carry familiar scents
-          that make the new environment feel less foreign.
-        </p>
-
-        <h2 className="mt-10 text-2xl font-semibold">5. Be Patient with Adjustment</h2>
-        <p className="mt-3 text-lg leading-relaxed">
-          Some pets settle in within days, others take weeks. Give them time
-          to adjust at their own pace, and avoid overwhelming them with too
-          much too soon.
-        </p>
-
-        <h2 className="mt-10 text-2xl font-semibold">Tips for Success</h2>
-        <ul className="mt-3 list-disc space-y-2 pl-6 text-lg leading-relaxed">
-          <li>Keep the first few days low-key with minimal visitors.</li>
-          <li>Watch for signs of stress and give them space when needed.</li>
-          <li>Celebrate small wins as they grow more comfortable.</li>
-        </ul>
+        <div className="mt-10 text-center">
+          <Link
+            href="/blog"
+            className="inline-block rounded-full bg-[#C9622A] px-8 py-3 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-[#B5541F]"
+          >
+            Read more articles
+          </Link>
+        </div>
       </article>
 
       <Footer />

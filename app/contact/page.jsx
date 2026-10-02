@@ -39,17 +39,17 @@ export default function ContactPage() {
       </section>
 
       <section
-        className="relative z-10 mx-auto max-w-7xl px-6 py-16 text-[#3B2414]"
+        className="relative z-10 mx-auto max-w-7xl px-6 pt-16 pb-[100px] text-[#3B2414]"
         style={{ fontFamily: "var(--font-fredoka), sans-serif" }}
       >
-        <p className="text-lg leading-snug">
-          We&apos;re always happy to help with your pet care needs.
-          <br />
-          Feel free to reach out to the PawPals team.
-        </p>
-
-        <div className="mt-16 flex flex-col items-center justify-center gap-10 md:flex-row md:gap-16 lg:gap-[150px]">
-          <div>
+      <p className="text-lg leading-snug md:text-xl">
+        We&apos;re always happy to help with your pet care needs.
+        <br />
+        Feel free to reach out to the PawPals team.
+      </p>
+      
+        <div className="mt-[50px] flex flex-col items-center gap-[50px] lg:grid lg:grid-cols-[minmax(0,520px)_minmax(0,720px)] lg:gap-x-[40px] lg:gap-y-0 2xl:-mr-[100px]">
+          <div className="w-full">
             <h2 className="text-5xl font-bold md:text-6xl">Our Location</h2>
 
             <address className="mt-8 space-y-2 text-xl not-italic leading-snug md:text-2xl">
@@ -70,42 +70,62 @@ export default function ContactPage() {
           <img
             src="/Contact/ContactUS-DOG1.png"
             alt="A smiling woman hugging a puppy"
-            className="h-auto w-full max-w-[420px] md:max-w-[480px] lg:max-w-[600px]"
+            className="h-auto w-full max-w-[560px] lg:max-w-none"
           />
         </div>
 
-        <h2 className="mt-16 text-4xl font-bold md:text-5xl">Send Us a Message</h2>
-        <p className="mt-4 max-w-3xl text-lg leading-snug">
-          Have a question about our services or need assistance? Send us a
-          message, and our team will get back to you as soon as possible.
-        </p>
-        <ContactForm />
+        <div className="mt-[50px] flex flex-col items-center gap-[50px] lg:grid lg:grid-cols-[minmax(0,520px)_minmax(0,720px)] lg:gap-x-[40px] lg:gap-y-0 2xl:-mr-[100px]">
+          <div className="w-full">
+            <h2 className="text-4xl font-bold md:text-5xl">Send Us a Message</h2>
+            <p className="mt-4 max-w-[560px] text-lg leading-snug">
+              Have a question about our services or need assistance? Send us a
+              message, and our team will get back to you as soon as possible.
+            </p>
+            <ContactForm />
+          </div>
 
-        <h2 className="mt-16 text-4xl font-bold md:text-5xl">Connect With Us</h2>
-        <p className="mt-4 max-w-3xl text-lg leading-snug">
-          Follow PawPals on social media for updates, pet care tips, and
-          community stories.
-        </p>
+          <img
+            src="/Contact/ContactUS-CAT%26DOG1.png"
+            alt="A husky and a cat cuddling together"
+            className="h-auto w-full max-w-[560px] lg:max-w-none"
+          />
+        </div>
 
-        <p className="mt-6 text-lg leading-snug">Follow Us On:</p>
-        <p className="mt-1 text-lg leading-snug">
-          {SOCIALS.map((s, i) => (
-            <span key={s.name}>{i > 0 && " | "}<a href={s.href} target="_blank" rel="noopener noreferrer" className="hover:underline">{s.name}</a></span>
-          ))}
-        </p>
+        <div className="mt-[50px] flex flex-col items-center gap-[50px] lg:grid lg:grid-cols-[minmax(0,520px)_minmax(0,720px)] lg:gap-x-[40px] lg:gap-y-0 2xl:-mr-[100px]">
+          <div className="w-full">
+            <h2 className="text-5xl font-bold md:text-6xl">Connect With Us</h2>
+            <p className="mt-6 max-w-[560px] text-lg leading-snug">
+              Follow PawPals on social media for updates, pet care tips, and
+              community stories.
+            </p>
 
-        <p className="mt-6 text-lg leading-snug">
-          Ready to book a service for your pet?
-          <br />
-          Schedule your appointment with PawPals today.
-        </p>
+            <p className="mt-8 text-lg leading-snug">Follow Us On:</p>
+            <p className="text-lg leading-snug">
+              {SOCIALS.map((s, i) => (
+                <span key={s.name}>{i > 0 && " | "}<a href={s.href} target="_blank" rel="noopener noreferrer" className="hover:underline">{s.name}</a></span>
+              ))}
+            </p>
 
-        <Link
-          href="/service/book-appointment"
-          className="mt-6 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
-        >
-          Book Now
-        </Link>
+            <p className="mt-8 text-lg leading-snug">
+              Ready to book a service for your pet?
+              <br />
+              Schedule your appointment with PawPals today.
+            </p>
+
+            <Link
+              href="/service/book-appointment"
+              className="mt-6 inline-block rounded-xl bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#3B2414] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+            >
+              Book Now
+            </Link>
+          </div>
+
+          <img
+            src="/Contact/ContactUS-CAT1.png"
+            alt="A cat"
+            className="h-auto w-full max-w-[560px] lg:max-w-none"
+          />
+        </div>
       </section>
 
       <Footer />

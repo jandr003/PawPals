@@ -71,23 +71,114 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-60 [--raise:6.75rem]">
+    <footer className="relative mt-20 sm:mt-60 [--raise:6.75rem]">
+      <div className="sm:hidden">
+        <svg viewBox="0 0 400 44" preserveAspectRatio="none" className="block h-10 w-full" aria-hidden="true">
+          <path d="M0 44 V20 C60 -2 130 -4 200 14 S340 34 400 8 V44 Z" fill="#E9A85B" />
+        </svg>
+
+        <div className="bg-[#E9A85B] px-6 pb-10 pt-2">
+          <h3 className="font-fredoka text-2xl font-bold text-[#3B2414]">Stay in the Loop</h3>
+          <p className="mt-3 max-w-[300px] font-fredoka text-base leading-relaxed text-[#4A3220]">
+            Get the latest pet care tips, treats, and PawPals updates in your inbox.
+          </p>
+          <button
+            type="button"
+            className="mt-4 rounded-lg bg-[#C97F4B] px-6 py-3 font-fredoka text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+          >
+            Subscribe Now
+          </button>
+        </div>
+
+        <div className="bg-[#401C05] px-6 pb-8 pt-8 text-white">
+          <Link href="/" className="inline-block" aria-label="PawPals home">
+            <img src="/PAWPALS-LOGO.png" alt="PawPals Logo" className="h-auto w-[130px] brightness-0 invert" />
+          </Link>
+          <p className="mt-3 max-w-[240px] font-fredoka text-xs leading-snug text-white/80">
+            Where Pets Are Treated Like Family, and Every Visit Feels Safe, Gentle, and Full of Care They Truly Deserve.
+          </p>
+
+          <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-8">
+            <nav aria-label="Quick links">
+              <h4 className="font-fredoka text-base font-bold">Quick links</h4>
+              <ul className="mt-3 space-y-3 font-fredoka text-xs text-white/80">
+                {QUICK_LINKS.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link href={href} className="transition-colors hover:text-white">{label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <div>
+              <h4 className="font-fredoka text-base font-bold">Get in touch</h4>
+              <ul className="mt-3 space-y-4 font-fredoka text-xs text-white/80">
+                <li>Address: San Miguel</li>
+                <li>
+                  Phone: <a href="tel:+639923421134" className="hover:text-white">(+63) 992 342 1134</a>
+                </li>
+                <li className="break-words">
+                  Email: <a href="mailto:johnandrew@gmail.com" className="hover:text-white">johnandrew@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-fredoka text-base font-bold">Opening Hours</h4>
+              <ul className="mt-3 space-y-4 font-fredoka text-xs text-white/80">
+                <li>Monday - Friday: 8:00AM - 7:30PM</li>
+                <li>Saturday - Sunday 7:00AM - 12:00NN</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-fredoka text-base font-bold">Follow us</h4>
+              <ul className="mt-3 space-y-4 font-fredoka text-xs text-white/80">
+                {SOCIALS.map((s) => (
+                  <li key={s.name}>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit PawPals on ${s.name}`}
+                      className="flex items-center gap-3 transition-colors hover:text-white"
+                    >
+                      <span className="[&>svg]:h-5 [&>svg]:w-5">{s.icon}</span>
+                      {s.handle}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-10 font-fredoka text-xs text-white/80">
+            <p>© {year} PawPals. All Rights Reserved.</p>
+            <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+              {LEGAL_LINKS.map(({ href, label }) => (
+                <Link key={href} href={href} className="hover:text-white">{label}</Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 bg-cover bg-top bg-no-repeat"
+        className="absolute inset-x-0 bottom-0 hidden bg-cover bg-top bg-no-repeat sm:block lg:[background-size:100%_100%]"
         style={{
           top: "calc(var(--raise) * -1)",
           backgroundImage: "url('/home/FOOTER-BG-1.png')",
         }}
       />
 
-      <div className="relative z-10 px-6 pb-10 pt-16 text-white sm:px-8">
+      <div className="relative z-10 hidden px-6 pb-10 pt-16 text-white sm:block sm:px-8">
         <div
           className="absolute inset-x-0 px-6 sm:px-8"
           style={{ top: "calc(10rem - var(--raise))" }}
         >
           <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
-            <div className="relative -left-2 sm:-left-8">
+            <div className="relative -top-6 -left-2 sm:-left-8">
               <h3 className="font-fredoka text-3xl font-bold text-[#3B2414] sm:text-4xl">
                 Stay in the Loop
               </h3>
@@ -105,13 +196,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mx-auto mt-[11.25rem] grid max-w-6xl grid-cols-2 gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mx-auto mt-[11.25rem] grid max-w-6xl grid-cols-2 gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1fr]">
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block" aria-label="PawPals home">
               <img
                 src="/PAWPALS-LOGO.png"
                 alt="PawPals Logo"
-                className="h-auto w-44 brightness-0 invert"
+                className="h-auto w-60 brightness-0 invert"
               />
             </Link>
             <p className="mt-4 max-w-[240px] font-fredoka text-sm leading-relaxed text-white/70">

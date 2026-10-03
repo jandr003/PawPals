@@ -61,11 +61,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="relative isolate overflow-visible mx-auto -mt-28 md:mt-0 w-full max-w-7xl pb-3 pt-2 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 md:pl-6 md:pr-6 lg:pl-6 lg:pr-10 lg:pt-0 xl:pl-0 xl:-mt-28 lg:-mt-28">
+    // PHONE: -mt-36 (was -mt-28) pulls the navbar up, pb-0 + -mb-6 tightens the gap to the picture
+    <nav className="relative isolate overflow-visible mx-auto -mt-36 -mb-[7.5rem] -translate-y-14 md:translate-y-0 md:mb-0 md:mt-0 w-full max-w-7xl pb-0 pt-2 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 md:pb-3 md:pl-6 md:pr-6 lg:pl-6 lg:pr-10 lg:pt-0 xl:pl-0 xl:-mt-28 lg:-mt-28">
       <div className="flex items-center justify-between overflow-visible">
         <Link
           href="/"
-          className="flex shrink-0 min-w-0 overflow-visible translate-y-1 items-center gap-2 md:translate-y-3 lg:ml-2 lg:translate-y-8 lg:translate-x-2 xl:-ml-16 xl:translate-y-9"
+          className="flex shrink-0 min-w-0 overflow-visible items-center gap-2 -ml-4 md:ml-0 md:translate-y-3 lg:ml-2 lg:translate-y-8 lg:translate-x-2 xl:-ml-16 xl:translate-y-9"
           onClick={() => {
             setOpen(false);
             setPending("/");
@@ -120,7 +121,7 @@ export default function Navbar() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-9 w-9 shrink-0 -translate-y-2 flex-col items-center justify-center gap-1.5 md:translate-y-0 lg:hidden"
+          className="flex h-9 w-9 shrink-0 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
           <span className={`block h-0.5 w-6 bg-text transition-transform duration-300 ${open ? "translate-y-2 rotate-45" : ""}`} />
           <span className={`block h-0.5 w-6 bg-text transition-opacity duration-300 ${open ? "opacity-0" : "opacity-100"}`} />

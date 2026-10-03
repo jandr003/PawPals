@@ -61,7 +61,6 @@ export default function Navbar() {
   }, []);
 
   return (
-    // PHONE: -mt-36 (was -mt-28) pulls the navbar up, pb-0 + -mb-6 tightens the gap to the picture
     <nav className="relative isolate overflow-visible mx-auto -mt-36 -mb-[7.5rem] -translate-y-14 md:translate-y-0 md:mb-0 md:mt-0 w-full max-w-7xl pb-0 pt-2 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 md:pb-3 md:pl-6 md:pr-6 lg:pl-6 lg:pr-10 lg:pt-0 xl:pl-0 xl:-mt-28 lg:-mt-28">
       <div className="flex items-center justify-between overflow-visible">
         <Link

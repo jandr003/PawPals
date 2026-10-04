@@ -28,23 +28,30 @@ const crew = [
 export default function AboutUs() {
   return (
     <>
-      <section className="relative z-[-1] -mt-[60px] w-full overflow-hidden bg-transparent md:-mt-[188px]">
-        <img
-          src="/about%20us/PAWPALS-ABOUTUS-BG.png"
-          alt=""
-          className="block h-auto w-full"
-        />
+    <section className="pointer-events-none block h-auto max-w-none -translate-y-20 drop-shadow-[0_3px_3px_rgba(0,0,0,0.25)] md:hidden">
+    <img
+      src="/about%20us/PAWPALS-ABOUTUS-BG.png"
+      alt=""
+      className="pointer-events-none block h-auto max-w-none -translate-y-10 md:hidden"
+      style={{ width: "200%", marginLeft: "-75%" }}
+    />
 
-        <div className="absolute inset-0 flex items-start pt-[60px] md:pt-[188px]">
-          <div className="w-full px-6 pt-6 font-fredoka text-[#3B2414] sm:px-8 md:pl-[14.4%] md:pr-0 md:pt-[4vw]">
-            <h1 className="text-3xl font-extrabold sm:text-5xl md:text-6xl">
-              About Us
-            </h1>
-            <p className="mt-2 text-sm font-medium sm:text-lg md:mt-3 md:text-xl">
-              Helping Pets Stay Happy, Healthy, and Well-Groomed
-            </p>
-          </div>
+      <img
+        src="/about%20us/PAWPALS-ABOUTUS-BG.png"
+        alt=""
+        className="hidden h-auto w-full md:block"
+      />
+
+      <div className="relative z-10 md:absolute md:inset-0 md:flex md:items-start md:pt-[188px]">
+        <div className="w-full px-5 pb-10 pt-6 text-left font-fredoka text-[#3B2414] md:px-0 md:pb-0 md:pl-[14.4%] md:pt-[4vw]">
+          <h1 className="text-[clamp(2.2rem,10.5vw,3.75rem)] font-extrabold leading-tight md:text-6xl">
+            About Us
+          </h1>
+          <p className="mt-2 max-w-[22ch] text-[clamp(1.1rem,5.2vw,1.8rem)] font-medium leading-snug sm:max-w-[30ch] md:mt-3 md:max-w-none md:text-xl">
+            Helping Pets Stay Happy, Healthy, and Well-Groomed
+          </p>
         </div>
+      </div>
       </section>
 
       <section

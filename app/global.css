@@ -17,15 +17,14 @@ body {
 
 @media (max-width: 1023px) {
 	main > nav {
-	position: relative;
-	z-index: 20;
-	margin-top: 0 !important;
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
-	padding-left: 1.5rem !important;
-	padding-right: 1.5rem !important;
-	background: #ffffff;
-	border-radius: 0 0 1.25rem 1.25rem;
+		position: relative;
+		z-index: 30; /* dating 20, dapat mas mataas sa section (z-10) */
+		margin-top: 0 !important;
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+		padding-left: 1.5rem !important;
+		padding-right: 1.5rem !important;
+		background: transparent;
 	}
 
 	main > nav + section {
@@ -134,16 +133,26 @@ body {
 	}
 
 	.contact-banner {
-  		image-rendering: -webkit-optimize-contrast;
-  		image-rendering: crisp-edges;
+		image-rendering: -webkit-optimize-contrast;
+		image-rendering: crisp-edges;
 	}
-	
+
 	html,
-		body,
-		button,
-		input,
-		textarea,
-		select {
+	body,
+	button,
+	input,
+	textarea,
+	select {
 		font-family: var(--font-fredoka);
+	}
+
+	html,
+	body {
+		overflow-x: hidden;
+	}
+
+	main > nav + section > img:first-of-type {
+		width: 200% !important;
+		max-width: none !important;
 	}
 }

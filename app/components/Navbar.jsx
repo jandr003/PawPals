@@ -61,7 +61,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="relative isolate overflow-visible mx-auto -mt-36 -mb-[7.5rem] -translate-y-14 md:translate-y-0 md:mb-0 md:mt-0 w-full max-w-7xl pb-0 pt-2 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 md:pb-3 md:pl-6 md:pr-6 lg:pl-6 lg:pr-10 lg:pt-0 xl:pl-0 xl:-mt-28 lg:-mt-28">
+    <nav
+      className={`relative isolate overflow-visible mx-auto -mt-36 -mb-[7.5rem] -translate-y-12 md:translate-y-0 md:mb-0 md:mt-0 w-full max-w-7xl pb-0 pt-2 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 md:pb-3 md:pl-6 md:pr-6 lg:pl-6 lg:pr-10 lg:pt-0 xl:pl-0 xl:-mt-28 lg:-mt-28 transition-shadow duration-300 ${
+        open
+          ? "rounded-b-2xl bg-white pb-0 shadow-lg lg:rounded-none lg:bg-transparent lg:shadow-none"
+          : ""
+      }`}
+    >
       <div className="flex items-center justify-between overflow-visible">
         <Link
           href="/"
@@ -77,7 +83,7 @@ export default function Navbar() {
             width={340}
             height={100}
             priority
-            className="h-auto w-48 sm:w-60 md:w-48 lg:w-64 xl:w-72 shrink-0"
+            className="h-auto w-48 sm:w-60 md:w-48 lg:w-64 xl:w-72 shrink-0 -my-4 lg:my-0"
           />
         </Link>
 
@@ -120,7 +126,9 @@ export default function Navbar() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-9 w-9 shrink-0 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className={`flex shrink-0 flex-col items-center justify-center gap-1.5 transition-all duration-300 lg:hidden ${
+            open ? "h-10 w-10 rounded-full border-2 border-text" : "h-9 w-9"
+          }`}
         >
           <span className={`block h-0.5 w-6 bg-text transition-transform duration-300 ${open ? "translate-y-2 rotate-45" : ""}`} />
           <span className={`block h-0.5 w-6 bg-text transition-opacity duration-300 ${open ? "opacity-0" : "opacity-100"}`} />
@@ -128,29 +136,35 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className={`overflow-hidden transition-all duration-300 lg:hidden ${open ? "mt-3 max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
-        <ul className="flex flex-col gap-4 py-4 border-t border-gray-100 text-lg text-text font-medium">
-          {NAV_LINKS.map(({ href, label }) => {
-            const active = activeHref === href;
-            return (
-              <li key={href}>
-                <Link
-                  href={href}
-                  onClick={() => {
-                    setOpen(false);
-                    setPending(href);
-                  }}
-                  aria-current={active ? "page" : undefined}
-                  className={`block transition-colors hover:text-button ${
-                    active ? "text-button underline decoration-[3px] underline-offset-4" : ""
-                  }`}
-                >
-                  {label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+      <div
+        className={`-mx-6 overflow-hidden transition-all duration-300 lg:hidden ${
+          open ? "-mt-8 max-h-[28rem] opacity-100" : "pointer-events-none max-h-0 opacity-0"
+        }`}
+      >
+        <div className="border-t border-gray-200 px-6 pb-5 pt-4">
+          <ul className="flex flex-col gap-5 text-lg font-medium text-text">
+            {NAV_LINKS.map(({ href, label }) => {
+              const active = activeHref === href;
+              return (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    onClick={() => {
+                      setOpen(false);
+                      setPending(href);
+                    }}
+                    aria-current={active ? "page" : undefined}
+                    className={`block transition-colors hover:text-button ${
+                      active ? "text-button" : ""
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </nav>
   );

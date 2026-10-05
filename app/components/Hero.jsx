@@ -146,16 +146,15 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative flex w-full flex-col-reverse items-center gap-8 px-6 pt-0 md:flex-row md:items-center md:justify-between md:gap-4 md:px-10 md:pt-16 lg:items-start lg:gap-0 lg:pl-24 lg:pr-16 lg:pt-24 xl:pl-80 xl:pr-48">
-        <div className="w-full md:max-w-[400px] lg:max-w-[460px] xl:max-w-[720px]">
-          <h1 className="font-fredoka font-semibold leading-[1.1] text-text text-[36px] md:text-[40px] lg:text-[48px] xl:text-[72px]">
-            Every Paw Deserves Love and Care
+      <div className="relative flex w-full flex-col-reverse items-center gap-8 px-6 pt-0 md:flex-row md:items-center md:justify-between md:gap-4 md:pl-12 md:pr-9 md:pt-16 lg:items-start lg:gap-0 lg:pl-24 lg:pr-16 lg:pt-24 xl:pl-80 xl:pr-48">
+        <div className="w-full md:max-w-[400px] md:max-lg:text-left lg:max-w-[460px] xl:max-w-[720px]">
+          <h1 className="font-fredoka font-semibold leading-[1.1] text-text text-[36px] md:max-lg:font-bold md:text-[44px] lg:text-[48px] xl:text-[72px]">
+            Every Paw <br className="hidden md:max-lg:block" />Deserves <br className="hidden md:max-lg:block" />Love and Care
           </h1>
-          <p className="mt-4 max-w-full font-fredoka font-light leading-relaxed text-text/80 text-base md:mt-6 md:max-w-[380px] md:text-lg lg:max-w-[420px] xl:max-w-[560px] xl:text-2xl">
-            Adopt pets, book vet appointments, and give your companions the
-            love and care they deserve.
+          <p className="mt-4 max-w-full font-fredoka font-light leading-relaxed text-text/80 text-base md:mt-4 md:max-w-[340px] md:text-sm lg:mt-6 lg:max-w-[420px] lg:text-lg xl:max-w-[560px] xl:text-2xl">
+            Adopt pets, book vet appointments, and give <br className="hidden md:max-lg:block" />your companions the love and care they deserve.
           </p>
-          <button className="mt-6 rounded-full bg-button font-fredoka font-medium text-white shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)] transition hover:brightness-95 px-8 py-3 text-base md:mt-8 md:px-9 md:py-4 xl:px-12 xl:py-5 xl:text-xl">
+          <button className="mt-6 rounded-full bg-button font-fredoka font-medium text-white shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)] transition hover:brightness-95 px-8 py-3 text-base md:mt-4 md:rounded-lg md:px-7 md:py-2.5 md:text-sm md:shadow-none lg:mt-8 lg:rounded-full lg:px-9 lg:py-4 lg:text-base lg:shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)] xl:px-12 xl:py-5 xl:text-xl">
             Adopt Now
           </button>
         </div>
@@ -163,15 +162,15 @@ export default function Hero() {
         <img
           src="/home/HOME-PICTURE-1.png"
           alt="Happy pet"
-          className="w-[80%] max-w-[300px] object-contain md:w-[42%] md:max-w-[340px] md:shrink-0 lg:w-full lg:-mt-16 lg:max-w-[460px] xl:-mt-52 xl:max-w-[700px]"
+          className="w-[80%] max-w-[300px] object-contain md:w-[320px] md:max-w-[320px] md:shrink-0 lg:w-full lg:-mt-16 lg:max-w-[460px] xl:-mt-52 xl:max-w-[700px]"
         />
       </div>
 
-      <div className="relative mx-auto mt-10 w-[700px] max-w-full px-6 text-center md:mt-[100px] md:px-8">
-        <h2 className="font-fredoka text-[30px] font-bold text-[#2B2118] md:text-[36px] xl:text-[44px]">
+      <div className="relative mx-auto mt-10 w-[700px] max-w-full px-6 text-center md:mt-[100px] md:w-[740px] md:px-6 lg:w-[700px] lg:px-8">
+        <h2 className="font-fredoka text-[30px] font-bold text-[#2B2118] md:text-[32px] lg:text-[36px] xl:text-[44px]">
           Welcome to PawPals!
         </h2>
-        <p className="mx-auto mt-4 font-fredoka text-base font-normal leading-[1.7] text-[#4A4A4A] lg:text-lg">
+        <p className="mx-auto mt-4 font-fredoka text-base font-normal leading-[1.7] text-[#4A4A4A] md:text-[13px] md:leading-[1.4] lg:text-lg lg:leading-[1.7]">
           PawPals is a caring space where pets find love, attention, and a
           second chance at happiness. We help connect animals in need with
           people who are ready to welcome them home, while also making sure

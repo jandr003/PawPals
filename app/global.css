@@ -18,7 +18,7 @@ body {
 @media (max-width: 1023px) {
 	main > nav {
 		position: relative;
-		z-index: 30; /* dating 20, dapat mas mataas sa section (z-10) */
+		z-index: 30; 
 		margin-top: 0 !important;
 		padding-top: 0.75rem;
 		padding-bottom: 0.75rem;

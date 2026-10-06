@@ -134,7 +134,7 @@ export default function BellaPage() {
               </h2>
               <div className="mt-3 space-y-3 text-lg leading-relaxed text-[#5C4A3D]">
                 <p>
-                  Bella is a warm, high-energy companion who thrives on attention and activity. Like most Labradors, she's eager to please, quick to learn, and happiest when she has a job to do — whether that's fetching a ball, greeting you at the door, or simply keeping you company on the couch after a long walk.
+                  Bella is a warm, high-energy companion who thrives on attention and activity. Like most Labradors, she&apos;s eager to please, quick to learn, and happiest when she has a job to do — whether that&apos;s fetching a ball, greeting you at the door, or simply keeping you company on the couch after a long walk.
                 </p>
                 <p>
                   She does well with an active household that can match her energy and give her regular exercise. Her friendly, food-motivated nature makes her easy to train, and she gets along well with people of all ages.

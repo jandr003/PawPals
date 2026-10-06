@@ -40,16 +40,16 @@ function Stars() {
   );
 }
 
-function TrimmedImg({ src, alt, className }) {
+function TrimmedImg({ src, alt, className, query = "(max-width: 767px)" }) {
   const [trim, setTrim] = useState(null);
   const [mob, setMob] = useState(false);
   useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
+    const mq = window.matchMedia(query);
     const f = () => setMob(mq.matches);
     f();
     mq.addEventListener("change", f);
     return () => mq.removeEventListener("change", f);
-  }, []);
+  }, [query]);
   useEffect(() => {
     const im = new window.Image();
     im.onload = () => {
@@ -124,7 +124,7 @@ const IMG = "block w-full rounded-2xl object-cover shadow-md transition duration
 
 export default function Hero() {
   return (
-    <section className="relative overflow-x-clip pb-[100px]">
+    <section className="relative overflow-x-clip pb-[100px] md:pb-[160px]">
       <div className="pointer-events-none absolute inset-0">
         {PAW_POSITIONS.map((p, i) => (
           <div
@@ -146,27 +146,28 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative flex w-full flex-col-reverse items-center gap-8 px-6 pt-0 md:flex-row md:items-center md:justify-between md:gap-4 md:pl-12 md:pr-9 md:pt-16 lg:items-start lg:gap-0 lg:pl-24 lg:pr-16 lg:pt-24 xl:pl-80 xl:pr-48">
-        <div className="w-full md:max-w-[400px] md:max-lg:text-left lg:max-w-[460px] xl:max-w-[720px]">
-          <h1 className="font-fredoka font-semibold leading-[1.1] text-text text-[36px] md:max-lg:font-bold md:text-[44px] lg:text-[48px] xl:text-[72px]">
-            Every Paw <br className="hidden md:max-lg:block" />Deserves <br className="hidden md:max-lg:block" />Love and Care
+      <div className="relative flex w-full flex-col-reverse items-center gap-8 px-6 pt-0 md:mx-auto md:max-w-[1100px] md:flex-row md:items-center md:justify-center md:gap-[clamp(24px,5vw,80px)] md:px-[clamp(24px,5vw,80px)] md:pt-2 lg:pt-4 xl:mx-0 xl:max-w-none xl:items-start xl:justify-between xl:gap-0 xl:pl-80 xl:pr-48 xl:pt-24">
+        <div className="w-full md:w-auto md:text-left xl:max-w-[720px]">
+          <h1 className="font-fredoka font-semibold leading-[1.1] text-text text-[36px] md:max-xl:font-bold md:text-[length:clamp(44px,5.4vw,64px)] xl:text-[72px]">
+            Every Paw <br className="hidden md:max-xl:block" />Deserves <br className="hidden md:max-xl:block" />Love and Care
           </h1>
-          <p className="mt-4 max-w-full font-fredoka font-light leading-relaxed text-text/80 text-base md:mt-4 md:max-w-[340px] md:text-sm lg:mt-6 lg:max-w-[420px] lg:text-lg xl:max-w-[560px] xl:text-2xl">
-            Adopt pets, book vet appointments, and give <br className="hidden md:max-lg:block" />your companions the love and care they deserve.
+          <p className="mt-4 max-w-full font-fredoka font-light leading-relaxed text-text/80 text-base md:mt-4 md:text-[length:clamp(15px,1.9vw,20px)] xl:mt-6 xl:max-w-[560px] xl:text-2xl">
+            Adopt pets, book vet appointments, and give <br className="hidden md:max-xl:block" />your companions the love and care they deserve.
           </p>
-          <button className="mt-6 rounded-full bg-button font-fredoka font-medium text-white shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)] transition hover:brightness-95 px-8 py-3 text-base md:mt-4 md:rounded-lg md:px-7 md:py-2.5 md:text-sm md:shadow-none lg:mt-8 lg:rounded-full lg:px-9 lg:py-4 lg:text-base lg:shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)] xl:px-12 xl:py-5 xl:text-xl">
+          <button className="mt-6 rounded-full bg-button font-fredoka font-medium text-white shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)] transition hover:brightness-95 px-8 py-3 text-base md:mt-5 md:rounded-lg md:px-8 md:py-3 md:text-base md:shadow-none lg:mt-6 lg:px-10 lg:py-3.5 lg:text-lg xl:mt-8 xl:rounded-full xl:px-12 xl:py-5 xl:text-xl xl:shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)]">
             Adopt Now
           </button>
         </div>
 
-        <img
+        <TrimmedImg
           src="/home/HOME-PICTURE-1.png"
           alt="Happy pet"
-          className="w-[80%] max-w-[300px] object-contain md:w-[320px] md:max-w-[320px] md:shrink-0 lg:w-full lg:-mt-16 lg:max-w-[460px] xl:-mt-52 xl:max-w-[700px]"
+          query="(min-width: 768px) and (max-width: 1279px)"
+          className="w-[80%] max-w-[300px] object-contain md:w-[clamp(250px,32vw,390px)] md:max-w-none md:shrink-0 xl:-mt-52 xl:w-full xl:max-w-[700px]"
         />
       </div>
 
-      <div className="relative mx-auto mt-10 w-[700px] max-w-full px-6 text-center md:mt-[100px] md:w-[740px] md:px-6 lg:w-[700px] lg:px-8">
+      <div className="relative mx-auto mt-10 w-[700px] max-w-full px-6 text-center md:mt-[120px] md:mb-[130px] md:w-[740px] md:px-6 lg:w-[700px] lg:px-8 xl:mt-[100px] xl:mb-0">
         <h2 className="font-fredoka text-[30px] font-bold text-[#2B2118] md:text-[32px] lg:text-[36px] xl:text-[44px]">
           Welcome to PawPals!
         </h2>
@@ -179,56 +180,56 @@ export default function Hero() {
         </p>
       </div>
 
-      <div className="relative mx-auto mt-16 max-w-6xl px-6 text-left md:mt-24 md:px-8 lg:mt-[195px]">
+      <div className="relative mx-auto mt-16 max-w-6xl px-6 text-left md:mt-24 md:px-8 lg:mt-[130px] xl:mt-[195px]">
         <h2 className="font-fredoka text-[28px] font-bold text-[#2B2118] md:text-[32px] lg:text-[40px]">
           Our Services
         </h2>
       </div>
 
-      <div className="relative mx-auto mt-0 flex max-w-6xl flex-col items-center gap-8 px-6 md:mt-8 md:flex-row md:flex-nowrap md:items-center md:gap-6 lg:gap-20 xl:gap-28 xl:px-8">
+      <div className="relative mx-auto mt-0 flex max-w-6xl flex-col items-center gap-8 px-6 md:mt-8 md:flex-row md:flex-nowrap md:items-center md:justify-center md:gap-10 lg:gap-14 xl:gap-28 xl:px-8">
         <img
           src="/home/HOME-PICTURE-2.png"
           alt="Our Services"
-          className="-mt-14 w-full max-w-[280px] shrink-0 object-contain md:mt-0 md:max-w-[280px] lg:max-w-[420px] xl:max-w-[450px]"
+          className="-mt-14 w-full max-w-[280px] shrink-0 object-contain md:mt-0 md:w-[48%] md:max-w-[380px] md:scale-110 lg:w-[46%] lg:max-w-[500px] lg:scale-105 xl:w-full xl:max-w-[450px] xl:scale-100"
         />
 
-        <div className="flex w-full min-w-0 flex-col gap-6 md:-ml-6 md:mt-8 md:max-w-[340px] md:gap-8 lg:ml-0 lg:max-w-[420px] lg:gap-10 xl:-ml-6 xl:max-w-none xl:gap-12">
+        <div className="flex w-full min-w-0 flex-col gap-6 md:ml-0 md:mt-0 md:max-w-none md:flex-1 md:gap-8 lg:gap-9 xl:-ml-6 xl:mt-8 xl:gap-12">
           <div className="flex items-center gap-4">
-            <img src="/home/OUR-SERVICES1.png" alt="Service 1" className="h-14 w-14 shrink-0 object-contain md:-ml-4 md:h-16 md:w-16" />
-            <div className="min-w-0 flex-1 md:-ml-1 md:-mt-6">
-              <h3 className="font-fredoka text-base font-bold text-[#2B2118] lg:text-lg">Pet Grooming</h3>
-              <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] lg:text-xl">
+            <img src="/home/OUR-SERVICES1.png" alt="Service 1" className="h-14 w-14 shrink-0 object-contain md:h-16 md:w-16 xl:-ml-4" />
+            <div className="min-w-0 flex-1 xl:-ml-1 xl:-mt-6">
+              <h3 className="font-fredoka text-base font-bold text-[#2B2118] md:text-lg">Pet Grooming</h3>
+              <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] md:text-base xl:text-xl">
                 Professional grooming services including bathing, nail trimming, and fur care.
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            <img src="/home/OUR-SERVICES2.png" alt="Service 2" className="h-14 w-14 shrink-0 object-contain md:ml-12 md:h-16 md:w-16" />
-            <div className="min-w-0 flex-1 md:-ml-1 md:-mt-6">
-              <h3 className="font-fredoka text-base font-bold text-[#2B2118] lg:text-lg">Pet Boarding &amp; Daycare</h3>
-              <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] lg:text-xl">
+            <img src="/home/OUR-SERVICES2.png" alt="Service 2" className="h-14 w-14 shrink-0 object-contain md:h-16 md:w-16 xl:ml-12" />
+            <div className="min-w-0 flex-1 xl:-ml-1 xl:-mt-6">
+              <h3 className="font-fredoka text-base font-bold text-[#2B2118] md:text-lg">Pet Boarding &amp; Daycare</h3>
+              <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] md:text-base xl:text-xl">
                 Safe and comfortable care for pets during the day or overnight.
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            <img src="/home/OUR-SERVICES3.png" alt="Service 3" className="h-14 w-14 shrink-0 object-contain md:ml-12 md:mt-4 md:h-16 md:w-16" />
-            <div className="min-w-0 flex-1 md:-ml-1">
-              <h3 className="font-fredoka text-base font-bold text-[#2B2118] lg:text-lg">Veterinary Care</h3>
-              <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] lg:text-xl">
+            <img src="/home/OUR-SERVICES3.png" alt="Service 3" className="h-14 w-14 shrink-0 object-contain md:h-16 md:w-16 xl:ml-12 xl:mt-4" />
+            <div className="min-w-0 flex-1 xl:-ml-1">
+              <h3 className="font-fredoka text-base font-bold text-[#2B2118] md:text-lg">Veterinary Care</h3>
+              <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] md:text-base xl:text-xl">
                 Veterinary care for checkups, vaccinations, and treatment.
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            <img src="/home/OUR-SERVICES4.png" alt="Service 4" className="h-14 w-14 shrink-0 object-contain md:-ml-4 md:h-16 md:w-16" />
-            <div className="min-w-0 flex-1 md:-ml-1">
-              <h3 className="font-fredoka text-base font-bold text-[#2B2118] lg:text-lg">Pet Sitting</h3>
-              <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] lg:text-xl">
-                Reliable care for your pets while you're away, including feeding, playtime, and companionship.
+            <img src="/home/OUR-SERVICES4.png" alt="Service 4" className="h-14 w-14 shrink-0 object-contain md:h-16 md:w-16 xl:-ml-4" />
+            <div className="min-w-0 flex-1 xl:-ml-1">
+              <h3 className="font-fredoka text-base font-bold text-[#2B2118] md:text-lg">Pet Sitting</h3>
+              <p className="mt-1 font-fredoka text-sm text-[#4A4A4A] md:text-base xl:text-xl">
+                Reliable care for your pets while you&apos;re away, including feeding, playtime, and companionship.
               </p>
             </div>
           </div>
@@ -244,7 +245,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative mx-auto mt-20 max-w-6xl px-6 text-left md:mt-32 md:px-8 lg:mt-[280px]">
+      <div className="relative mx-auto mt-20 max-w-6xl px-6 text-left md:mt-[130px] md:px-8 lg:mt-[130px] xl:mt-[280px]">
         <h2 className="font-fredoka text-[28px] font-bold text-[#2B2118] md:text-[32px] lg:text-[40px]">
           Happy Pet Parents of PawPals
         </h2>
@@ -253,25 +254,28 @@ export default function Hero() {
       {TESTIMONIALS.map((t, i) => (
         <div
           key={t.name}
-          className={`relative mx-auto flex max-w-6xl flex-col-reverse items-center px-6 md:block md:px-10 ${
-            i === 0 ? "mt-10 md:mt-[55px]" : "mt-10 md:mt-[120px]"
+          className={`testimonial-row relative mx-auto flex max-w-6xl flex-col-reverse items-center px-6 md:block md:px-6 lg:px-10 ${
+            i === 0 ? "mt-10 md:mt-[55px]" : "mt-10 md:mt-16 lg:mt-[120px]"
           }`}
         >
-          <div className="relative w-full rounded-3xl bg-white p-6 pt-16 shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)] md:p-8 md:pl-[240px] lg:p-10 lg:pl-[440px]">
+          <div className="relative w-full rounded-3xl bg-white p-6 pt-16 shadow-[0_20px_50px_-20px_rgba(43,33,24,0.25)] md:p-8 md:pl-[316px] lg:p-10 lg:pl-[440px]">
             <Stars />
             <p className="font-fredoka text-base leading-relaxed text-[#2B2118] md:text-xl lg:max-w-[600px] lg:text-2xl">
-              "{t.text}"
+              &ldquo;{t.text}&rdquo;
             </p>
             <p className="mt-4 font-fredoka text-xl font-semibold text-[#2B2118] md:mt-6 md:text-2xl lg:text-3xl">
               {t.name}
             </p>
           </div>
 
-          <TrimmedImg
-            src={t.img}
-            alt="Happy pet parent"
-            className="relative z-10 -mb-9 h-auto w-[88%] object-contain md:absolute md:left-16 md:top-1/2 md:mb-0 md:w-[280px] md:-translate-y-1/2 lg:left-12 lg:w-[420px] xl:w-[400px]"
-          />
+          <div className="relative z-10 -mb-9 w-[88%] md:absolute md:left-6 md:top-1/2 md:mb-0 md:h-[320px] md:w-[300px] md:-translate-y-1/2 lg:left-12 lg:h-auto lg:w-[420px] xl:w-[400px]">
+            <TrimmedImg
+              src={t.img}
+              alt="Happy pet parent"
+              query="(max-width: 1023px)"
+              className="block h-auto w-full object-contain md:h-full lg:h-auto"
+            />
+          </div>
         </div>
       ))}
 
@@ -310,7 +314,7 @@ export default function Hero() {
           </button>
         </div>
 
-        <div className="relative mx-auto mt-24 max-w-6xl text-left md:mt-56">
+        <div className="relative mx-auto mt-20 max-w-6xl text-left md:mt-[130px]">
           <h2 className="font-fredoka text-[30px] font-bold text-[#2B2118] md:text-[40px] xl:text-[44px]">
             Pet Care Stories
           </h2>
@@ -324,8 +328,8 @@ export default function Hero() {
                 <img src={p.img} alt={p.title} width={800} height={533} className="block h-56 w-full object-cover md:h-64" />
                 <div className="p-5">
                   <h3 className="font-fredoka text-xl font-bold text-[#2B2118]">{p.title}</h3>
-                  <p className="mt-2 text-sm text-[#4A4A4A]">{p.text}</p>
-                  <p className="mt-3 text-xs text-[#8A8A8A]">24 May 2026</p>
+                  <p className="mt-2 font-fredoka text-sm text-[#4A4A4A]">{p.text}</p>
+                  <p className="mt-3 font-fredoka text-xs text-[#8A8A8A]">24 May 2026</p>
                   <Link href="/blog" className="mt-2 inline-block font-fredoka font-semibold text-[#2B2118] transition-colors hover:text-button">
                     Read more
                   </Link>

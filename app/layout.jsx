@@ -5,6 +5,7 @@ const fredoka = Fredoka({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-fredoka",
+  display: "swap",
 });
 
 export const metadata = {
@@ -18,8 +19,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={fredoka.variable}>
-      <body className="m-0 p-0">{children}</body>
+    <html lang="en" className={`${fredoka.variable} ${fredoka.className}`}>
+      <body className={`m-0 p-0 ${fredoka.className}`}>{children}</body>
     </html>
   );
 }

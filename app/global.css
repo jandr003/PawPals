@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+	font-family: var(--font-fredoka), "Fredoka", sans-serif !important;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -138,15 +144,6 @@ body {
 	}
 
 	html,
-	body,
-	button,
-	input,
-	textarea,
-	select {
-		font-family: var(--font-fredoka);
-	}
-
-	html,
 	body {
 		overflow-x: hidden;
 	}
@@ -154,5 +151,80 @@ body {
 	main > nav + section > img:first-of-type {
 		width: 200% !important;
 		max-width: none !important;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+	.about-hero > img:nth-of-type(2) {
+		width: 100% !important;
+		max-width: none !important;
+		margin: 0 !important;
+	}
+
+	.about-hero .about-hero-copy-wrap {
+		margin-top: 0 !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		padding-top: clamp(145px, 15vw, 188px) !important;
+	}
+
+	.about-hero .about-hero-copy {
+		padding-left: clamp(4.75rem, 8.5vw, 6.5rem) !important;
+		padding-right: 1rem !important;
+		padding-bottom: 0 !important;
+		padding-top: clamp(1.25rem, 2.4vw, 2rem) !important;
+	}
+
+	.about-hero .about-hero-title {
+		font-size: clamp(2.25rem, 4vw, 2.75rem) !important;
+		line-height: 1.05 !important;
+	}
+
+	.about-hero .about-hero-subtitle {
+		margin-top: 0.75rem !important;
+		max-width: none !important;
+		font-size: clamp(0.9rem, 1.55vw, 1.05rem) !important;
+		line-height: 1.25 !important;
+		white-space: nowrap;
+	}
+
+	main > nav + section > div:nth-child(2) {
+		padding-bottom: 0 !important;
+		margin-bottom: 0 !important;
+		min-height: 0 !important;
+		height: auto !important;
+		align-items: center !important;
+	}
+
+	main > nav + section > div:nth-child(2) > img {
+		display: block;
+		margin: 0 !important;
+	}
+
+	main > nav + section > div:nth-child(3) {
+		margin-top: 120px !important;
+		padding-top: 0 !important;
+		padding-left: 2.5rem !important;
+		padding-right: 2.5rem !important;
+	}
+
+	main > nav + section > div:nth-child(3) h2 {
+		margin: 0;
+		line-height: 1.1;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.about-hero .about-hero-copy-wrap {
+		padding-top: clamp(126px, 14vw, 140px) !important;
+	}
+
+	.about-hero .about-hero-copy {
+		padding-top: 0.75rem !important;
+	}
+
+	.about-hero .about-hero-subtitle {
+		max-width: 28ch !important;
+		white-space: normal;
 	}
 }

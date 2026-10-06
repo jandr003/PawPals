@@ -71,7 +71,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-20 sm:mt-60 [--raise:6.75rem]">
+    <footer className="relative mt-[40px] sm:mt-[178px] md:mt-[118px] xl:mt-[128px] [--raise:6.75rem]">
       <div className="sm:hidden">
         <svg viewBox="0 0 400 44" preserveAspectRatio="none" className="block h-10 w-full" aria-hidden="true">
           <path d="M0 44 V20 C60 -2 130 -4 200 14 S340 34 400 8 V44 Z" fill="#E9A85B" />
@@ -118,7 +118,7 @@ export default function Footer() {
                   Phone: <a href="tel:+639923421134" className="hover:text-white">(+63) 992 342 1134</a>
                 </li>
                 <li className="break-words">
-                  Email: <a href="mailto:johnandrew@gmail.com" className="hover:text-white">johnandrew@gmail.com</a>
+                  Email: <a href="mailto:johnandrew@gmail.com" className="break-all hover:text-white">johnandrew@gmail.com</a>
                 </li>
               </ul>
             </div>
@@ -165,7 +165,7 @@ export default function Footer() {
 
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 hidden bg-cover bg-top bg-no-repeat sm:block lg:[background-size:100%_100%]"
+        className="absolute inset-x-0 bottom-0 hidden bg-top bg-no-repeat sm:block sm:[background-size:100%_100%]"
         style={{
           top: "calc(var(--raise) * -1)",
           backgroundImage: "url('/home/FOOTER-BG-1.png')",
@@ -178,7 +178,7 @@ export default function Footer() {
           style={{ top: "calc(10rem - var(--raise))" }}
         >
           <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
-            <div className="relative -top-6 -left-2 sm:-left-8">
+            <div className="relative -top-6 left-0 xl:-left-8">
               <h3 className="font-fredoka text-3xl font-bold text-[#3B2414] sm:text-4xl">
                 Stay in the Loop
               </h3>
@@ -196,24 +196,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mx-auto mt-[11.25rem] grid max-w-6xl grid-cols-2 gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1fr]">
-          <div className="col-span-2 lg:col-span-1">
+        <div className="mx-auto mt-[11.25rem] grid max-w-6xl grid-cols-2 gap-x-8 gap-y-10 xl:grid-cols-[1.6fr_1fr_1fr_1fr_1fr] xl:gap-10">
+          <div className="col-span-2 xl:col-span-1">
             <Link href="/" className="inline-block" aria-label="PawPals home">
               <img
                 src="/PAWPALS-LOGO.png"
                 alt="PawPals Logo"
-                className="h-auto w-60 brightness-0 invert"
+                className="h-auto w-[170px] brightness-0 invert lg:w-60"
               />
             </Link>
-            <p className="mt-4 max-w-[240px] font-fredoka text-sm leading-relaxed text-white/70">
+            <p className="mt-4 max-w-[240px] font-fredoka text-xs leading-relaxed text-white/70 lg:text-sm">
               Where pets are treated like family — every visit is safe, gentle,
               and full of the care they truly deserve.
             </p>
           </div>
 
           <nav aria-label="Quick links">
-            <h4 className="font-fredoka text-lg font-bold">Quick Links</h4>
-            <ul className="mt-4 space-y-2 font-fredoka text-sm text-white/70">
+            <h4 className="font-fredoka text-base font-bold lg:text-lg">Quick Links</h4>
+            <ul className="mt-4 space-y-2 font-fredoka text-xs text-white/70 lg:text-sm">
               {QUICK_LINKS.map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="transition-colors hover:text-white focus:outline-none focus:text-white">
@@ -225,8 +225,8 @@ export default function Footer() {
           </nav>
 
           <div>
-            <h4 className="font-fredoka text-lg font-bold">Get in Touch</h4>
-            <ul className="mt-4 space-y-2 font-fredoka text-sm text-white/70">
+            <h4 className="font-fredoka text-base font-bold lg:text-lg">Get in Touch</h4>
+            <ul className="mt-4 space-y-2 font-fredoka text-xs text-white/70 lg:text-sm">
               <li>
                 <span className="text-white/50">Address:</span> San Miguel
               </li>
@@ -234,22 +234,22 @@ export default function Footer() {
                 <a href="tel:+639923421134" className="hover:text-white">(+63) 992 342 1134</a>
               </li>
               <li>
-                <a href="mailto:johnandrew@gmail.com" className="hover:text-white">johnandrew@gmail.com</a>
+                <a href="mailto:johnandrew@gmail.com" className="break-all hover:text-white">johnandrew@gmail.com</a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-fredoka text-lg font-bold">Opening Hours</h4>
-            <ul className="mt-4 space-y-2 font-fredoka text-sm text-white/70">
+            <h4 className="font-fredoka text-base font-bold lg:text-lg">Opening Hours</h4>
+            <ul className="mt-4 space-y-2 font-fredoka text-xs text-white/70 lg:text-sm">
               <li>Mon – Fri: 8:00 AM – 7:30 PM</li>
               <li>Sat – Sun: 7:00 AM – 12:00 NN</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-fredoka text-lg font-bold">Follow Us</h4>
-            <ul className="mt-4 space-y-3 font-fredoka text-sm text-white/70">
+            <h4 className="font-fredoka text-base font-bold lg:text-lg">Follow Us</h4>
+            <ul className="mt-4 space-y-3 font-fredoka text-xs text-white/70 lg:text-sm">
               {SOCIALS.map((s) => (
                 <li key={s.name}>
                   <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={`Visit PawPals on ${s.name}`} className="flex items-center gap-2 transition-colors hover:text-white focus:outline-none focus:text-white">
@@ -264,7 +264,7 @@ export default function Footer() {
 
         <div className="mx-auto mt-12 flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 font-fredoka text-sm text-white/60 sm:flex-row">
           <p>© {year} PawPals. All Rights Reserved.</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {LEGAL_LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className="hover:text-white">
                 {label}

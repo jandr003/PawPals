@@ -28,7 +28,7 @@ const crew = [
 export default function AboutUs() {
   return (
     <>
-      <section className="relative z-10 w-full overflow-x-clip -mt-16 md:z-[-1] md:-mt-[188px] md:overflow-hidden md:bg-transparent">
+      <section className="about-hero relative z-10 w-full overflow-x-clip -mt-16 md:z-[-1] md:-mt-[188px] md:overflow-hidden md:bg-transparent">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 -top-24 z-0 h-24 bg-white md:hidden"
@@ -47,12 +47,12 @@ export default function AboutUs() {
           className="hidden h-auto w-full md:block"
         />
 
-        <div className="relative z-10 -top-32 md:top-0 md:absolute md:inset-0 md:flex md:items-start md:pt-[188px]">
-          <div className="w-full pl-3 pr-5 pb-10 pt-6 text-left font-fredoka text-[#3B2414] md:px-0 md:pb-0 md:pl-[14.4%] md:pt-[4vw]">
-            <h1 className="text-[clamp(2.2rem,10.5vw,3.75rem)] font-extrabold leading-tight md:text-6xl">
+        <div className="about-hero-copy-wrap relative z-10 -top-32 md:top-0 md:absolute md:inset-0 md:flex md:items-start md:pt-[188px]">
+          <div className="about-hero-copy w-full pl-3 pr-5 pb-10 pt-6 text-left font-fredoka text-[#3B2414] md:px-0 md:pb-0 md:pl-[14.4%] md:pt-[4vw]">
+            <h1 className="about-hero-title text-[clamp(2.2rem,10.5vw,3.75rem)] font-extrabold leading-tight md:text-6xl">
               About Us
             </h1>
-            <p className="mt-2 max-w-[22ch] text-[clamp(1.1rem,5.2vw,1.8rem)] font-medium leading-snug sm:max-w-[30ch] md:mt-3 md:max-w-none md:text-xl">
+            <p className="about-hero-subtitle mt-2 max-w-[22ch] text-[clamp(1.1rem,5.2vw,1.8rem)] font-medium leading-snug sm:max-w-[30ch] md:mt-3 md:max-w-none md:text-xl">
               Helping Pets Stay Happy, Healthy, and Well-Groomed
             </p>
           </div>

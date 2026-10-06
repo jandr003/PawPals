@@ -134,10 +134,10 @@ export default function SimbaPage() {
               </h2>
               <div className="mt-3 space-y-3 text-lg leading-relaxed text-[#5C4A3D]">
                 <p>
-                  Simba is a confident, proud young orange tabby who carries himself like he owns the place. He's happiest stretched out in a patch of sunlight, watching everything around him with calm, curious eyes.
+                  Simba is a confident, proud young orange tabby who carries himself like he owns the place. He&apos;s happiest stretched out in a patch of sunlight, watching everything around him with calm, curious eyes.
                 </p>
                 <p>
-                  He does best in a quiet, sunny home with a cozy window spot to call his own. Give him a little time to warm up, and he'll reward you with a loyal, easygoing companion who loves being near his people.
+                  He does best in a quiet, sunny home with a cozy window spot to call his own. Give him a little time to warm up, and he&apos;ll reward you with a loyal, easygoing companion who loves being near his people.
                 </p>
               </div>
             </div>

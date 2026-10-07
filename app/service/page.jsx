@@ -17,10 +17,10 @@ export default function ServicesPage() {
       <section
         id="booking"
         aria-labelledby="booking-heading"
-        className="mt-[180px] mb-[180px] w-full scroll-mt-24 px-6 py-16 font-fredoka text-[#3B2414] sm:px-8"
+        className="mt-0 mb-[100px] w-full scroll-mt-24 px-6 pt-0 pb-0 font-fredoka text-[#3B2414] sm:px-8 md:mb-[130px]"
       >
         <div className="mx-auto max-w-6xl">
-          <div className="ml-[8%] max-w-2xl md:ml-[20%]">
+          <div className="ml-[8%] max-w-2xl md:ml-[8%] xl:ml-[20%]">
             <h2 id="booking-heading" className="text-4xl font-bold md:text-5xl">
               Book an Appointment
             </h2>
@@ -34,7 +34,7 @@ export default function ServicesPage() {
               <li>Step 4: Confirm your booking and receive a confirmation message</li>
             </ol>
 
-            <h3 className="mt-12 text-xl font-bold md:text-2xl">Booking Form</h3>
+            <h3 className="mt-[50px] text-xl font-bold md:mt-[55px] md:text-2xl">Booking Form</h3>
 
             <form className="mt-6 rounded-2xl border-2 border-dashed border-[#C97F4B] bg-white p-6 shadow-[0_16px_40px_-24px_rgba(43,33,24,0.2)] sm:p-8">
               <div className="space-y-5 text-lg">

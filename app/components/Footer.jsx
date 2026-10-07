@@ -1,4 +1,42 @@
+"use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
+function TrimmedLogo({ src, alt, className }) {
+  const [trim, setTrim] = useState(null);
+  useEffect(() => {
+    const im = new window.Image();
+    im.onload = () => {
+      try {
+        const c = document.createElement("canvas");
+        c.width = im.naturalWidth;
+        c.height = im.naturalHeight;
+        const ctx = c.getContext("2d");
+        ctx.drawImage(im, 0, 0);
+        const { data, width, height } = ctx.getImageData(0, 0, c.width, c.height);
+        let x0 = width, y0 = height, x1 = 0, y1 = 0;
+        for (let y = 0; y < height; y++) {
+          for (let x = 0; x < width; x++) {
+            if (data[(y * width + x) * 4 + 3] > 20) {
+              if (x < x0) x0 = x;
+              if (x > x1) x1 = x;
+              if (y < y0) y0 = y;
+              if (y > y1) y1 = y;
+            }
+          }
+        }
+        if (x1 <= x0 || y1 <= y0) return;
+        const t = document.createElement("canvas");
+        t.width = x1 - x0 + 1;
+        t.height = y1 - y0 + 1;
+        t.getContext("2d").drawImage(c, x0, y0, t.width, t.height, 0, 0, t.width, t.height);
+        setTrim(t.toDataURL("image/png"));
+      } catch (e) {}
+    };
+    im.src = src;
+  }, [src]);
+  return <img src={trim || src} alt={alt} className={className} />;
+}
 
 const SOCIALS = [
   {
@@ -69,11 +107,12 @@ const LEGAL_LINKS = [
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const tabletGutter = "clamp(2rem, 5.3vw, 3.75rem)";
 
   return (
-    <footer className="relative mt-[40px] sm:mt-[178px] md:mt-[118px] xl:mt-[128px] [--raise:6.75rem]">
-      <div className="sm:hidden">
-        <svg viewBox="0 0 400 44" preserveAspectRatio="none" className="block h-10 w-full" aria-hidden="true">
+    <footer className="relative mt-[40px] md:-mt-[15px] xl:mt-[128px] [--raise:6.75rem] md:max-xl:[--raise:0rem]">
+      <div className="md:hidden">
+        <svg viewBox="0 0 400 44" preserveAspectRatio="none" className="-mb-px block h-10 w-full" aria-hidden="true">
           <path d="M0 44 V20 C60 -2 130 -4 200 14 S340 34 400 8 V44 Z" fill="#E9A85B" />
         </svg>
 
@@ -163,16 +202,151 @@ export default function Footer() {
         </div>
       </div>
 
+      <div className="relative hidden min-h-[574px] overflow-hidden md:block xl:hidden">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-top bg-no-repeat [background-size:100%_100%]"
+          style={{ backgroundImage: "url('/home/FOOTER-BG-1.png')" }}
+        />
+
+        <div className="relative z-10 min-h-[574px] text-white">
+          <div
+            className="absolute flex items-start justify-between gap-8"
+            style={{
+              left: `calc(${tabletGutter} + 0.75rem)`,
+              right: tabletGutter,
+              top: "clamp(5.9rem, 12vw, 6.875rem)",
+            }}
+          >
+            <div>
+              <h3 className="font-fredoka text-[22px] font-bold leading-none text-[#3B2414]">
+                Stay in the Loop
+              </h3>
+              <p className="mt-3 max-w-[320px] font-fredoka text-[15px] leading-snug text-[#3B2414]">
+                Get the latest pet care tips, treats, and PawPals updates in your inbox.
+              </p>
+            </div>
+            <button
+              type="button"
+              className="mt-3 h-[38px] w-[140px] shrink-0 rounded-md bg-[#C97F4B] font-fredoka text-base font-normal leading-none text-[#2B1B12] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+            >
+              Subscribe Now
+            </button>
+          </div>
+
+          <div
+            className="absolute grid gap-y-0"
+            style={{
+              left: tabletGutter,
+              right: tabletGutter,
+              top: "16.75rem",
+              columnGap: "clamp(0.625rem, 1.75vw, 1rem)",
+              gridTemplateColumns:
+                "minmax(9.625rem, 1.59fr) minmax(4.375rem, 0.72fr) minmax(7.875rem, 1.28fr) minmax(9.125rem, 1.4fr) minmax(6.5rem, 0.93fr)",
+            }}
+          >
+            <div className="pt-[34px]">
+              <Link href="/" className="inline-block" aria-label="PawPals home">
+                <TrimmedLogo
+                  src="/PAWPALS-LOGO.png"
+                  alt="PawPals Logo"
+                  className="h-auto w-[166px] brightness-0 invert"
+                />
+              </Link>
+              <p className="mt-2 max-w-[205px] font-fredoka text-[12px] leading-[1.15] text-white">
+                Where Pets Are Treated Like Family, and Every Visit Feels Safe, Gentle, and Full of Care They Truly Deserve.
+              </p>
+            </div>
+
+            <nav aria-label="Quick links">
+              <h4 className="font-fredoka text-[15px] font-bold leading-none">Quick links</h4>
+              <ul className="mt-5 space-y-[11px] font-fredoka text-[12px] leading-none text-white">
+                {QUICK_LINKS.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link href={href} className="transition-colors hover:text-white/75 focus:outline-none focus:text-white/75">
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <div>
+              <h4 className="font-fredoka text-[15px] font-bold leading-none">Get in touch</h4>
+              <ul className="mt-5 space-y-[13px] font-fredoka text-[12px] leading-[1.15] text-white">
+                <li>Address: San Miguel</li>
+                <li>
+                  Phone: <a href="tel:+639923421134" className="hover:text-white/75">(+63) 9923 421 1134</a>
+                </li>
+                <li>
+                  Email:<br />
+                  <a href="mailto:johnandrew@gmail.com" className="break-all hover:text-white/75">johnandrew@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-fredoka text-[15px] font-bold leading-none">Opening Hours</h4>
+              <ul className="mt-5 space-y-[4px] font-fredoka text-[12px] leading-[1.15] text-white">
+                <li>Monday - Friday: 8:00AM - 7:30PM</li>
+                <li>Saturday - Sunday 7:00AM - 12:00NN</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-fredoka text-[15px] font-bold leading-none">Follow us</h4>
+              <ul className="mt-5 space-y-[13px] font-fredoka text-[12px] leading-none text-white">
+                {SOCIALS.map((s) => (
+                  <li key={s.name}>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit PawPals on ${s.name}`}
+                      className="flex items-center gap-2 transition-colors hover:text-white/75 focus:outline-none focus:text-white/75 [&>svg]:h-[17px] [&>svg]:w-[17px]"
+                    >
+                      {s.icon}
+                      {s.handle}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div
+            className="absolute flex items-center justify-between font-fredoka text-[12px] leading-none text-white"
+            style={{
+              bottom: "2.25rem",
+              left: tabletGutter,
+              right: tabletGutter,
+            }}
+          >
+            <p className="ml-3">&copy; {year} PawPals. All Rights Reserved.</p>
+            <div
+              className="flex items-center justify-between"
+              style={{ width: "clamp(17rem, 32vw, 18.25rem)" }}
+            >
+              {LEGAL_LINKS.map(({ href, label }) => (
+                <Link key={href} href={href} className="hover:text-white/75">
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 hidden bg-top bg-no-repeat sm:block sm:[background-size:100%_100%]"
+        className="absolute inset-x-0 bottom-0 hidden bg-top bg-no-repeat xl:block xl:[background-size:100%_100%]"
         style={{
           top: "calc(var(--raise) * -1)",
           backgroundImage: "url('/home/FOOTER-BG-1.png')",
         }}
       />
 
-      <div className="relative z-10 hidden px-6 pb-10 pt-16 text-white sm:block sm:px-8">
+      <div className="relative z-10 hidden px-6 pb-10 pt-16 text-white xl:block xl:px-8">
         <div
           className="absolute inset-x-0 px-6 sm:px-8"
           style={{ top: "calc(10rem - var(--raise))" }}
@@ -196,13 +370,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mx-auto mt-[11.25rem] grid max-w-6xl grid-cols-2 gap-x-8 gap-y-10 xl:grid-cols-[1.6fr_1fr_1fr_1fr_1fr] xl:gap-10">
-          <div className="col-span-2 xl:col-span-1">
+        <div className="mx-auto mt-[11.25rem] grid max-w-6xl grid-cols-[1.6fr_1fr_1fr_1fr_1fr] gap-x-4 gap-y-10 lg:gap-x-6 xl:min-h-[328px] xl:grid-cols-[1.3fr_1fr_1fr_1fr_1fr] xl:gap-10">
+          <div>
             <Link href="/" className="inline-block" aria-label="PawPals home">
-              <img
+              <TrimmedLogo
                 src="/PAWPALS-LOGO.png"
                 alt="PawPals Logo"
-                className="h-auto w-[170px] brightness-0 invert lg:w-60"
+                className="h-auto w-[140px] brightness-0 invert xl:w-[185px]"
               />
             </Link>
             <p className="mt-4 max-w-[240px] font-fredoka text-xs leading-relaxed text-white/70 lg:text-sm">

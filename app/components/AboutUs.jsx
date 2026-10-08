@@ -141,7 +141,7 @@ export default function AboutUs() {
 
       <section
         aria-labelledby="crew-heading"
-        className="relative px-4 pb-[60px] pt-0 sm:px-6 md:pb-[130px] md:pt-0 xl:pb-[120px] xl:pt-[150px]"
+        className="relative px-4 pb-[100px] pt-0 sm:px-6 md:pb-[130px] md:pt-0 xl:pb-[120px] xl:pt-[150px]"
       >
         <div className="mx-auto max-w-[1400px]">
           <h2

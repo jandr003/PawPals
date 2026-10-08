@@ -20,7 +20,7 @@ export default function ServicesPage() {
         className="mt-0 mb-[100px] w-full scroll-mt-24 px-6 pt-0 pb-0 font-fredoka text-[#3B2414] sm:px-8 md:mb-[130px]"
       >
         <div className="mx-auto max-w-6xl">
-          <div className="ml-[8%] max-w-2xl md:ml-[8%] xl:ml-[20%]">
+          <div className="mx-auto max-w-2xl md:mx-0 md:ml-[8%] xl:ml-[20%]">
             <h2 id="booking-heading" className="text-4xl font-bold md:text-5xl">
               Book an Appointment
             </h2>

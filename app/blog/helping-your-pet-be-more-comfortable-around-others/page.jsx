@@ -68,9 +68,9 @@ export default function HelpingYourPetBeMoreComfortableAroundOthersPage() {
 
   return (
     <main>
-      <Navbar />
+      <Navbar inset />
 
-      <article className="mx-auto max-w-4xl px-6 pb-16 pt-2 font-fredoka text-[#3B2414] sm:px-8">
+      <article className="mx-auto max-w-4xl px-6 pb-16 pt-6 font-fredoka text-[#3B2414] sm:px-8 md:pt-2">
         <Link
           href="/blog"
           className="group mb-6 inline-flex items-center gap-2 rounded-full border border-[#E5D5C3] bg-white px-5 py-2.5 text-sm font-semibold text-[#C97F4B] shadow-[0_2px_8px_rgba(201,127,75,0.12)] transition-all duration-300 hover:border-[#C97F4B] hover:bg-[#C97F4B] hover:text-white hover:shadow-[0_4px_14px_rgba(201,127,75,0.35)]"

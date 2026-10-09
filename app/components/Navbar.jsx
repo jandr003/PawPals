@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { href: "/contact", label: "Contact Us" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ inset = false }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname() ?? "";
 
@@ -62,7 +62,11 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`relative isolate overflow-visible mx-auto -mt-36 -mb-[7.5rem] -translate-y-12 md:translate-y-0 md:mb-0 md:mt-0 w-full max-w-7xl pb-0 pt-2 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 md:pb-3 md:pl-6 md:pr-6 lg:pl-6 lg:pr-10 lg:pt-0 xl:pl-0 xl:-mt-28 lg:-mt-28 transition-shadow duration-300 ${
+      className={`relative isolate overflow-visible mx-auto ${
+        inset ? "" : "-mt-36 -mb-[7.5rem] -translate-y-12"
+      } md:translate-y-0 md:mb-0 md:mt-0 w-full max-w-7xl pb-0 pt-2 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 md:pb-3 md:pl-6 md:pr-6 lg:pl-6 lg:pr-10 lg:pt-0 xl:pl-0 ${
+        inset ? "" : "xl:-mt-28 lg:-mt-28"
+      } transition-shadow duration-300 ${
         open
           ? "rounded-b-2xl bg-white pb-0 shadow-lg md:rounded-none md:bg-transparent md:shadow-none"
           : ""

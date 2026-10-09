@@ -1,9 +1,10 @@
 # PawPals
 
-[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square\&logo=next.js\&logoColor=white)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-61DAFB?style=flat-square\&logo=react\&logoColor=black)](https://react.dev/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square\&logo=javascript\&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square\&logo=tailwindcss\&logoColor=white)](https://tailwindcss.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-14.2.35-000000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.19-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Lucide React](https://img.shields.io/badge/Lucide_React-1.48.0-F56565?style=flat-square&logo=lucide&logoColor=white)](https://lucide.dev/)
 
 PawPals is a web-based pet adoption and care website where users can browse pets available for adoption, view pet profiles, explore pet care services, and read articles related to pet ownership and care. It brings these features together in one platform to make pet-related information easier to find and access.
 
@@ -59,12 +60,26 @@ The website is designed with a simple and organized layout, making it easy for u
 
 ## Technologies
 
-| Technology       | Purpose                                               |
-| ---------------- | ----------------------------------------------------- |
-| **Next.js**      | Website framework, routing, and application structure |
-| **React**        | Building reusable and interactive UI components       |
-| **JavaScript**   | Website functionality and interactive behavior        |
-| **Tailwind CSS** | Styling, responsive layouts, and UI design            |
+| Technology | Version | Purpose |
+| --- | --- | --- |
+| **Next.js** | 14.2.35 | Website framework, routing, and application structure |
+| **React** | 18.3.1 | Building reusable and interactive UI components |
+| **React DOM** | 18.3.1 | Rendering React components in the browser |
+| **JavaScript** | — | Website functionality and interactive behavior; JavaScript is a language, so it does not have a package version |
+| **Tailwind CSS** | 3.4.19 | Styling, responsive layouts, and UI design |
+| **Lucide React** | 1.48.0 | Icon components used in the interface |
+| **Fredoka** | — | Website font, loaded through Next.js `next/font/google` |
+
+### Development Tools
+
+| Tool | Version | Purpose |
+| --- | --- | --- |
+| **PostCSS** | 8.5.26 | CSS processing |
+| **Autoprefixer** | 10.5.4 | Adding browser-compatible CSS prefixes |
+| **ESLint** | 8.57.1 | JavaScript linting |
+| **eslint-config-next** | 14.2.35 | Next.js linting rules |
+
+Versions listed above are the versions resolved in `package-lock.json` for this project.
 
 ## Project Purpose
 

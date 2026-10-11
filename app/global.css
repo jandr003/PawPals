@@ -149,27 +149,50 @@ body {
 		max-width: none !important;
 	}
 
-	main.contact-page > nav {
-		transform: translateY(-3rem);
-	}
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
 	.about-hero > img:nth-of-type(2) {
-		width: 100% !important;
+		width: 110% !important;
 		max-width: none !important;
 		margin: 0 !important;
+	}
+
+	.blog-hero > img:nth-of-type(2) {
+		width: 110% !important;
+		max-width: none !important;
+		margin: 0 0 0 -10% !important;
+		transform: none !important;
+	}
+
+	.contact-hero .contact-banner {
+		width: 110% !important;
+		max-width: none !important;
+		margin: 0 0 0 -10% !important;
+		transform: none !important;
+	}
+
+	.contact-hero > div:last-child {
+		padding-top: calc(clamp(145px, 15vw, 188px) - 30px) !important;
+	}
+
+	.contact-hero > div:last-child > div {
+		padding-left: clamp(3.5rem, 6vw, 4rem) !important;
+	}
+
+	.contact-hero > div:last-child p {
+		margin-top: 1rem !important;
 	}
 
 	.about-hero .about-hero-copy-wrap {
 		margin-top: 0 !important;
 		padding-left: 0 !important;
 		padding-right: 0 !important;
-		padding-top: clamp(145px, 15vw, 188px) !important;
+		padding-top: clamp(24px, 2.8vw, 36px) !important;
 	}
 
 	.about-hero .about-hero-copy {
-		padding-left: clamp(4.75rem, 8.5vw, 6.5rem) !important;
+		padding-left: clamp(3.5rem, 6vw, 4rem) !important;
 		padding-right: 1rem !important;
 		padding-bottom: 0 !important;
 		padding-top: clamp(1.25rem, 2.4vw, 2rem) !important;
@@ -181,7 +204,7 @@ body {
 	}
 
 	.about-hero .about-hero-subtitle {
-		margin-top: 0.75rem !important;
+		margin-top: 1rem !important;
 		max-width: none !important;
 		font-size: clamp(0.9rem, 1.55vw, 1.05rem) !important;
 		line-height: 1.25 !important;
@@ -216,7 +239,7 @@ body {
 
 @media (min-width: 768px) and (max-width: 1023px) {
 	.about-hero .about-hero-copy-wrap {
-		padding-top: clamp(126px, 14vw, 140px) !important;
+		padding-top: clamp(24px, 2.8vw, 36px) !important;
 	}
 
 	.about-hero .about-hero-copy {

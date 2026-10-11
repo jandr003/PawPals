@@ -1,12 +1,7 @@
 import Navbar from "../components/Navbar";
 import ServiceCard from "../components/ServiceCard";
+import BookingForm from "../components/BookingForm";
 import Footer from "../components/Footer";
-import { services } from "../data/services";
-
-const FIELD =
-  "flex-1 border-b border-dashed border-[#3B2414]/50 bg-transparent py-1 focus:border-solid focus:outline-none";
-const ROW = "flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3";
-const LABEL = "font-medium sm:w-48 sm:flex-shrink-0";
 
 export default function ServicesPage() {
   return (
@@ -36,64 +31,7 @@ export default function ServicesPage() {
 
             <h3 className="mt-[50px] text-xl font-bold md:mt-[55px] md:text-2xl">Booking Form</h3>
 
-            <form className="mt-6 rounded-2xl border-2 border-dashed border-[#C97F4B] bg-white p-6 shadow-[0_16px_40px_-24px_rgba(43,33,24,0.2)] sm:p-8">
-              <div className="space-y-5 text-lg">
-                <label className={ROW}>
-                  <span className={LABEL}>Owner&apos;s Name:</span>
-                  <input type="text" name="ownerName" className={FIELD} />
-                </label>
-
-                <label className={ROW}>
-                  <span className={LABEL}>Email:</span>
-                  <input type="email" name="email" className={FIELD} />
-                </label>
-
-                <label className={ROW}>
-                  <span className={LABEL}>Contact Number:</span>
-                  <input type="tel" name="contactNumber" className={FIELD} />
-                </label>
-
-                <label className={ROW}>
-                  <span className={LABEL}>Service:</span>
-                  <select name="service" defaultValue="" required className={FIELD}>
-                    <option value="" disabled>
-                      Choose a service
-                    </option>
-                    {services.map((s) => (
-                      <option key={s.id}>
-                        {s.shortName} (&#8369;{s.price})
-                      </option>
-                    ))}
-                  </select>
-                </label>
-
-                <label className={ROW}>
-                  <span className={LABEL}>Date &amp; Time:</span>
-                  <input type="text" name="dateTime" className={FIELD} />
-                </label>
-
-                <label className={ROW}>
-                  <span className={LABEL}>Pet&apos;s Name &amp; Breed:</span>
-                  <input type="text" name="petNameBreed" className={FIELD} />
-                </label>
-
-                <label className="flex flex-col gap-1">
-                  <span className="font-medium">Additional Notes</span>
-                  <textarea
-                    name="additionalNotes"
-                    rows={4}
-                    className="mt-1 rounded-lg border border-[#3B2414]/40 bg-white p-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
-                  />
-                </label>
-              </div>
-
-              <button
-                type="submit"
-                className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
-              >
-                Book Appointment
-              </button>
-            </form>
+            <BookingForm />
           </div>
         </div>
       </section>

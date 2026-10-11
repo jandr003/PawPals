@@ -13,7 +13,7 @@ export default function AdoptPage() {
 
         <div className="-mt-8 flex flex-col items-center justify-between gap-5 text-center sm:mt-0 sm:flex-row sm:items-end sm:gap-4 sm:text-left">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-amber-700">
+            <p className="text-sm font-semibold uppercase tracking-wide text-[#3B2414]">
               Adoption
             </p>
             <h1 className="mt-2 text-3xl font-semibold sm:text-4xl">Meet the Pets</h1>
@@ -21,10 +21,10 @@ export default function AdoptPage() {
               Every one of them is ready to go home with someone who&apos;ll love them back.
             </p>
           </div>
-          <span className="inline-flex items-center gap-2.5 rounded-full bg-[#C9622A] px-5 py-2.5 font-fredoka text-base font-semibold text-white shadow-[0_2px_8px_rgba(201,98,42,0.25)] sm:px-6 sm:py-3 sm:text-lg">
+          <span className="inline-flex items-center gap-2.5 rounded-full bg-[#C77D4A]/15 px-5 py-2.5 font-fredoka text-base font-semibold text-[#2B1B12] sm:px-6 sm:py-3 sm:text-lg">
             <span className="relative flex h-3 w-3">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"></span>
-              <span className="relative inline-flex h-3 w-3 rounded-full bg-white"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#C77D4A] opacity-75 motion-reduce:animate-none"></span>
+              <span className="relative inline-flex h-3 w-3 rounded-full bg-[#C77D4A]"></span>
             </span>
             {pets.length} pets available
           </span>

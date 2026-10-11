@@ -62,11 +62,8 @@ export default function Navbar({ inset = false }) {
 
   return (
     <nav
-      className={`relative isolate overflow-visible mx-auto ${
-        inset ? "" : "-mt-36 -mb-[7.5rem] -translate-y-12"
-      } md:translate-y-0 md:mb-0 md:mt-0 w-full max-w-7xl pb-0 pt-2 pl-4 pr-6 font-fredoka sm:pl-6 sm:pr-8 md:pb-3 md:pl-6 md:pr-6 lg:pl-6 lg:pr-10 lg:pt-0 xl:pl-0 ${
-        inset ? "" : "xl:-mt-28 lg:-mt-28"
-      } transition-shadow duration-300 ${
+      data-inset={inset || undefined}
+      className={`relative isolate mx-auto w-full max-w-7xl overflow-visible pb-0 pt-2 pl-4 pr-6 font-fredoka transition-shadow duration-300 sm:pl-6 sm:pr-8 md:pb-3 md:pl-6 md:pr-6 lg:pl-6 lg:pr-10 lg:pt-0 xl:pl-0 ${
         open
           ? "rounded-b-2xl bg-white pb-0 shadow-lg md:rounded-none md:bg-transparent md:shadow-none"
           : ""
@@ -75,23 +72,23 @@ export default function Navbar({ inset = false }) {
       <div className="flex items-center justify-between overflow-visible">
         <Link
           href="/"
-          className="flex shrink-0 min-w-0 overflow-visible items-center gap-2 -ml-4 md:ml-0 md:translate-y-3 lg:ml-2 lg:translate-y-8 lg:translate-x-2 xl:-ml-16 xl:translate-y-9"
+          className="flex min-w-0 shrink-0 items-center gap-2 overflow-visible -ml-4 md:ml-0 lg:ml-2 lg:translate-x-2 xl:-ml-16"
           onClick={() => {
             setOpen(false);
             setPending("/");
           }}
         >
           <Image
-            src="/PAWPALS-LOGO.png"
+            src="/PAWPALS-LOGO-CROPPED.png"
             alt="PawPals Logo"
-            width={340}
-            height={100}
+            width={1570}
+            height={500}
             priority
-            className="h-auto w-48 sm:w-60 md:w-48 lg:w-64 xl:w-72 shrink-0 -my-4 lg:my-0"
+            className="h-auto w-48 shrink-0 sm:w-60 md:w-48 md:translate-y-3 lg:w-64 xl:w-72"
           />
         </Link>
 
-        <ul className="relative hidden items-center gap-6 text-base font-medium text-text md:flex md:translate-y-3 lg:translate-y-6 lg:-translate-x-6 lg:gap-10 lg:text-lg xl:translate-x-6">
+        <ul className="relative hidden items-center gap-6 text-base font-medium text-text md:flex lg:-translate-x-6 lg:gap-10 lg:text-lg xl:translate-x-6">
           {NAV_LINKS.map(({ href, label }) => {
             const active = activeHref === href;
             return (
@@ -142,7 +139,7 @@ export default function Navbar({ inset = false }) {
 
       <div
         className={`-mx-6 overflow-hidden transition-all duration-300 md:hidden ${
-          open ? "-mt-8 max-h-[28rem] opacity-100" : "pointer-events-none max-h-0 opacity-0"
+          open ? "max-h-[28rem] opacity-100" : "pointer-events-none max-h-0 opacity-0"
         }`}
       >
         <div className="border-t border-gray-200 px-6 pb-5 pt-4">

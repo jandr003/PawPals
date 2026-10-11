@@ -28,7 +28,7 @@ const crew = [
 export default function AboutUs() {
   return (
     <>
-      <section className="about-hero relative z-10 w-full overflow-x-clip -mt-16 md:z-[-1] md:-mt-[188px] md:overflow-hidden md:bg-transparent">
+      <section className="about-hero relative z-10 w-full overflow-x-clip -mt-16 md:z-[-1] md:-mt-[188px] md:max-xl:-mt-[94px] md:overflow-hidden md:bg-transparent">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 -top-24 z-0 h-24 bg-white md:hidden"
@@ -37,7 +37,7 @@ export default function AboutUs() {
         <img
           src="/about%20us/PAWPALS-ABOUTUS-BG.png"
           alt=""
-          className="pointer-events-none relative z-0 block h-auto max-w-none !mt-0 -translate-y-20 md:hidden"
+          className="pointer-events-none relative z-0 block h-auto max-w-none !mt-0 -translate-y-12 md:hidden"
           style={{ width: "200%", marginLeft: "-75%" }}
         />
 
@@ -47,7 +47,7 @@ export default function AboutUs() {
           className="hidden h-auto w-full md:block md:max-xl:h-[355px] md:max-xl:object-cover md:max-xl:object-[right_bottom]"
         />
 
-        <div className="about-hero-copy-wrap relative z-10 -top-32 md:top-0 md:absolute md:inset-0 md:flex md:items-start md:pt-[188px] md:max-xl:pt-[212px]">
+        <div className="about-hero-copy-wrap relative z-10 -top-32 md:top-0 md:absolute md:inset-0 md:flex md:items-start md:pt-[188px] md:max-xl:translate-y-24 md:max-xl:pt-[212px]">
           <div className="about-hero-copy w-full pl-3 pr-5 pb-10 pt-6 text-left font-fredoka text-[#3B2414] md:px-0 md:pb-0 md:pl-[14.4%] md:pt-[4vw]">
             <h1 className="about-hero-title text-[clamp(2.2rem,10.5vw,3.75rem)] font-extrabold leading-tight md:text-6xl">
               About Us

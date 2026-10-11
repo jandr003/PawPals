@@ -104,16 +104,19 @@ const TESTIMONIALS = [
 
 const POSTS = [
   {
+    href: "/blog/the-secret-to-a-healthy-pet-smile",
     img: "https://images.unsplash.com/photo-1741230713152-244939ffbd75?fm=jpg&q=80&w=800&auto=format&fit=crop",
     title: "The Secret to a Healthy Pet Smile",
     text: "Keep your pet's teeth clean and healthy with simple dental care tips for a brighter smile.",
   },
   {
+    href: "/blog/is-your-pet-trying-to-tell-you-something",
     img: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?fm=jpg&q=80&w=800&auto=format&fit=crop",
     title: "Is Your Pet Trying to Tell You Something?",
     text: "Spot early signs of illness before it turns into a serious problem.",
   },
   {
+    href: "/blog/common-household-items-that-can-be-toxic-to-pets",
     img: "https://images.unsplash.com/photo-1745252752503-2c5eb22167b6?fm=jpg&q=80&w=800&auto=format&fit=crop",
     title: "Common Household Items That Can Be Toxic to Pets",
     text: "Some foods and plants at home can harm pets. Learn what to avoid and what to do.",
@@ -147,23 +150,26 @@ export default function Hero() {
       </div>
 
       <div className="relative flex w-full flex-col-reverse items-center gap-8 px-6 pt-0 md:mx-auto md:max-w-[1100px] md:flex-row md:items-center md:justify-center md:gap-[clamp(24px,5vw,80px)] md:px-[clamp(24px,5vw,80px)] md:pt-2 lg:pt-4 xl:mx-0 xl:max-w-none xl:items-start xl:justify-between xl:gap-0 xl:pl-80 xl:pr-48 xl:pt-24">
-        <div className="w-full md:w-auto md:text-left xl:max-w-[720px]">
+        <div className="w-full md:w-auto md:text-left xl:max-w-[720px] xl:translate-y-6">
           <h1 className="font-fredoka font-semibold leading-[1.1] text-text text-[36px] md:max-xl:font-bold md:text-[length:clamp(44px,5.4vw,64px)] xl:text-[72px]">
             Every Paw <br className="hidden md:max-xl:block" />Deserves <br className="hidden md:max-xl:block" />Love and Care
           </h1>
           <p className="mt-4 max-w-full font-fredoka font-light leading-relaxed text-text/80 text-base md:mt-4 md:text-[length:clamp(15px,1.9vw,20px)] xl:mt-6 xl:max-w-[560px] xl:text-2xl">
             Adopt pets, book vet appointments, and give <br className="hidden md:max-xl:block" />your companions the love and care they deserve.
           </p>
-          <button className="mt-6 rounded-full bg-button font-fredoka font-medium text-white shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)] transition hover:brightness-95 px-8 py-3 text-base md:mt-5 md:rounded-lg md:px-8 md:py-3 md:text-base md:shadow-none lg:mt-6 lg:px-10 lg:py-3.5 lg:text-lg xl:mt-8 xl:rounded-full xl:px-12 xl:py-5 xl:text-xl xl:shadow-[0_10px_24px_-10px_rgba(199,125,74,0.6)]">
-            Adopt Now
-          </button>
+            <Link
+              href="/adopt"
+              className="mt-6 inline-block rounded-2xl bg-button font-fredoka font-medium text-white shadow-sm transition duration-200 hover:shadow-md hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-button focus-visible:ring-offset-2 active:scale-[0.98] px-8 py-3 text-base md:mt-5 lg:mt-6 lg:px-10 lg:py-3.5 lg:text-lg xl:mt-8 xl:px-12 xl:py-5 xl:text-xl"
+            >
+              Adopt Now
+            </Link>
         </div>
 
         <TrimmedImg
           src="/home/HOME-PICTURE-1.png"
           alt="Happy pet"
           query="(min-width: 768px) and (max-width: 1279px)"
-          className="w-[80%] max-w-[300px] object-contain md:w-[clamp(250px,32vw,390px)] md:max-w-none md:shrink-0 xl:-mt-52 xl:w-full xl:max-w-[700px]"
+          className="w-[80%] max-w-[300px] object-contain md:w-[clamp(250px,32vw,390px)] md:max-w-none md:shrink-0 xl:-mt-24 xl:w-full xl:max-w-[700px]"
         />
       </div>
 
@@ -235,12 +241,18 @@ export default function Hero() {
           </div>
 
           <div className="mx-auto mt-2 flex w-full flex-wrap items-center justify-center gap-3 md:mt-6 md:flex-nowrap md:gap-4 lg:gap-8">
-            <button className="whitespace-nowrap rounded-2xl border border-[#C77D4A] px-5 py-3 text-sm font-fredoka font-medium leading-none text-[#2B2118] transition hover:bg-[#C77D4A]/10 md:px-5 md:py-3.5 lg:px-8 lg:py-4 lg:text-base xl:px-14 xl:py-6 xl:text-lg">
+            <Link
+              href="/service/book-appointment"
+              className="inline-block whitespace-nowrap rounded-2xl border border-[#C77D4A] px-5 py-3 text-sm font-fredoka font-medium leading-none text-[#2B2118] transition hover:bg-[#C77D4A]/10 md:px-5 md:py-3.5 lg:px-8 lg:py-4 lg:text-base xl:px-14 xl:py-6 xl:text-lg"
+            >
               Book Vet Appointment
-            </button>
-            <button className="whitespace-nowrap rounded-2xl bg-[#C77D4A] px-5 py-3 text-sm font-fredoka font-medium leading-none text-white transition hover:brightness-95 md:px-5 md:py-3.5 lg:px-8 lg:py-4 lg:text-base xl:px-14 xl:py-6 xl:text-lg">
+            </Link>
+            <Link
+              href="/service/book-appointment"
+              className="inline-block whitespace-nowrap rounded-2xl bg-[#C77D4A] px-5 py-3 text-sm font-fredoka font-medium leading-none text-white transition hover:brightness-95 md:px-5 md:py-3.5 lg:px-8 lg:py-4 lg:text-base xl:px-14 xl:py-6 xl:text-lg"
+            >
               Schedule Visit
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -309,9 +321,9 @@ export default function Hero() {
         </div>
 
         <div className="mt-8 flex justify-start md:mt-10">
-          <button className="rounded-2xl bg-[#C77D4A] px-8 py-3 font-fredoka font-medium text-white transition hover:brightness-95 md:px-10 md:py-4">
+          <Link href="/gallery" className="inline-block rounded-2xl bg-[#C77D4A] px-8 py-3 font-fredoka font-medium text-white transition hover:brightness-95 md:px-10 md:py-4">
             View Gallery
-          </button>
+          </Link>
         </div>
 
         <div className="relative mx-auto mt-20 max-w-6xl text-left md:mt-[130px]">
@@ -321,20 +333,29 @@ export default function Hero() {
 
           <div className="mt-6 grid grid-cols-1 gap-6 md:mt-8 md:grid-cols-2 lg:grid-cols-3">
             {POSTS.map((p) => (
-              <div
+              <Link
                 key={p.title}
-                className="w-full overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl"
+                href={p.href}
+                className="group flex h-full w-full flex-col overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-xl"
               >
-                <img src={p.img} alt={p.title} width={800} height={533} className="block h-56 w-full object-cover md:h-64" />
-                <div className="p-5">
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  width={800}
+                  height={533}
+                  className="block h-56 w-full shrink-0 object-cover md:h-64"
+                />
+                <div className="flex flex-1 flex-col p-5">
                   <h3 className="font-fredoka text-xl font-bold text-[#2B2118]">{p.title}</h3>
                   <p className="mt-2 font-fredoka text-sm text-[#4A4A4A]">{p.text}</p>
-                  <p className="mt-3 font-fredoka text-xs text-[#8A8A8A]">24 May 2026</p>
-                  <Link href="/blog" className="mt-2 inline-block font-fredoka font-semibold text-[#2B2118] transition-colors hover:text-button">
-                    Read more
-                  </Link>
+                  <div className="mt-auto pt-3">
+                    <p className="font-fredoka text-xs text-[#8A8A8A]">24 May 2026</p>
+                    <span className="mt-2 inline-block font-fredoka font-semibold text-[#2B2118] transition-colors group-hover:text-button">
+                      Read more
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 

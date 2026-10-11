@@ -74,7 +74,7 @@ export default function BeforeYouTravelPage() {
   const next = () => setCurrent((i) => (i + 1) % total);
 
   const arrowClass =
-    "absolute top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-[#C97F4B] shadow-md transition-colors hover:bg-[#C97F4B] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]";
+    "absolute top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-[#C77D4A] shadow-md transition duration-200 hover:bg-[#C77D4A] hover:text-white active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C77D4A] focus-visible:ring-offset-2";
 
   return (
     <main>
@@ -83,26 +83,36 @@ export default function BeforeYouTravelPage() {
       <article className="mx-auto max-w-4xl px-6 pb-16 pt-6 font-fredoka text-[#3B2414] sm:px-8 md:pt-2">
         <Link
           href="/blog"
-          className="group mb-6 inline-flex items-center gap-2 rounded-full border border-[#E5D5C3] bg-white px-5 py-2.5 text-sm font-semibold text-[#C97F4B] shadow-[0_2px_8px_rgba(201,127,75,0.12)] transition-all duration-300 hover:border-[#C97F4B] hover:bg-[#C97F4B] hover:text-white hover:shadow-[0_4px_14px_rgba(201,127,75,0.35)]"
+          className="group mb-6 flex w-fit items-center gap-2 rounded-2xl text-base font-semibold text-[#3B2414] transition duration-200 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C77D4A] focus-visible:ring-offset-2 sm:inline-flex sm:border sm:border-[#C77D4A] sm:px-5 sm:py-2.5 sm:text-sm sm:hover:bg-[#C77D4A]/10 sm:hover:no-underline"
         >
           <ArrowLeft
-            className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1"
+            className="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-1 sm:h-4 sm:w-4"
             strokeWidth={2.5}
+            aria-hidden="true"
           />
           Back to Blog
         </Link>
 
-        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#F5E6D3]">
+        <div
+          className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#F5E6D3]"
+          aria-roledescription="carousel"
+          aria-label="Travel with your pet photos"
+        >
           {GALLERY.map((photo, i) => (
             <img
               key={photo.src}
               src={photo.src}
               alt={photo.alt}
-              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+              aria-hidden={i !== current}
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 motion-reduce:transition-none ${
                 i === current ? "opacity-100" : "opacity-0"
               }`}
             />
           ))}
+
+          <p className="sr-only" aria-live="polite">
+            Photo {current + 1} of {total}: {GALLERY[current].alt}
+          </p>
 
           {total > 1 && (
             <>
@@ -112,7 +122,7 @@ export default function BeforeYouTravelPage() {
                 aria-label="Previous photo"
                 className={`${arrowClass} left-3`}
               >
-                <ChevronLeft className="h-6 w-6" strokeWidth={2.5} />
+                <ChevronLeft className="h-6 w-6" strokeWidth={2.5} aria-hidden="true" />
               </button>
               <button
                 type="button"
@@ -120,10 +130,10 @@ export default function BeforeYouTravelPage() {
                 aria-label="Next photo"
                 className={`${arrowClass} right-3`}
               >
-                <ChevronRight className="h-6 w-6" strokeWidth={2.5} />
+                <ChevronRight className="h-6 w-6" strokeWidth={2.5} aria-hidden="true" />
               </button>
 
-              <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-black/30 px-3 py-1.5">
+              <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center rounded-full bg-black/30 px-2">
                 {GALLERY.map((photo, i) => (
                   <button
                     key={photo.src}
@@ -131,10 +141,14 @@ export default function BeforeYouTravelPage() {
                     onClick={() => setCurrent(i)}
                     aria-label={`Show photo ${i + 1}`}
                     aria-current={i === current}
-                    className={`h-2.5 rounded-full transition-all ${
-                      i === current ? "w-6 bg-white" : "w-2.5 bg-white/60 hover:bg-white"
-                    }`}
-                  />
+                    className="group flex h-8 items-center px-1 focus:outline-none"
+                  >
+                    <span
+                      className={`block h-2.5 rounded-full transition-all group-focus-visible:ring-2 group-focus-visible:ring-white group-focus-visible:ring-offset-1 group-focus-visible:ring-offset-black/40 ${
+                        i === current ? "w-6 bg-white" : "w-2.5 bg-white/60 group-hover:bg-white"
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
             </>
@@ -142,7 +156,7 @@ export default function BeforeYouTravelPage() {
         </div>
 
         <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#F5E6D3] px-4 py-1.5 text-sm font-semibold text-[#3B2A1F]">
-          <CalendarDays className="h-4 w-4 text-[#B5541F]" strokeWidth={2.5} />
+          <CalendarDays className="h-4 w-4 text-[#B5541F]" strokeWidth={2.5} aria-hidden="true" />
           24 May 2026
         </span>
 
@@ -190,7 +204,7 @@ export default function BeforeYouTravelPage() {
             {TIPS.map((tip) => (
               <li key={tip} className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#4B5D3A] text-white">
-                  <Check className="h-4 w-4" strokeWidth={3} />
+                  <Check className="h-4 w-4" strokeWidth={3} aria-hidden="true" />
                 </span>
                 {tip}
               </li>
@@ -201,7 +215,7 @@ export default function BeforeYouTravelPage() {
         <div className="mt-10 text-center">
           <Link
             href="/blog"
-            className="inline-block rounded-full bg-[#C9622A] px-8 py-3 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-[#B5541F]"
+            className="inline-block rounded-2xl bg-[#C77D4A] px-8 py-3 font-fredoka font-medium text-white shadow-sm transition duration-200 hover:shadow-md hover:brightness-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C77D4A] focus-visible:ring-offset-2 active:scale-[0.98] md:px-10 md:py-4"
           >
             Read more articles
           </Link>

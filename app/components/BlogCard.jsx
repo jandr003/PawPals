@@ -6,7 +6,7 @@ import { blogPosts } from "../data/blogPosts";
 export default function BlogCard() {
   return (
     <>
-      <section className="blog-hero relative z-10 w-full overflow-x-clip -mt-16 md:z-[-1] md:-mt-[188px] md:overflow-hidden md:bg-transparent">
+      <section className="blog-hero relative z-10 w-full overflow-x-clip -mt-16 md:z-[-1] md:-mt-[188px] md:max-xl:-mt-[94px] md:overflow-hidden md:bg-transparent">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 -top-24 z-0 h-24 bg-white md:hidden"
@@ -15,14 +15,14 @@ export default function BlogCard() {
         <img
           src="/blog/BLOG-PAWPALS.png"
           alt=""
-          className="pointer-events-none relative z-0 block h-auto max-w-none !mt-0 -translate-y-20 md:hidden"
-          style={{ width: "200%", marginLeft: "-100%" }}
+          className="pointer-events-none relative z-0 block h-auto max-w-none !mt-0 -translate-y-12 md:hidden"
+          style={{ width: "200%", marginLeft: "-98%" }}
         />
 
         <img
           src="/blog/BLOG-PAWPALS.png"
           alt=""
-          className="pointer-events-none hidden h-auto w-full md:block md:max-lg:!m-0 md:max-lg:!w-full md:max-xl:h-[355px] md:max-xl:object-cover md:max-xl:object-[right_bottom]"
+          className="pointer-events-none hidden h-auto w-full md:block md:max-xl:h-[355px] md:max-xl:object-cover md:max-xl:object-[right_bottom]"
         />
 
         <div className="blog-hero-copy-wrap relative z-10 -top-32 md:hidden">
@@ -37,12 +37,12 @@ export default function BlogCard() {
         </div>
 
         <header className="absolute inset-x-0 top-0 hidden font-fredoka text-[#3B2414] md:block">
-          <div className="md:max-lg:pt-[calc(clamp(126px,14vw,140px)_+_0.75rem)] lg:max-xl:pt-[calc(clamp(145px,15vw,188px)_+_clamp(1.25rem,2.4vw,2rem))] xl:pt-[calc(188px_+_4vw)] md:max-xl:pl-[clamp(4.75rem,8.5vw,6.5rem)] xl:pl-[14.4%]">
+          <div className="md:max-xl:pt-[calc(clamp(145px,15vw,188px)_+_clamp(1.25rem,2.4vw,2rem)_-_30px)] xl:pt-[calc(188px_+_4vw)] md:max-xl:pl-[clamp(3.5rem,6vw,4rem)] xl:pl-[14.4%]">
             <h1 className="text-6xl font-extrabold md:max-xl:text-[length:clamp(2.25rem,4vw,2.75rem)] md:max-xl:leading-[1.05]">
               <span className="xl:hidden">Blogs</span>
               <span className="hidden xl:inline">Blog</span>
             </h1>
-            <p className="mt-3 text-xl font-medium md:max-xl:text-[length:clamp(0.9rem,1.55vw,1.05rem)] md:max-xl:leading-[1.25] md:max-xl:max-w-[34%]">
+            <p className="mt-4 text-xl font-medium md:max-xl:text-[length:clamp(0.9rem,1.55vw,1.05rem)] md:max-xl:leading-[1.25] md:max-xl:max-w-[34%]">
               <span className="xl:hidden">Helpful Pet Care Tips, Stories, and Advice</span>
               <span className="hidden xl:inline">Tips and Stories for Happy, Healthy Pets</span>
             </p>

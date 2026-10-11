@@ -47,12 +47,12 @@ const LAYOUT = {
 export default function ServiceCard() {
   return (
     <>
-      <section className="relative z-[-1] -mt-[160px] w-full overflow-hidden bg-transparent md:-mt-[188px]">
+      <section className="relative z-[-1] -mt-16 w-full overflow-hidden bg-transparent md:-mt-[188px] md:max-xl:-mt-[94px]">
         <img
           src="/SERVICE-PAWPALS.png"
           alt=""
-          className="pointer-events-none block h-auto max-w-none md:hidden"
-          style={{ width: "200%", marginLeft: "-95%", marginTop: "-60px" }}
+          className="pointer-events-none relative z-0 block h-auto max-w-none !mt-0 -translate-y-12 md:hidden"
+          style={{ width: "200%", marginLeft: "-90%" }}
         />
 
         <img
@@ -61,21 +61,23 @@ export default function ServiceCard() {
           className="hidden h-auto w-full md:block md:max-lg:!m-0 md:max-lg:!w-full md:max-xl:h-[355px] md:max-xl:object-cover md:max-xl:object-[right_bottom]"
         />
 
-        <div className="md:hidden">
-          <div className="w-full px-6 pt-6 font-fredoka text-[#3B2414] sm:px-8">
-            <h1 className="text-3xl font-extrabold sm:text-5xl">Our Services</h1>
-            <p className="mt-2 text-sm font-medium sm:text-lg">
+        <div className="-mt-16 md:hidden">
+          <div className="w-full pl-9 pr-5 pt-6 text-left font-fredoka text-[#3B2414]">
+            <h1 className="text-[clamp(2.2rem,10.5vw,3.75rem)] font-extrabold leading-tight">
+              Our Services
+            </h1>
+            <p className="mt-2 max-w-[22ch] text-[clamp(1.1rem,5.2vw,1.8rem)] font-medium leading-snug sm:max-w-[30ch]">
               Your Guide to Better Pet Care!
             </p>
           </div>
         </div>
 
         <header className="absolute inset-x-0 top-0 hidden font-fredoka text-[#3B2414] md:block">
-          <div className="md:max-lg:pt-[calc(clamp(126px,14vw,140px)_+_0.75rem)] lg:max-xl:pt-[calc(clamp(145px,15vw,188px)_+_clamp(1.25rem,2.4vw,2rem))] xl:pt-[calc(188px_+_4vw)] md:max-xl:pl-[clamp(4.75rem,8.5vw,6.5rem)] xl:pl-[14.4%]">
+          <div className="md:max-xl:pt-[calc(clamp(145px,15vw,188px)_+_clamp(1.25rem,2.4vw,2rem)_-_30px)] xl:pt-[calc(188px_+_4vw)] md:max-xl:pl-[clamp(3.5rem,6vw,4rem)] xl:pl-[14.4%]">
             <h1 className="text-6xl font-extrabold md:max-xl:text-[length:clamp(2.25rem,4vw,2.75rem)] md:max-xl:leading-[1.05]">
               Our Service
             </h1>
-            <p className="mt-3 text-xl font-medium md:max-xl:text-[length:clamp(0.9rem,1.55vw,1.05rem)] md:max-xl:leading-[1.25] md:max-xl:whitespace-nowrap">
+            <p className="mt-4 text-xl font-medium md:max-xl:text-[length:clamp(0.9rem,1.55vw,1.05rem)] md:max-xl:leading-[1.25] md:max-xl:whitespace-nowrap">
               Your Guide to Better Pet Care!
             </p>
           </div>
@@ -134,7 +136,7 @@ export default function ServiceCard() {
 
               <Link
                 href={l.cta.href}
-                className="mt-8 inline-block rounded-lg bg-[#C97F4B] px-8 py-3 text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
+                className="mt-8 inline-block rounded-2xl bg-[#C77D4A] px-8 py-3 text-base font-medium text-white shadow-sm transition duration-200 hover:bg-[#B86F3E] hover:shadow-md active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C77D4A] focus-visible:ring-offset-2"
               >
                 {l.cta.label}
               </Link>

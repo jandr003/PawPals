@@ -38,6 +38,25 @@ function TrimmedLogo({ src, alt, className }) {
   return <img src={trim || src} alt={alt} className={className} />;
 }
 
+function SubscribeButton({ className = "" }) {
+  const [subscribed, setSubscribed] = useState(false);
+
+  return (
+    <button
+      type="button"
+      onClick={() => setSubscribed(true)}
+      disabled={subscribed}
+      className={`${className} rounded-2xl shadow-sm transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414] focus-visible:ring-offset-2 focus-visible:ring-offset-[#E9A85B] ${
+        subscribed
+          ? "cursor-default bg-[#3B2414] text-white"
+          : "bg-[#C77D4A] text-[#2B1B12] hover:bg-[#B86F3E] hover:shadow-md active:scale-[0.98]"
+      }`}
+    >
+      {subscribed ? "Subscribed" : "Subscribe Now"}
+    </button>
+  );
+}
+
 const SOCIALS = [
   {
     name: "Instagram",
@@ -121,12 +140,7 @@ export default function Footer() {
           <p className="mt-3 max-w-[300px] font-fredoka text-base leading-relaxed text-[#4A3220]">
             Get the latest pet care tips, treats, and PawPals updates in your inbox.
           </p>
-          <button
-            type="button"
-            className="mt-4 rounded-lg bg-[#C97F4B] px-6 py-3 font-fredoka text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
-          >
-            Subscribe Now
-          </button>
+          <SubscribeButton className="mt-4 px-6 py-3 font-fredoka text-base font-medium" />
         </div>
 
         <div className="bg-[#401C05] px-6 pb-8 pt-8 text-white">
@@ -143,7 +157,7 @@ export default function Footer() {
               <ul className="mt-3 space-y-3 font-fredoka text-xs text-white/80">
                 {QUICK_LINKS.map(({ href, label }) => (
                   <li key={href}>
-                    <Link href={href} className="transition-colors hover:text-white">{label}</Link>
+                    <Link href={href} className="transition-colors hover:text-white focus:outline-none focus:text-white">{label}</Link>
                   </li>
                 ))}
               </ul>
@@ -154,10 +168,10 @@ export default function Footer() {
               <ul className="mt-3 space-y-4 font-fredoka text-xs text-white/80">
                 <li>Address: San Miguel</li>
                 <li>
-                  Phone: <a href="tel:+639923421134" className="hover:text-white">(+63) 992 342 1134</a>
+                  Phone: <a href="tel:+639923421134" className="hover:text-white focus:outline-none focus:text-white">(+63) 992 342 1134</a>
                 </li>
                 <li className="break-words">
-                  Email: <a href="mailto:johnandrew@gmail.com" className="break-all hover:text-white">johnandrew@gmail.com</a>
+                  Email: <a href="mailto:johnandrew@gmail.com" className="break-all hover:text-white focus:outline-none focus:text-white">johnandrew@gmail.com</a>
                 </li>
               </ul>
             </div>
@@ -180,7 +194,7 @@ export default function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Visit PawPals on ${s.name}`}
-                      className="flex items-center gap-3 transition-colors hover:text-white"
+                      className="flex items-center gap-3 transition-colors hover:text-white focus:outline-none focus:text-white"
                     >
                       <span className="[&>svg]:h-5 [&>svg]:w-5">{s.icon}</span>
                       {s.handle}
@@ -195,7 +209,7 @@ export default function Footer() {
             <p>© {year} PawPals. All Rights Reserved.</p>
             <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
               {LEGAL_LINKS.map(({ href, label }) => (
-                <Link key={href} href={href} className="hover:text-white">{label}</Link>
+                <Link key={href} href={href} className="hover:text-white focus:outline-none focus:text-white">{label}</Link>
               ))}
             </div>
           </div>
@@ -226,12 +240,7 @@ export default function Footer() {
                 Get the latest pet care tips, treats, and PawPals updates in your inbox.
               </p>
             </div>
-            <button
-              type="button"
-              className="mt-3 h-[38px] w-[140px] shrink-0 rounded-md bg-[#C97F4B] font-fredoka text-base font-normal leading-none text-[#2B1B12] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414]"
-            >
-              Subscribe Now
-            </button>
+            <SubscribeButton className="mt-3 h-[38px] w-[140px] shrink-0 font-fredoka text-base font-medium leading-none" />
           </div>
 
           <div
@@ -276,11 +285,11 @@ export default function Footer() {
               <ul className="mt-5 space-y-[13px] font-fredoka text-[12px] leading-[1.15] text-white">
                 <li>Address: San Miguel</li>
                 <li>
-                  Phone: <a href="tel:+639923421134" className="hover:text-white/75">(+63) 9923 421 1134</a>
+                  Phone: <a href="tel:+639923421134" className="hover:text-white/75 focus:outline-none focus:text-white/75">(+63) 992 342 1134</a>
                 </li>
                 <li>
                   Email:<br />
-                  <a href="mailto:johnandrew@gmail.com" className="break-all hover:text-white/75">johnandrew@gmail.com</a>
+                  <a href="mailto:johnandrew@gmail.com" className="break-all hover:text-white/75 focus:outline-none focus:text-white/75">johnandrew@gmail.com</a>
                 </li>
               </ul>
             </div>
@@ -328,7 +337,7 @@ export default function Footer() {
               style={{ width: "clamp(17rem, 32vw, 18.25rem)" }}
             >
               {LEGAL_LINKS.map(({ href, label }) => (
-                <Link key={href} href={href} className="hover:text-white/75">
+                <Link key={href} href={href} className="hover:text-white/75 focus:outline-none focus:text-white/75">
                   {label}
                 </Link>
               ))}
@@ -361,12 +370,7 @@ export default function Footer() {
                 your inbox.
               </p>
             </div>
-            <button
-              type="button"
-              className="rounded-lg bg-[#C97F4B] px-10 py-4 font-fredoka text-base font-medium text-[#FBEEDD] transition-colors hover:bg-[#B86F3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2414] sm:text-lg"
-            >
-              Subscribe Now
-            </button>
+            <SubscribeButton className="px-10 py-4 font-fredoka text-base font-medium sm:text-lg" />
           </div>
         </div>
 
@@ -405,10 +409,10 @@ export default function Footer() {
                 <span className="text-white/50">Address:</span> San Miguel
               </li>
               <li>
-                <a href="tel:+639923421134" className="hover:text-white">(+63) 992 342 1134</a>
+                <a href="tel:+639923421134" className="hover:text-white focus:outline-none focus:text-white">(+63) 992 342 1134</a>
               </li>
               <li>
-                <a href="mailto:johnandrew@gmail.com" className="break-all hover:text-white">johnandrew@gmail.com</a>
+                <a href="mailto:johnandrew@gmail.com" className="break-all hover:text-white focus:outline-none focus:text-white">johnandrew@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -440,7 +444,7 @@ export default function Footer() {
           <p>© {year} PawPals. All Rights Reserved.</p>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {LEGAL_LINKS.map(({ href, label }) => (
-              <Link key={href} href={href} className="hover:text-white">
+              <Link key={href} href={href} className="hover:text-white focus:outline-none focus:text-white">
                 {label}
               </Link>
             ))}

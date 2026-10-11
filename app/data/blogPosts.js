@@ -14,6 +14,7 @@ export const blogPosts = [
   { slug: "before-you-travel-with-your-pet", title: "Before You Travel With Your Pet", excerpt: "Things to keep in mind to help your pet stay comfortable while traveling.", date: "24 May 2026", image: u("1712681355846-f81302e7886f") },
   { slug: "is-your-pet-trying-to-tell-you-something", title: "Is Your Pet Trying to Tell You Something?", excerpt: "Spot early signs of illness before it turns into a serious problem.", date: "24 May 2026", image: u("1513360371669-4adf3dd7dff8") },
   { slug: "common-household-items-that-can-be-toxic-to-pets", title: "Common Household Items That Can Be Toxic to Pets", excerpt: "Some foods and plants at home can harm pets. Learn what to avoid and what to do.", date: "24 May 2026", image: u("1631669969504-f35518bf96ba") },
+  { slug: "the-secret-to-a-healthy-pet-smile", title: "The Secret to a Healthy Pet Smile", excerpt: "Keep your pet's teeth clean and healthy with simple dental care tips for a brighter smile.", date: "24 May 2026", image: u("1741230713152-244939ffbd75") },
 ];
 
 export function getPostBySlug(slug) {

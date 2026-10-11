@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { Patrick_Hand } from "next/font/google";
-import { PawPrint, Calendar, Venus, Mars, Check, X, ArrowLeft } from "lucide-react";
+import { PawPrint, Calendar, Venus, Mars, Check, X, ArrowLeft, ArrowRight } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { pets } from "../../data/pets";
@@ -10,6 +11,8 @@ const patrickHand = Patrick_Hand({ subsets: ["latin"], weight: "400" });
 
 export default function SimbaPage() {
   const pet = pets.find((p) => p.slug === "simba");
+  if (!pet) notFound();
+
   const { name, breed, age, gender, status, description } = pet;
 
   const gallery = [
@@ -40,9 +43,9 @@ export default function SimbaPage() {
       <section className="mx-auto max-w-[96rem] px-5 pb-12 pt-2 font-fredoka text-text sm:px-6 sm:pb-16 md:px-8 lg:px-10">
         <Link
           href="/adopt"
-          className="group mb-5 mt-6 flex w-fit items-center gap-2 text-base font-semibold text-[#C97F4B] transition-colors duration-300 hover:text-[#B86F3E] sm:mt-0 sm:mb-6 sm:inline-flex sm:rounded-full sm:border sm:border-[#E5D5C3] sm:bg-white sm:px-5 sm:py-2.5 sm:text-sm sm:shadow-[0_2px_8px_rgba(201,127,75,0.12)] sm:transition-all sm:hover:border-[#C97F4B] sm:hover:bg-[#C97F4B] sm:hover:text-white sm:hover:shadow-[0_4px_14px_rgba(201,127,75,0.35)]"
+          className="group mb-5 mt-6 flex w-fit items-center gap-2 rounded-2xl text-base font-semibold text-[#3B2414] transition duration-200 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C77D4A] focus-visible:ring-offset-2 sm:mb-6 sm:mt-0 sm:inline-flex sm:border sm:border-[#C77D4A] sm:px-5 sm:py-2.5 sm:text-sm sm:hover:bg-[#C77D4A]/10 sm:hover:no-underline"
         >
-          <ArrowLeft className="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-1 sm:h-4 sm:w-4" strokeWidth={2.5} />
+          <ArrowLeft className="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-1 sm:h-4 sm:w-4" strokeWidth={2.5} aria-hidden="true" />
           Back to all pets
         </Link>
 
@@ -81,10 +84,10 @@ export default function SimbaPage() {
 
           <div className="order-2 min-w-0 md:pt-16">
             {status && (
-              <span className="inline-flex items-center gap-2 rounded-full bg-[#C9622A] px-4 py-1.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(201,98,42,0.25)]">
+              <span className="inline-flex items-center gap-2 rounded-full bg-[#C77D4A]/15 px-4 py-1.5 text-sm font-semibold text-[#2B1B12]">
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"></span>
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-white"></span>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#C77D4A] opacity-75 motion-reduce:animate-none"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#C77D4A]"></span>
                 </span>
                 {status}
               </span>
@@ -135,10 +138,10 @@ export default function SimbaPage() {
               </h2>
               <div className="mt-3 space-y-3 text-base leading-relaxed text-[#5C4A3D] sm:text-lg">
                 <p>
-                  Simba is a confident, proud young orange tabby who carries himself like he owns the place. He&apos;s happiest stretched out in a patch of sunlight, watching everything around him with calm, curious eyes.
+                 Simba is a confident, proud young orange tabby who carries himself like he owns the place. He&apos;s happiest stretched out in a patch of sunlight, watching everything around him with calm, curious eyes.
                 </p>
                 <p>
-                  He does best in a quiet, sunny home with a cozy window spot to call his own. Give him a little time to warm up, and he&apos;ll reward you with a loyal, easygoing companion who loves being near his people.
+                 He does best in a quiet, sunny home with a cozy window spot to call his own. Give him a little time to warm up, and he&apos;ll reward you with a loyal, easygoing companion who loves being near his people.
                 </p>
               </div>
             </div>
@@ -183,9 +186,13 @@ export default function SimbaPage() {
               </div>
             </div>
 
-            <button className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-[#C9622A] py-3.5 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-[#B5541F] sm:py-4 sm:text-xl">
-              Start Adoption Process →
-            </button>
+            <Link
+              href={`/contact?pet=${pet.slug}`}
+              className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#C77D4A] py-3.5 text-lg font-semibold text-white shadow-sm transition duration-200 hover:bg-[#B86F3E] hover:shadow-md active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C77D4A] focus-visible:ring-offset-2 sm:py-4 sm:text-xl"
+            >
+              Start Adoption Process
+              <ArrowRight className="h-5 w-5" strokeWidth={2.5} aria-hidden="true" />
+            </Link>
 
             <p
               className={`${patrickHand.className} mt-4 flex items-center justify-center gap-2 text-center text-lg text-[#4B5D3A] sm:text-xl`}

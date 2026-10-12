@@ -13,7 +13,16 @@ const SOCIALS = [
 ];
 
 const ROW =
-  "mt-10 flex flex-col items-center gap-10 md:mt-20 md:gap-10 lg:mt-[50px] lg:grid lg:grid-cols-[minmax(0,520px)_minmax(0,720px)] lg:gap-x-[40px] lg:gap-y-0 2xl:-mr-[100px]";
+  "mt-[85px] flex flex-col items-center gap-10 md:grid md:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] md:items-center md:gap-x-2 md:gap-y-0 lg:grid-cols-[minmax(0,520px)_minmax(0,720px)] lg:gap-x-[40px] lg:max-xl:grid-cols-[minmax(0,380px)_minmax(0,1fr)] lg:max-xl:gap-x-0 lg:max-xl:pl-10 2xl:-mr-[100px]";
+
+const H2 =
+  "text-4xl font-bold leading-tight sm:text-5xl md:max-lg:text-4xl";
+
+const BODY =
+  "text-base leading-snug sm:text-lg md:max-lg:text-base";
+
+const IMG =
+  "h-auto w-full max-w-[560px] lg:max-w-none md:max-lg:!h-[340px] md:max-lg:max-w-none md:max-lg:object-contain";
 
 const LINK_FOCUS =
   "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C77D4A] focus-visible:ring-offset-2 rounded-sm";
@@ -71,13 +80,11 @@ export default async function ContactPage({ searchParams }) {
           Feel free to reach out to the PawPals team.
         </p>
 
-        <div className={`${ROW} md:max-xl:mt-20`}>
+        <div className={ROW}>
           <div className="w-full">
-            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-              Our Location
-            </h2>
+            <h2 className={H2}>Our Location</h2>
 
-            <address className="mt-6 space-y-2 text-lg not-italic leading-snug sm:text-xl md:mt-8 md:text-2xl">
+            <address className={`mt-6 space-y-2 not-italic ${BODY}`}>
               <p>PawPals Pet Care Services</p>
               <p>San Miguel, Bulacan</p>
               <p>
@@ -108,16 +115,14 @@ export default async function ContactPage({ searchParams }) {
             src="/Contact/ContactUS-DOG1.png"
             alt="A smiling woman hugging a puppy"
             loading="lazy"
-            className="h-auto w-full max-w-[560px] lg:max-w-none"
+            className={IMG}
           />
         </div>
 
-        <div id="message" className={`${ROW} scroll-mt-24 md:max-xl:mt-[100px]`}>
+        <div id="message" className={`${ROW} scroll-mt-24`}>
           <div className="w-full">
-            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-              Send Us a Message
-            </h2>
-            <p className="mt-4 max-w-[560px] text-base leading-snug sm:text-lg">
+            <h2 className={H2}>Send Us a Message</h2>
+            <p className={`mt-6 max-w-[560px] ${BODY}`}>
               Have a question about our services or need assistance? Send us a
               message, and our team will get back to you as soon as possible.
             </p>
@@ -128,26 +133,22 @@ export default async function ContactPage({ searchParams }) {
             src="/Contact/ContactUS-CAT%26DOG1.png"
             alt="A husky and a cat cuddling together"
             loading="lazy"
-            className="h-auto w-full max-w-[560px] lg:max-w-none"
+            className={IMG}
           />
         </div>
 
-        <div className={`${ROW} md:max-xl:mt-[100px]`}>
+        <div className={ROW}>
           <div className="w-full">
-            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-              Connect With Us
-            </h2>
-            <p className="mt-5 max-w-[560px] text-base leading-snug sm:text-lg md:mt-6">
+            <h2 className={H2}>Connect With Us</h2>
+            <p className={`mt-6 max-w-[560px] ${BODY}`}>
               Follow PawPals on social media for updates, pet care tips, and
               community stories.
             </p>
 
-            <p className="mt-6 text-base leading-snug sm:text-lg md:mt-8">
-              Follow Us On:
-            </p>
-            <ul className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-base sm:text-lg">
+            <p className={`mt-6 ${BODY}`}>Follow Us On:</p>
+            <ul className={`mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 ${BODY} md:max-lg:text-sm`}>
               {SOCIALS.map((s, i) => (
-                <li key={s.name} className="flex items-center gap-x-3">
+                <li key={s.name} className="flex items-center gap-x-2">
                   {i > 0 && <span aria-hidden="true">|</span>}
                   <a
                     href={s.href}
@@ -162,7 +163,7 @@ export default async function ContactPage({ searchParams }) {
               ))}
             </ul>
 
-            <p className="mt-6 text-base leading-snug sm:text-lg md:mt-8">
+            <p className={`mt-6 ${BODY}`}>
               Ready to book a service for your pet?
               <br className="hidden sm:block" />{" "}
               Schedule your appointment with PawPals today.
@@ -180,7 +181,7 @@ export default async function ContactPage({ searchParams }) {
             src="/Contact/ContactUS-CAT1.png"
             alt="A cat"
             loading="lazy"
-            className="h-auto w-full max-w-[560px] lg:max-w-none"
+            className={IMG}
           />
         </div>
       </section>

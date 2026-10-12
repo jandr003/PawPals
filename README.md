@@ -5,7 +5,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.19-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Lucide React](https://img.shields.io/badge/Lucide_React-1.48.0-F56565?style=flat-square&logo=lucide&logoColor=white)](https://lucide.dev/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
 
 **Live Demo:** [pawpals-eta.vercel.app](https://pawpals-eta.vercel.app)
 

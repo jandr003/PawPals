@@ -86,7 +86,3 @@ PawPals provides a centralized platform for discovering adoptable pets, learning
 **Completed and Deployed**
 
 PawPals is a completed web project focused on pet adoption and care, featuring responsive layouts, pet profiles, service listings, appointment booking, and pet-related articles.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
